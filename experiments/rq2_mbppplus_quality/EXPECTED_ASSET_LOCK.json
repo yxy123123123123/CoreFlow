@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "gates": {
+    "code_k2_code_seed41.pt": "f6f1c24c19473b7a15a1cadb2cef165fc738a84b18c82104bdddf165d00e4464",
+    "code_k2_code_seed42.pt": "5712254df9cea2fba408f63afa5d603a2e22d448fe584d46f9d34fab4f01df52",
+    "code_k2_code_seed43.pt": "1fa8bddcc85bca63298fcef2c24dc36b5e21232d57479d1db4f0873863674f65",
+    "code_k3_code_seed41.pt": "d02e824d5c8e0f25f4ab4178f66de4057b490a365e1cacf9c99a735795e349db",
+    "code_k3_code_seed42.pt": "e3466ae639541185773f7a7fa125734a4b47f9762aafca58798479f523738dc5",
+    "code_k3_code_seed43.pt": "1ae260ce90a1e4e8443e965fdfed2c53e6577619c8b547eed6a26b4987c3c705",
+    "code_k5_code_seed41.pt": "640e1a72f66d965731a2033c4326c634d49515e8fd8b74e0750d72f235e1d2c7",
+    "code_k5_code_seed42.pt": "28e3c1dffc97107ddc140a98186d38163b1b2296f3581c9f00a15481ee2f1966",
+    "code_k5_code_seed43.pt": "ee7bef0a196b2544598f65df88935dd7d333e6368d2d251b9aced96335a71636",
+    "math_k2_math_seed41.pt": "24b391e2db956785684130b83be3e8321083173c6b6a92a78f5f6347ac0bfd53",
+    "math_k2_math_seed42.pt": "234e95963fa003b7a7fcd983a2ba2a6bae044c8e182c87f4ea1e0d679afe7ac3",
+    "math_k2_math_seed43.pt": "740348be40506fe3bec6ee064c3ce26ad21368128eae005906c72b814b565fe0",
+    "math_k5_math_seed41.pt": "b53423b996d4d7cfd1eff5669d88496875d43910c0347d784e86c59c06861e27",
+    "math_k5_math_seed42.pt": "fe3800b973298a14708f10179ed54c42996bdd39bea64daab7a2eec63f74419e",
+    "math_k5_math_seed43.pt": "a67590e68b1eb7ec298733d383a29cc3ed980c88e1ca364e3b29d0d1980582aa"
+  },
+  "banks": {
+    "k2_code": {
+      "185": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k2_code/q185_bf16",
+        "core_bank_sha256": "c0b8809f81a013acd13cd2ce2cb2359f263bb7ecefb7d5f22c9982412f341891",
+        "efficiency": {
+          "source_resident_adapter_parameters": 799539200,
+          "coreflow_resident_adapter_parameters": 477566400,
+          "resident_parameter_reduction_pct": 40.269795402151644,
+          "source_adapter_macs_per_token": 799539200,
+          "coreflow_adapter_macs_per_token": 477566400,
+          "adapter_macs_reduction_pct": 40.269795402151644
+        }
+      },
+      "224": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k2_code/q224_bf16",
+        "core_bank_sha256": "24233984b21cdf7312cadd3111c113087e8e46827d420c108949db9c3abe0a61",
+        "efficiency": {
+          "source_resident_adapter_parameters": 799539200,
+          "coreflow_resident_adapter_parameters": 582156288,
+          "resident_parameter_reduction_pct": 27.188524590163933,
+          "source_adapter_macs_per_token": 799539200,
+          "coreflow_adapter_macs_per_token": 582156288,
+          "adapter_macs_reduction_pct": 27.188524590163933
+        }
+      }
+    },
+    "k2_math": {
+      "185": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k2_math/q185_bf16",
+        "core_bank_sha256": "c5976322bfa68cf20b6742f0441a7c00a003000448b6c6954679885b28db02d5",
+        "efficiency": {
+          "source_resident_adapter_parameters": 319815680,
+          "coreflow_resident_adapter_parameters": 327103488,
+          "resident_parameter_reduction_pct": -2.2787525614754056,
+          "source_adapter_macs_per_token": 319815680,
+          "coreflow_adapter_macs_per_token": 327103488,
+          "adapter_macs_reduction_pct": -2.2787525614754056
+        }
+      },
+      "224": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k2_math/q224_bf16",
+        "core_bank_sha256": "2ab663f09e092a828ec53db9018e0ce51bb06b2b331f4fe8b682592e1b1069fc",
+        "efficiency": {
+          "source_resident_adapter_parameters": 319815680,
+          "coreflow_resident_adapter_parameters": 327103488,
+          "resident_parameter_reduction_pct": -2.2787525614754056,
+          "source_adapter_macs_per_token": 319815680,
+          "coreflow_adapter_macs_per_token": 327103488,
+          "adapter_macs_reduction_pct": -2.2787525614754056
+        }
+      }
+    },
+    "k3_code": {
+      "185": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k3_code/q185_bf16",
+        "core_bank_sha256": "1f3f5bec0c9de8eb323d11e2860123da7a15bd317bdf1074b934fc9d0063526c",
+        "efficiency": {
+          "source_resident_adapter_parameters": 959447040,
+          "coreflow_resident_adapter_parameters": 485232800,
+          "resident_parameter_reduction_pct": 49.425785919356215,
+          "source_adapter_macs_per_token": 959447040,
+          "coreflow_adapter_macs_per_token": 485232800,
+          "adapter_macs_reduction_pct": 49.425785919356215
+        }
+      },
+      "224": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k3_code/q224_bf16",
+        "core_bank_sha256": "aa00398632a3765ea8ac93a233c2652638ed7a22c1777a007ca0589296d75048",
+        "efficiency": {
+          "source_resident_adapter_parameters": 959447040,
+          "coreflow_resident_adapter_parameters": 593395712,
+          "resident_parameter_reduction_pct": 38.15232240437159,
+          "source_adapter_macs_per_token": 959447040,
+          "coreflow_adapter_macs_per_token": 593395712,
+          "adapter_macs_reduction_pct": 38.15232240437159
+        }
+      }
+    },
+    "k5_code": {
+      "185": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k5_code/q185_bf16",
+        "core_bank_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+        "efficiency": {
+          "source_resident_adapter_parameters": 1279262720,
+          "coreflow_resident_adapter_parameters": 500565600,
+          "resident_parameter_reduction_pct": 60.870774065861944,
+          "source_adapter_macs_per_token": 1279262720,
+          "coreflow_adapter_macs_per_token": 500565600,
+          "adapter_macs_reduction_pct": 60.870774065861944
+        }
+      },
+      "224": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k5_code/q224_bf16",
+        "core_bank_sha256": "d5c75258f4ec374cc20e28a82e9fa06a5c7d6254b19b7245ce12ed3c7757ef62",
+        "efficiency": {
+          "source_resident_adapter_parameters": 1279262720,
+          "coreflow_resident_adapter_parameters": 615874560,
+          "resident_parameter_reduction_pct": 51.85706967213115,
+          "source_adapter_macs_per_token": 1279262720,
+          "coreflow_adapter_macs_per_token": 615874560,
+          "adapter_macs_reduction_pct": 51.85706967213115
+        }
+      }
+    },
+    "k5_math": {
+      "185": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k5_math/q185_bf16",
+        "core_bank_sha256": "1c0bd0147455c8abd98216c680d7768316841dcc974e4c438929e17c3ca2f391",
+        "efficiency": {
+          "source_resident_adapter_parameters": 1279262720,
+          "coreflow_resident_adapter_parameters": 500565600,
+          "resident_parameter_reduction_pct": 60.870774065861944,
+          "source_adapter_macs_per_token": 1279262720,
+          "coreflow_adapter_macs_per_token": 500565600,
+          "adapter_macs_reduction_pct": 60.870774065861944
+        }
+      },
+      "224": {
+        "directory": "/root/autodl-tmp/coreflow_m0/m2_assets/core_banks/k5_math/q224_bf16",
+        "core_bank_sha256": "d5c75258f4ec374cc20e28a82e9fa06a5c7d6254b19b7245ce12ed3c7757ef62",
+        "efficiency": {
+          "source_resident_adapter_parameters": 1279262720,
+          "coreflow_resident_adapter_parameters": 615874560,
+          "resident_parameter_reduction_pct": 51.85706967213115,
+          "source_adapter_macs_per_token": 1279262720,
+          "coreflow_adapter_macs_per_token": 615874560,
+          "adapter_macs_reduction_pct": 51.85706967213115
+        }
+      }
+    }
+  },
+  "sources": {
+    "fresh_apps_intro_heldout.jsonl": "139a2dd6c305ec15b6060da86180af6b7116bf1df2844c95576c423675ce9a95",
+    "fresh_cmath_heldout.jsonl": "34116b6376956bc90dc11be442dcdb85a2a5720fcd50b7cbebbc826933490d99"
+  }
+}

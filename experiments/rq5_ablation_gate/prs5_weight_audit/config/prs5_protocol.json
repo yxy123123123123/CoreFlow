@@ -1,0 +1,49 @@
+{
+  "protocol_id": "coreflow-prs5-weight-audit-v1",
+  "protocol_date": "2026-08-05",
+  "status": "LOCAL_EVIDENCE_FROZEN_BEFORE_WEIGHT_AUDIT_OUTPUTS",
+  "purpose": "Complete the frozen PRS-5 A0-A6 evidence matrix without task generation or method selection.",
+  "defaults": {
+    "source_work_root": "/root/autodl-tmp/coreflow_m0",
+    "m2_asset_root": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets",
+    "phase2b_work_root": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace",
+    "work_root": "/root/autodl-tmp/coreflow_prs5_weight_audit_v1_workspace"
+  },
+  "expert_order": ["zh", "ru", "es", "math", "code"],
+  "experts": {
+    "zh": {"relative": "zh_lora", "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "46b992598135f1f1351613d4fa50e6aad5650f24eb0ef7a80d233aceba1b83fb"},
+    "ru": {"relative": "ru_lora", "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "b2e6becfbe82a70690d3632ff2028ba9c22a005658ffc04cb09e2202e1ce41c2"},
+    "es": {"relative": "es_lora", "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "00826c33ff5b61307cfcaa88ec424d263b52eb3bfb2df041698566090beae9da"},
+    "math": {"relative": "math_lora", "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "8b938cfe4941860068aebbfa0e11816c0733b3a40ff5862246f6c9440fb66e61"},
+    "code": {"relative": "code_lora", "adapter_config_sha256": "9d0dce1fd43678f5e9d2ba776d0f5d97e004b934f83d6d479821fb01a5861520", "checkpoint_sha256": "929e484e57b64bb6676ac22850ad05a1f585b9952bb45f52c0463aa281c2b0c4"}
+  },
+  "variants": {
+    "A0_bilateral_normed_joint": {"kind": "bilateral", "root": "m2", "relative": "core_banks/k5_code/q185_bf16", "tensor": "core_bank.safetensors", "config": "core_config.json", "tensor_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2"},
+    "A1_bilateral_no_norm": {"kind": "bilateral", "root": "phase2b", "relative": "banks/phase2b/ablation/A1_bilateral_no_norm", "tensor": "core_bank.safetensors", "config": "core_config.json", "tensor_sha256": "c61f1cdc804f02de574861ac35fb7687eed16195667b89f625aa28122816e865"},
+    "A2_input_only": {"kind": "input", "root": "phase2b", "relative": "banks/phase2b/ablation/A2_input_only", "tensor": "one_sided_bank.safetensors", "config": "one_sided_config.json", "tensor_sha256": "fe3e171e803b8f5cb93af4b038e04ac2ffc6764332f675da7305be9e31ded616"},
+    "A3_output_only": {"kind": "output", "root": "phase2b", "relative": "banks/phase2b/ablation/A3_output_only", "tensor": "one_sided_bank.safetensors", "config": "one_sided_config.json", "tensor_sha256": "580b417198b1937fea071b7499d6af32fe3ad9d4ddc8602b905bc21c01b3f775"},
+    "A4_plain_concat_svd": {"kind": "bilateral", "root": "phase2b", "relative": "banks/phase2b/ablation/A4_plain_concat_svd", "tensor": "core_bank.safetensors", "config": "core_config.json", "tensor_sha256": "8821bc20aea9dfaacbd614d4843c9a6900c45df9edb7f012c7e86479b957d796"},
+    "A5_gate_frequency_weighted": {"kind": "bilateral", "root": "phase2b", "relative": "banks/phase2b/ablation/A5_gate_frequency_weighted", "tensor": "core_bank.safetensors", "config": "core_config.json", "tensor_sha256": "211c79059f24e7c200f01da30aee92d652ef536fc48d1318a8148274827d2833"},
+    "A6_random_orthogonal": {"kind": "bilateral", "root": "phase2b", "relative": "banks/phase2b/ablation/A6_random_orthogonal", "tensor": "core_bank.safetensors", "config": "core_config.json", "tensor_sha256": "47f124548da607f37a2c07f9498e6ad02aa08795f501f28449d556c4e830cfdb"}
+  },
+  "audit": {
+    "device": "cuda",
+    "matrix_dtype": "float32",
+    "subspace_definition": "energy capture and canonical-cosine summaries from source LoRA factor subspaces; no task outputs",
+    "dispersion_definition": "per-expert mean of bank-config FP32 sampled output errors across all modules, followed by population std, IQR and max-minus-min",
+    "zero_rank_definition": "count of structurally allocated shared-side ranks equal to zero across bank modules; not an ISVD allocation metric"
+  },
+  "execution_contract": {
+    "package_integrity_before_each_stage": true,
+    "preflight_before_seal": true,
+    "seal_before_audit_outputs": true,
+    "no_task_data": true,
+    "no_generation": true,
+    "no_training": true,
+    "no_q_selection": true,
+    "no_main_method_change": true,
+    "single_gpu_serial": true,
+    "no_automatic_retry": true,
+    "retain_partial_on_failure": true
+  }
+}

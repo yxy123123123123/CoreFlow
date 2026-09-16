@@ -1,0 +1,27 @@
+{
+  "assets": {
+    "core_bank": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+    "gates": {
+      "41": "640e1a72f66d965731a2033c4326c634d49515e8fd8b74e0750d72f235e1d2c7",
+      "42": "28e3c1dffc97107ddc140a98186d38163b1b2296f3581c9f00a15481ee2f1966",
+      "43": "ee7bef0a196b2544598f65df88935dd7d333e6368d2d251b9aced96335a71636"
+    },
+    "isvd_bank": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433"
+  },
+  "claims": {
+    "compact_isvd_forbidden": true,
+    "historical_phase2a_2.02x_not_a_replication_target": true,
+    "new_primary_metric": "decode_tokens_per_second"
+  },
+  "inputs": {
+    "effective_inputs_l1024.json": "9155270b9940c8c35e49f9a2b7a9127f6e88676be71d4d731904c01c8693f0cc",
+    "effective_inputs_l512.json": "baadc10c073c116c00a2ec68e4664f6c878ae87aab712dc59780b58fcb2c0aee",
+    "mbppplus_dev128.jsonl": "016d3884caa8177fb487bebbf07aca93e3609c9baafb6bdde2998b329a3b8a0b",
+    "prompt_code_mbppplus.txt": "c40cc1a112e3df54a00070ddbe1a2e78f9ab9707d687b28eadac8179f43dea75"
+  },
+  "package_manifest_sha256": "337db9fdd40835aba73276e3bf8af171d685cf21b0673953137c045f8d66451b",
+  "protocol_id": "coreflow-applsci-original-baselines-v1.1",
+  "protocol_sha256": "ec4ee20e10871f52f739917cce156f4ca7b29ec38a16539a3c941ba7f9a72df0",
+  "status": "SEALED_BEFORE_ORIGINAL_BASELINES_GPU_OUTPUTS",
+  "timestamp_utc": "2026-08-02T09:04:34.126564+00:00"
+}

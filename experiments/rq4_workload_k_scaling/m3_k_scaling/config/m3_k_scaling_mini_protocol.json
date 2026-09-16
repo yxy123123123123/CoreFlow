@@ -1,0 +1,55 @@
+{
+  "protocol_id": "coreflow-m3-k-scaling-mini-v1",
+  "protocol_date": "2026-07-29",
+  "scope": "mechanism-only K scaling audit; no gate training; no end-to-end generation",
+  "q": 185,
+  "pools": {
+    "k3_strict": ["zh", "math", "code"],
+    "k5_formal": ["zh", "ru", "es", "math", "code"],
+    "k8_strict": ["zh", "ru", "es", "math", "code", "magicoder", "openwebmath", "gsm8k_loftq"]
+  },
+  "existing_experts": {
+    "zh": "zh_lora",
+    "ru": "ru_lora",
+    "es": "es_lora",
+    "math": "math_lora",
+    "code": "code_lora"
+  },
+  "new_experts": {
+    "magicoder": "lora_assets/m3_k8_strict/magicoder",
+    "openwebmath": "lora_assets/m3_k8_strict/openwebmath",
+    "gsm8k_loftq": "lora_assets/m3_k8_strict/gsm8k_loftq"
+  },
+  "budget_rule": "matched-Core-budget: Independent-SVD total resident adapter parameters <= CoreFlow q185 resident adapter parameters for the same K pool",
+  "metrics": {
+    "activation_samples_per_module": 4,
+    "fused_gate_draws_per_distribution": 4,
+    "gate_distributions": ["uniform", "one_hot", "top2_sparse", "dirichlet_0.3", "dirichlet_1.0"],
+    "random_seed": 20260729
+  },
+  "benchmark": {
+    "enabled": true,
+    "device": "cuda",
+    "warmup": 10,
+    "iterations": 50,
+    "modules": [
+      "model.layers.0.self_attn.q_proj",
+      "model.layers.0.self_attn.o_proj",
+      "model.layers.0.mlp.gate_proj",
+      "model.layers.0.mlp.up_proj",
+      "model.layers.0.mlp.down_proj",
+      "model.layers.31.self_attn.q_proj",
+      "model.layers.31.mlp.up_proj"
+    ]
+  },
+  "go_nogo": {
+    "k8_core_mean_fused_error_le_isvd": true,
+    "k8_core_worst_expert_error_not_over_isvd_by_more_than_pct": 10.0,
+    "k8_core_adapter_benchmark_speedup_over_isvd_min": 1.05
+  },
+  "interpretation_rules": [
+    "This package does not alter formal-v2 primary.",
+    "No endpoint quality or pass@1 claim is made because no K=8 gate is trained.",
+    "Finance/application heterogeneous pool is excluded from v1 mini."
+  ]
+}

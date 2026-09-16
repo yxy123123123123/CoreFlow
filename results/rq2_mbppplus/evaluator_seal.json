@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-formal-v2-primary-v1",
+  "timestamp_utc": "2026-07-29T01:40:36.932255+00:00",
+  "config_sha256": "d89d03f695505c52f0fe198a26836cb3a928e5430a52896a90fa971da7d22c0a",
+  "evaluator_file_sha256": "b01628bd18ca28a1e15c078940b1ffdfe8c463f05df10e106040f0a66ffacdba",
+  "selection_contract": {
+    "uses_entry_point": true,
+    "multi_fenced_block_rule": "first AST-valid block containing def entry_point(...), then AST prefix fallbacks",
+    "hidden_tests_used_for_selection": false,
+    "numpy_available_in_isolated_executor": true
+  },
+  "postprocessor_tests": [
+    {
+      "name": "example_call_then_function",
+      "status": "PASS",
+      "mode": "entrypoint_text_ast_prefix",
+      "expected_mode": "entrypoint_text_ast_prefix",
+      "processed_code": "def foo(x):\n    return x",
+      "contains_entrypoint_text": true
+    },
+    {
+      "name": "multiple_fenced_blocks",
+      "status": "PASS",
+      "mode": "entrypoint_fenced_block",
+      "expected_mode": "entrypoint_fenced_block",
+      "processed_code": "def bar(x):\n    return x + 1",
+      "contains_entrypoint_text": true
+    },
+    {
+      "name": "no_fence_plain_function",
+      "status": "PASS",
+      "mode": "entrypoint_text_ast_prefix",
+      "expected_mode": "entrypoint_text_ast_prefix",
+      "processed_code": "def baz(x):\n    return x * 2\n\nExplanation: done",
+      "contains_entrypoint_text": true
+    },
+    {
+      "name": "missing_target_function",
+      "status": "PASS",
+      "mode": "non_entrypoint_fenced_block",
+      "expected_mode": "non_entrypoint_fenced_block",
+      "processed_code": "def other(x):\n    return x",
+      "contains_entrypoint_text": false
+    },
+    {
+      "name": "syntax_error_after_valid_function",
+      "status": "PASS",
+      "mode": "entrypoint_fenced_block_ast_prefix",
+      "expected_mode": "entrypoint_fenced_block_ast_prefix",
+      "processed_code": "def zap(x):\n    return x",
+      "contains_entrypoint_text": true
+    }
+  ],
+  "pass_case": {
+    "parse_mode": "entrypoint_fenced_block",
+    "processed_code": "def inc(x):\n    return x + 1",
+    "processed_chars": 28,
+    "case_count": null,
+    "evaluator": "mbppplus_asserts_f0r2",
+    "entry_point": "inc",
+    "has_entrypoint_def": true,
+    "compiled": true,
+    "passed": true,
+    "status": "PASS",
+    "returncode": 0,
+    "stdout_tail": "",
+    "stderr_tail": ""
+  },
+  "missing_entrypoint_case": {
+    "parse_mode": "non_entrypoint_fenced_block",
+    "processed_code": "def other(x):\n    return x + 1",
+    "processed_chars": 30,
+    "case_count": null,
+    "evaluator": "mbppplus_asserts_f0r2",
+    "entry_point": "inc",
+    "has_entrypoint_def": false,
+    "compiled": true,
+    "passed": false,
+    "status": "ENTRYPOINT_MISSING"
+  },
+  "numpy_smoke": {
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "1.26.4",
+    "stderr_tail": ""
+  }
+}

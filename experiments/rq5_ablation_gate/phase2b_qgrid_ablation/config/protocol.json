@@ -1,0 +1,151 @@
+{
+  "protocol_id": "coreflow-applsci-phase2b-final-v1",
+  "protocol_status": "DRAFT_BEFORE_FREEZE",
+  "generated_at": "2026-07-31",
+  "target_hardware": "single NVIDIA GeForce RTX 4090 24 GB",
+  "target_venue": "MDPI Applied Sciences special issue",
+  "runtime_precision": "bfloat16",
+  "k_formal": 5,
+  "expert_order": ["zh", "ru", "es", "math", "code"],
+  "expert_ranks": {"zh": 64, "ru": 64, "es": 64, "math": 64, "code": 256},
+  "target_modules": [
+    {"name": "q_proj",  "d_in": 4096, "d_out": 4096},
+    {"name": "k_proj",  "d_in": 4096, "d_out": 4096},
+    {"name": "v_proj",  "d_in": 4096, "d_out": 4096},
+    {"name": "o_proj",  "d_in": 4096, "d_out": 4096},
+    {"name": "gate_proj", "d_in": 4096, "d_out": 11008},
+    {"name": "up_proj",   "d_in": 4096, "d_out": 11008},
+    {"name": "down_proj", "d_in": 11008, "d_out": 4096}
+  ],
+  "n_decoder_layers": 32,
+  "n_target_modules_total": 224,
+  "base_model": "Llama-2-7B",
+  "base_model_params": 6738415616,
+
+  "b1_qgrid": {
+    "description": "q-grid quality-resource Pareto",
+    "q_values": [128, 160, 185, 224, 256],
+    "k": 5,
+    "gate_seeds": [41, 42, 43],
+    "dev_set_code_rows": 128,
+    "dev_set_math_rows": 128,
+    "generation": {"do_sample": false, "temperature": 1.0, "top_p": 1.0,
+      "max_new_tokens_code": 768, "max_new_tokens_math": 256, "max_input_tokens": 2048},
+    "evaluator": {"code_timeout_seconds": 8, "math_timeout_seconds": 1,
+      "cpu_limit_seconds": 6, "address_space_limit_mb": 1024, "file_size_limit_mb": 4, "process_limit": 32},
+    "bootstrap_samples": 100000, "bootstrap_confidence": 0.95
+  },
+
+  "b2_ablation": {
+    "description": "fixed-budget structure ablation",
+    "target_budget_params": "P_CoreFlow(K=5, q=185)",
+    "budget_tolerance_pct": 1.0,
+    "variants": {
+      "A0_bilateral_normed_joint": {
+        "label": "default CoreFlow (bilateral shared, norm-balanced, joint SVD)",
+        "q": 185
+      },
+      "A1_bilateral_no_norm": {
+        "label": "bilateral shared, no norm balancing",
+        "q": 185
+      },
+      "A2_bilateral_plain_concat_svd": {
+        "label": "bilateral shared, plain-concatenated SVD (not joint covariance)",
+        "q": 185
+      },
+      "A3_input_only": {
+        "label": "shared input basis only (matches P_target with integer rank)",
+        "match_budget": true
+      },
+      "A4_output_only": {
+        "label": "shared output basis only (matches P_target with integer rank)",
+        "match_budget": true
+      },
+      "A5_random_orthogonal": {
+        "label": "negative control: random orthogonal basis",
+        "match_budget": true,
+        "skip_task_generation": true
+      }
+    },
+    "gate_seeds": [41, 42, 43],
+    "dev_set_code_rows": 128,
+    "dev_set_math_rows": 128
+  },
+
+  "b3_prefill_ttft": {
+    "description": "prefill latency, TTFT, input throughput",
+    "methods": ["full_vectorized", "core_q185"],
+    "k": 5,
+    "configs": [
+      {"batch": 1, "input_length": 128,  "warmup": 10, "trials": 50, "launch_pairs": 3},
+      {"batch": 1, "input_length": 512,  "warmup": 10, "trials": 50, "launch_pairs": 6},
+      {"batch": 1, "input_length": 1024, "warmup": 10, "trials": 50, "launch_pairs": 5},
+      {"batch": 2, "input_length": 512,  "warmup": 10, "trials": 50, "launch_pairs": 5},
+      {"batch": 4, "input_length": 512,  "warmup": 10, "trials": 50, "launch_pairs": 5}
+    ],
+    "ttft_warmup": 5,
+    "ttft_trials": 20,
+    "primary_endpoint": "B1/L512 prefill input tokens/s",
+    "throughput_retention_bound": {"ci95_lower": 0.97, "rationale": "3% tolerance for parameter/VRAM savings trade-off"},
+    "measurement_rules": {
+      "cuda_synchronize_envelope": true,
+      "warmup_excluded_from_stats": true,
+      "launch_pair_is_outermost_unit": true,
+      "trial_is_repeated_measurement": true,
+      "alternate_method_order": "AB_BA_per_launch_pair",
+      "sum_attention_mask_must_equal_requested_input_length": true
+    }
+  },
+
+  "b4_direct_load": {
+    "description": "compiled bank direct load (no source LoRA checkpoint read)",
+    "k": 5,
+    "methods": ["full_packed_bank", "coreflow_compiled_bank"],
+    "correctness_gate": {
+      "prompt_count": 20,
+      "token_equivalence_required": true,
+      "on_failure": "STOP_ALL_B4_PERFORMANCE_MEASUREMENT"
+    },
+    "launch_pairs": 5,
+    "measurement_scope": "independent_process_startup_under_ordinary_os_page_cache"
+  },
+
+  "dev_set_isolation": {
+    "code_dev_from": "APPS introductory heldout (must not overlap formal-v2 frozen_apps_intro_heldout)",
+    "math_dev_from": "CMATH heldout (must not overlap formal-v2 fresh_cmath_heldout)",
+    "source_prioritization": "deterministic selection from official train/val splits first",
+    "formal_v2_frozen_ids_must_be_empty_intersection": true,
+    "freeze_before_any_phase2b_output": true,
+    "no_question_removal_after_seeing_q_results": true
+  },
+
+  "execution_contract": {
+    "single_gpu_exclusive_serial": true,
+    "no_concurrent_gpu_processes": true,
+    "no_automatic_retry": true,
+    "retain_partial_on_failure": true,
+    "seal_before_any_formal_output": true,
+    "no_q_modification_after_seal": true,
+    "no_training": true,
+    "no_formal250_access": true,
+    "compact_isvd_not_in_system_comparison": true,
+    "direct_compiled_bank_load_not_tested_in_phase2a": true
+  },
+
+  "negative_result_policy": {
+    "all_pre_registered_configs_must_be_run_or_documented_oom": true,
+    "failed_runs_retained_not_deleted": true,
+    "oom_is_legitimate_capacity_result": true,
+    "do_not_shrink_batch_to_recover_oom": true,
+    "do_not_select_best_q_based_on_dev_results": true,
+    "do_not_remove_unfavorable_q_from_pareto": true
+  },
+
+  "phase2a_analysis_corrections": {
+    "s2_ratio_direction": "core_over_full_time_ratio (was previously reported backwards)",
+    "corrected_s2_csv": "phase2a_corrected_s2.csv",
+    "adapter_model_cost_recomputed": "adapter_share_of_total_compute_16pct_not_0p05pct",
+    "corrected_report": "CoreFlow_Phase2A分析报告_v2.md",
+    "original_v1_report_retained": true
+  }
+}

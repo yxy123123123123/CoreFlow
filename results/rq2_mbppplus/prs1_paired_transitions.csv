@@ -1,0 +1,10 @@
+scope,comparison,pass_to_pass,pass_to_fail,fail_to_pass,fail_to_fail,exact_mcnemar_two_sided_p
+seed41,core_vs_full,24,11,12,203,1.0
+seed41,core_vs_isvd,24,10,12,204,0.8318119049072266
+seed41,isvd_vs_full,24,11,10,205,1.0
+seed42,core_vs_full,37,10,11,192,1.0
+seed42,core_vs_isvd,38,13,10,189,0.6776394844055176
+seed42,isvd_vs_full,45,2,6,197,0.2890625
+seed43,core_vs_full,26,15,12,197,0.7011080384254456
+seed43,core_vs_isvd,27,11,11,201,1.0
+seed43,isvd_vs_full,32,9,6,203,0.60723876953125

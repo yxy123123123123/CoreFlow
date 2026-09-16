@@ -1,0 +1,140 @@
+{
+  "protocol_id": "coreflow-prs3-pilot-v1",
+  "protocol_date": "2026-08-05",
+  "protocol_status": "PILOT_INSTRUMENTATION_VALIDATION_NOT_FORMAL_EVIDENCE",
+  "scope": "Minimal PRS-3A/3B metric-pipeline and trend pilot on one RTX 4090",
+  "claims_forbidden": [
+    "formal confirmatory PRS-3 evidence",
+    "statistical superiority or stable confidence intervals",
+    "K8 endpoint quality or serving quality",
+    "generalization beyond the frozen hardware and implementations"
+  ],
+  "defaults": {
+    "model": "/root/autodl-tmp/Model",
+    "source_work_root": "/root/autodl-tmp/coreflow_m0",
+    "formal_v1_work_root": "/root/autodl-tmp/coreflow_formal_v1_workspace",
+    "formal_v2_work_root": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace",
+    "m3_work_root": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace",
+    "work_root": "/root/autodl-tmp/coreflow_prs3_pilot_v1_workspace",
+    "cuda_device": "0"
+  },
+  "parent_evidence": {
+    "prs0_seal_sha256": "d37b737a01b69641f2a71e98e4a5eaeed8afbe14759091e0e24a27ee5aec9f89",
+    "prs0_assets_sha256": "1b5fbe21db4f7c1bb59983667df5453e5305fd6e84552ce29bf9f7091614a29a",
+    "m3_bank_lock_sha256": "1a88b2e60c6561651b0c3e0dc55165e47c6cf0f5d9045056e2da1fdcbe36238c"
+  },
+  "methods": {
+    "full_legacy_original": {"kind": "full", "paper_name": "Original LoRA-Flow"},
+    "coreflow_q185_frozen": {"kind": "core", "paper_name": "CoreFlow q185"},
+    "isvd_legacy_padded_matched_q185": {"kind": "isvd", "paper_name": "Original Per-Expert SVD matched-q185"}
+  },
+  "expert_order": ["zh", "ru", "es", "math", "code"],
+  "assets": {
+    "model_config_sha256": "9242e7db1bc2a17873e66084c3b1c6ed10883076e156b338fd6a7775748e2e3c",
+    "gate_seed": 41,
+    "gate_pattern": "m2_assets/gates/code_k5_code_seed{seed}.pt",
+    "gate_sha256": "640e1a72f66d965731a2033c4326c634d49515e8fd8b74e0750d72f235e1d2c7",
+    "experts": {
+      "zh": {"source": "official", "relative": "zh_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "46b992598135f1f1351613d4fa50e6aad5650f24eb0ef7a80d233aceba1b83fb"},
+      "ru": {"source": "official", "relative": "ru_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "b2e6becfbe82a70690d3632ff2028ba9c22a005658ffc04cb09e2202e1ce41c2"},
+      "es": {"source": "official", "relative": "es_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "00826c33ff5b61307cfcaa88ec424d263b52eb3bfb2df041698566090beae9da"},
+      "math": {"source": "official", "relative": "math_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "8b938cfe4941860068aebbfa0e11816c0733b3a40ff5862246f6c9440fb66e61"},
+      "code": {"source": "official", "relative": "code_lora", "config_sha256": "9d0dce1fd43678f5e9d2ba776d0f5d97e004b934f83d6d479821fb01a5861520", "checkpoint_sha256": "929e484e57b64bb6676ac22850ad05a1f585b9952bb45f52c0463aa281c2b0c4"},
+      "magicoder": {"source": "k8_external", "relative": "magicoder", "config_sha256": "4f1de4ef1bbd542cf550055ea9b1e5e6ab5993c70311518027487196224d9bec", "checkpoint_sha256": "8ab878472fc46681f383b85909441e51464b13064663bc4410ea175a602f449a"},
+      "openwebmath": {"source": "k8_external", "relative": "openwebmath", "config_sha256": "f8426788bd63f44edcd7ef4c5365d1c9913cf487060e3382b158e0bbf655f72d", "checkpoint_sha256": "330beab8c8d6f9df1e099b1de9573eb8b22f3cd50a37907ba4f30cee3ee011f0"},
+      "gsm8k_loftq": {"source": "k8_external", "relative": "gsm8k_loftq", "config_sha256": "7d95398607a8f3de18bf2ee44722f798de65236416feb5ae9d46072c1ecf5f02", "checkpoint_sha256": "1069e36d62262fd107a54c87a547c5ba39bb2fa29506483cc9b7bfc07602567c"}
+    },
+    "banks": {
+      "k3_strict": {
+        "core_relative": "banks/coreflow/k3_strict/q185_bf16",
+        "core_bank_sha256": "d942ac37ab12612db8fa66aabc47367ad0f784d23fa4fb81c1c36d71ee5d7b05",
+        "core_config_sha256": "edfe24fb50d157973e5ddb98bbc468d147a8b614413744824c4eef18cc461dfa",
+        "isvd_relative": "banks/isvd/k3_strict/matched_q185_bf16",
+        "isvd_bank_sha256": "6a43da0134db9995ec66052c167cfc866d1f842d3c397a72269e3aa1fc4c4b22",
+        "isvd_config_sha256": "3e2426098290411008363c817361abfe826c25800691961bcf63bce069dddbcd"
+      },
+      "k5_formal": {
+        "core_absolute_kind": "formal_v1",
+        "core_relative": "m2_assets/core_banks/k5_code/q185_bf16",
+        "core_bank_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+        "core_config_sha256": "1e002abd6145aeee4fb6b5967aed1c638d117e7d9d8430af133d203969f80427",
+        "isvd_absolute_kind": "formal_v2",
+        "isvd_relative": "isvd_banks/k5_code/matched_q185_bf16",
+        "isvd_bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+        "isvd_config_sha256": "3bb89fcb6ddbac70dc1c1527f564be264f9238caa5567d3a4a24a1a260b021a9"
+      },
+      "k8_strict": {
+        "core_relative": "banks/coreflow/k8_strict/q185_bf16",
+        "core_bank_sha256": "bea4c581568a92b339fb294684a6f8e51365df67464528077db44e469bfc3f87",
+        "core_config_sha256": "2512e07ec7b7bb39b2c8243fa7a655f3a0be922dac55b31c9ba4c7354e62e87c",
+        "isvd_relative": "banks/isvd/k8_strict/matched_q185_bf16",
+        "isvd_bank_sha256": "307dcfb4ac3d1508919fd835c025a82982c2ae20110f01456475e4d13cec112d",
+        "isvd_config_sha256": "29dacc70b885c03a3006ce24d1812b13fa1dd96c4f8f0248ff36bdd5e1c1cc58"
+      }
+    }
+  },
+  "data": {
+    "source_file": "mbppplus_dev128.jsonl",
+    "source_rows": 128,
+    "source_sha256": "016d3884caa8177fb487bebbf07aca93e3609c9baafb6bdde2998b329a3b8a0b",
+    "prompt_file": "prompt_code_mbppplus.txt",
+    "prompt_sha256": "c40cc1a112e3df54a00070ddbe1a2e78f9ab9707d687b28eadac8179f43dea75",
+    "benchmark_rows": 20
+  },
+  "prs3a": {
+    "gate_seed": 41,
+    "fixed_output_length": true,
+    "workloads": [
+      {"name": "w0_b1_l128_o64", "batch_size": 1, "input_length": 128, "output_length": 64, "warmup": 1, "measurements": 3, "orders": [["full_legacy_original", "coreflow_q185_frozen", "isvd_legacy_padded_matched_q185"]]},
+      {"name": "w1_b1_l512_o128", "batch_size": 1, "input_length": 512, "output_length": 128, "warmup": 1, "measurements": 3, "orders": [["full_legacy_original", "coreflow_q185_frozen", "isvd_legacy_padded_matched_q185"], ["coreflow_q185_frozen", "isvd_legacy_padded_matched_q185", "full_legacy_original"], ["isvd_legacy_padded_matched_q185", "full_legacy_original", "coreflow_q185_frozen"]]},
+      {"name": "w3_b1_l2048_o128", "batch_size": 1, "input_length": 2048, "output_length": 128, "warmup": 1, "measurements": 3, "orders": [["coreflow_q185_frozen", "isvd_legacy_padded_matched_q185", "full_legacy_original"]]},
+      {"name": "w4_b1_l512_o256", "batch_size": 1, "input_length": 512, "output_length": 256, "warmup": 1, "measurements": 3, "orders": [["isvd_legacy_padded_matched_q185", "full_legacy_original", "coreflow_q185_frozen"]]},
+      {"name": "w5_b4_l512_o128", "batch_size": 4, "input_length": 512, "output_length": 128, "warmup": 1, "measurements": 3, "orders": [["full_legacy_original", "isvd_legacy_padded_matched_q185", "coreflow_q185_frozen"]]},
+      {"name": "w6_b8_l512_o128", "batch_size": 8, "input_length": 512, "output_length": 128, "warmup": 1, "measurements": 2, "orders": [["coreflow_q185_frozen", "full_legacy_original", "isvd_legacy_padded_matched_q185"]]}
+    ],
+    "anchor": "w1_b1_l512_o128",
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 20260805
+  },
+  "prs3b": {
+    "pools": {
+      "k3_strict": ["zh", "math", "code"],
+      "k5_formal": ["zh", "ru", "es", "math", "code"],
+      "k8_strict": ["zh", "ru", "es", "math", "code", "magicoder", "openwebmath", "gsm8k_loftq"]
+    },
+    "token_blocks": [1, 32, 128, 512],
+    "modules": [
+      "model.layers.0.self_attn.q_proj",
+      "model.layers.0.self_attn.k_proj",
+      "model.layers.0.self_attn.v_proj",
+      "model.layers.0.self_attn.o_proj",
+      "model.layers.0.mlp.gate_proj",
+      "model.layers.0.mlp.up_proj",
+      "model.layers.0.mlp.down_proj"
+    ],
+    "gate_kind": "uniform",
+    "dtype": "bfloat16",
+    "warmup": 3,
+    "iterations": 10,
+    "main_launches": 1,
+    "cv_sentinel_pool": "k5_formal",
+    "cv_sentinel_token_block": 128,
+    "cv_total_launches": 3,
+    "profiler_token_blocks": [1, 512],
+    "profiler_iterations": 2,
+    "seed": 20260805,
+    "scope_label": "seven_layer0_module_types_adapter_only_pilot"
+  },
+  "execution_contract": {
+    "single_gpu_serial": true,
+    "seal_before_gpu_outputs": true,
+    "no_training": true,
+    "no_q_selection": true,
+    "no_endpoint_quality": true,
+    "no_automatic_retry": true,
+    "partial_outputs_retained": true,
+    "skip_only_complete": true,
+    "oom_recorded_without_substitution": true,
+    "true_effective_input_lengths": true
+  }
+}

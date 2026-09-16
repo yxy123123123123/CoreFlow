@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-indep-confirm-classeval-v1",
+  "timestamp_utc": "2026-08-07T14:13:54.026350+00:00",
+  "config_sha256": "786eb4e0e9045f9ff4f2f0912769f8fc5022f11d689c68d3481967606e01868f",
+  "evaluator_file_sha256": "150c529ff301b5bc3804c90f03c4c1e0584c9371e7821d9081638ae243fc23a1",
+  "m2_eval_file_sha256": "11a798d202a911ce8d39e71405da2b361f34391580dbdb51ee75b2e0c605a50a",
+  "compositional_contract": {
+    "official_style_prompt": true,
+    "method_extracted_from_response": true,
+    "class_assembled_before_unittest": true,
+    "canonical_solutions_used_only_for_evaluator_seal": true
+  },
+  "extractor_cases": [
+    {
+      "name": "fenced_target_method",
+      "status": "PASS",
+      "code": "    @staticmethod\n    def foo(x):\n        return x + 1\n"
+    },
+    {
+      "name": "indented_class_method",
+      "status": "PASS",
+      "code": "    def bar(self, y):\n        return y * 2\n"
+    },
+    {
+      "name": "missing_target",
+      "status": "PASS",
+      "code": ""
+    },
+    {
+      "name": "unclosed_docstring_repaired",
+      "status": "PASS",
+      "code": "    @staticmethod\n    def doc(x):\n        \"\"\"unclosed\n        return x\n        \"\"\"\n        pass\n"
+    }
+  ],
+  "canonical_class_smoke": {
+    "status": "PASS",
+    "class_id": "ClassEval_27",
+    "methods": 4,
+    "assembly": "PASS",
+    "evaluation": [
+      {
+        "parse_mode": "classeval_compositional",
+        "processed_code": "    def convert(self, amount, from_currency, to_currency):\n            if from_currency == to_currency:\n                return amount\n\n            if from_currency not in self.rates or to_currency not in self.rates:\n                return False\n\n            from_rate = self.rates[from_currency]\n            to_rate = self.rates[to_currency]\n\n            converted_amount = (amount / from_rate) * to_rate\n            return converted_amount\n",
+        "processed_chars": 441,
+        "processed_lines": 12,
+        "evaluator": "classeval_method",
+        "entry_point": "convert",
+        "has_entrypoint_def": true,
+        "class_methods": [
+          "convert",
+          "get_supported_currencies",
+          "add_currency_rate",
+          "update_currency_rate"
+        ],
+        "compiled": true,
+        "execution_attempted": true,
+        "executed": true,
+        "passed": true,
+        "status": "PASS",
+        "returncode": 0,
+        "stdout_tail": "__COREFLOW_CLASSEVAL_ALL_TESTS_PASSED__\n",
+        "stderr_tail": ""
+      },
+      {
+        "parse_mode": "classeval_compositional",
+        "processed_code": "    def get_supported_currencies(self):\n            return list(self.rates.keys())\n",
+        "processed_chars": 83,
+        "processed_lines": 2,
+        "evaluator": "classeval_method",
+        "entry_point": "get_supported_currencies",
+        "has_entrypoint_def": true,
+        "class_methods": [
+          "convert",
+          "get_supported_currencies",
+          "add_currency_rate",
+          "update_currency_rate"
+        ],
+        "compiled": true,
+        "execution_attempted": true,
+        "executed": true,
+        "passed": true,
+        "status": "PASS",
+        "returncode": 0,
+        "stdout_tail": "__COREFLOW_CLASSEVAL_ALL_TESTS_PASSED__\n",
+        "stderr_tail": ""
+      },
+      {
+        "parse_mode": "classeval_compositional",
+        "processed_code": "    def add_currency_rate(self, currency, rate):\n            if currency in self.rates:\n                return False\n            self.rates[currency] = rate\n",
+        "processed_chars": 157,
+        "processed_lines": 4,
+        "evaluator": "classeval_method",
+        "entry_point": "add_currency_rate",
+        "has_entrypoint_def": true,
+        "class_methods": [
+          "convert",
+          "get_supported_currencies",
+          "add_currency_rate",
+          "update_currency_rate"
+        ],
+        "compiled": true,
+        "execution_attempted": true,
+        "executed": true,
+        "passed": true,
+        "status": "PASS",
+        "returncode": 0,
+        "stdout_tail": "__COREFLOW_CLASSEVAL_ALL_TESTS_PASSED__\n",
+        "stderr_tail": ""
+      },
+      {
+        "parse_mode": "classeval_compositional",
+        "processed_code": "    def update_currency_rate(self, currency, new_rate):\n            if currency not in self.rates:\n                return False\n            self.rates[currency] = new_rate\n",
+        "processed_chars": 172,
+        "processed_lines": 4,
+        "evaluator": "classeval_method",
+        "entry_point": "update_currency_rate",
+        "has_entrypoint_def": true,
+        "class_methods": [
+          "convert",
+          "get_supported_currencies",
+          "add_currency_rate",
+          "update_currency_rate"
+        ],
+        "compiled": true,
+        "execution_attempted": true,
+        "executed": true,
+        "passed": true,
+        "status": "PASS",
+        "returncode": 0,
+        "stdout_tail": "__COREFLOW_CLASSEVAL_ALL_TESTS_PASSED__\n",
+        "stderr_tail": ""
+      }
+    ]
+  },
+  "broken_method_smoke": {
+    "status": "PASS",
+    "evaluation": {
+      "parse_mode": "classeval_compositional",
+      "processed_code": "    def convert(self, *args, **kwargs):\n        return None\n",
+      "processed_chars": 60,
+      "processed_lines": 2,
+      "evaluator": "classeval_method",
+      "entry_point": "convert",
+      "has_entrypoint_def": true,
+      "class_methods": [
+        "convert",
+        "get_supported_currencies",
+        "add_currency_rate",
+        "update_currency_rate"
+      ],
+      "compiled": true,
+      "execution_attempted": true,
+      "executed": true,
+      "passed": false,
+      "status": "ASSERTION_FAILURE",
+      "returncode": 0,
+      "stdout_tail": "\n",
+      "stderr_tail": "======================================================================\nERROR: test_convert_3 (__main__.CurrencyConverterTestConvert.test_convert_3)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/coreflow_classeval_exec_eoz1cqjs/candidate.py\", line 75, in test_convert_3\n    self.assertAlmostEqual(res, 7.1999999999999)\n  File \"/root/miniconda3/lib/python3.12/unittest/case.py\", line 916, in assertAlmostEqual\n    diff = abs(first - second)\n               ~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'NoneType' and 'float'\n\n======================================================================\nERROR: test_convert_4 (__main__.CurrencyConverterTestConvert.test_convert_4)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/coreflow_classeval_exec_eoz1cqjs/candidate.py\", line 80, in test_convert_4\n    self.assertAlmostEqual(res, 46.08)\n  File \"/root/miniconda3/lib/python3.12/unittest/case.py\", line 916, in assertAlmostEqual\n    diff = abs(first - second)\n               ~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'NoneType' and 'float'\n\n======================================================================\nERROR: test_convert_5 (__main__.CurrencyConverterTestConvert.test_convert_5)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/coreflow_classeval_exec_eoz1cqjs/candidate.py\", line 85, in test_convert_5\n    self.assertAlmostEqual(res, 78.72)\n  File \"/root/miniconda3/lib/python3.12/unittest/case.py\", line 916, in assertAlmostEqual\n    diff = abs(first - second)\n               ~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'NoneType' and 'float'\n\n======================================================================\nFAIL: test_convert_1 (__main__.CurrencyConverterTestConvert.test_convert_1)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/coreflow_classeval_exec_eoz1cqjs/candidate.py\", line 65, in test_convert_1\n    self.assertEqual(res, 10.0)\nAssertionError: None != 10.0\n\n======================================================================\nFAIL: test_convert_2 (__main__.CurrencyConverterTestConvert.test_convert_2)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/coreflow_classeval_exec_eoz1cqjs/candidate.py\", line 70, in test_convert_2\n    self.assertEqual(res, 64)\nAssertionError: None != 64\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nFAILED (failures=2, errors=3)\n\n"
+    }
+  }
+}

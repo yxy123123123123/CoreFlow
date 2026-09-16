@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-07-29T01:37:41.797865+00:00",
+  "config_sha256": "d89d03f695505c52f0fe198a26836cb3a928e5430a52896a90fa971da7d22c0a",
+  "cases": [
+    {
+      "k": 2,
+      "ranks": [
+        8,
+        16
+      ],
+      "dtype": "fp32",
+      "norm_spread": false,
+      "q_left": 24,
+      "q_right": 24,
+      "relative_error": 4.957545611315397e-07,
+      "threshold": 1e-05,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 24,
+        "q_left_numerical": 24,
+        "q_right_numerical": 24
+      }
+    },
+    {
+      "k": 2,
+      "ranks": [
+        8,
+        16
+      ],
+      "dtype": "bf16",
+      "norm_spread": false,
+      "q_left": 24,
+      "q_right": 24,
+      "relative_error": 0.0062239927053003635,
+      "threshold": 0.01,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 24,
+        "q_left_numerical": 24,
+        "q_right_numerical": 24
+      }
+    },
+    {
+      "k": 2,
+      "ranks": [
+        8,
+        16
+      ],
+      "dtype": "fp16",
+      "norm_spread": false,
+      "q_left": 24,
+      "q_right": 24,
+      "relative_error": 0.000729367478977778,
+      "threshold": 0.001,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 24,
+        "q_left_numerical": 24,
+        "q_right_numerical": 24
+      }
+    },
+    {
+      "k": 3,
+      "ranks": [
+        4,
+        12,
+        20
+      ],
+      "dtype": "fp32",
+      "norm_spread": true,
+      "q_left": 36,
+      "q_right": 36,
+      "relative_error": 5.991667079072561e-07,
+      "threshold": 1e-05,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 36,
+        "q_left_numerical": 36,
+        "q_right_numerical": 36
+      }
+    },
+    {
+      "k": 3,
+      "ranks": [
+        4,
+        12,
+        20
+      ],
+      "dtype": "bf16",
+      "norm_spread": true,
+      "q_left": 36,
+      "q_right": 36,
+      "relative_error": 0.006068019108897083,
+      "threshold": 0.01,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 36,
+        "q_left_numerical": 36,
+        "q_right_numerical": 36
+      }
+    },
+    {
+      "k": 3,
+      "ranks": [
+        4,
+        12,
+        20
+      ],
+      "dtype": "fp16",
+      "norm_spread": true,
+      "q_left": 36,
+      "q_right": 36,
+      "relative_error": 0.0007522399336723401,
+      "threshold": 0.001,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 36,
+        "q_left_numerical": 36,
+        "q_right_numerical": 36
+      }
+    },
+    {
+      "k": 5,
+      "ranks": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "dtype": "fp32",
+      "norm_spread": true,
+      "q_left": 60,
+      "q_right": 60,
+      "relative_error": 5.848745448170536e-07,
+      "threshold": 1e-05,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 60,
+        "q_left_numerical": 60,
+        "q_right_numerical": 60
+      }
+    },
+    {
+      "k": 5,
+      "ranks": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "dtype": "bf16",
+      "norm_spread": true,
+      "q_left": 60,
+      "q_right": 60,
+      "relative_error": 0.005928956507311981,
+      "threshold": 0.01,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 60,
+        "q_left_numerical": 60,
+        "q_right_numerical": 60
+      }
+    },
+    {
+      "k": 5,
+      "ranks": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "dtype": "fp16",
+      "norm_spread": true,
+      "q_left": 60,
+      "q_right": 60,
+      "relative_error": 0.0007294017090989282,
+      "threshold": 0.001,
+      "passed": true,
+      "basis_report": {
+        "q_upper": 60,
+        "q_left_numerical": 60,
+        "q_right_numerical": 60
+      }
+    }
+  ],
+  "elapsed_seconds": 0.08394193649291992,
+  "gate_tensor_identity_scope": "synthetic full-subspace only; compressed q185/q224 quality runs do not require gate tensor equality",
+  "f0r_threshold_policy": "FP32 <=1e-5, FP16 <=1e-3, BF16 <=1e-2 based on pre-seal F0 observation that BF16 full-subspace relative error is stable around 6e-3."
+}

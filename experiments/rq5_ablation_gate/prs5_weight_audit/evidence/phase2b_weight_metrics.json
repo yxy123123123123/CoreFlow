@@ -1,0 +1,460 @@
+{
+  "activation_samples_per_module": 4,
+  "formal_quality_evidence": false,
+  "gate_draws_per_layer": 64,
+  "methods": [
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q128_bf16",
+      "efficiency": {
+        "adapter_macs_reduction_pct": 73.5655737704918,
+        "coreflow_adapter_macs_per_token": 338165760,
+        "coreflow_resident_adapter_parameters": 338165760,
+        "resident_parameter_reduction_pct": 73.5655737704918,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.5254323131230194,
+        "median": 0.5507516264915466,
+        "p95": 0.8694034367799759,
+        "worst": 0.9564632177352905
+      },
+      "kind": "core",
+      "label": "core_q128",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.32729454943577624,
+        "median": 0.2753674387931824,
+        "p95": 0.7318400651216506,
+        "worst": 0.9561607837677002
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q128_bf16",
+      "efficiency": {
+        "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+        "budget_gap_fraction_of_budget": 1.892562984496124e-05,
+        "budget_gap_parameters": 6400,
+        "budget_parameters": 338165760,
+        "mean_retained_energy": 0.7296488531130787,
+        "min_retained_energy": 0.0,
+        "rank_entries": 1120,
+        "source_full_parameters": 1279262720,
+        "used_parameters": 338159360,
+        "zero_rank_entries": 53
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.45880533383308375,
+        "median": 0.49221572279930115,
+        "p95": 0.8544110506772995,
+        "worst": 1.0035415887832642
+      },
+      "kind": "isvd",
+      "label": "isvd_q128",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.4476745731544465,
+        "median": 0.4336497187614441,
+        "p95": 0.9732200294733045,
+        "worst": 1.0000001192092896
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q160_bf16",
+      "efficiency": {
+        "adapter_macs_reduction_pct": 66.50870901639344,
+        "coreflow_adapter_macs_per_token": 428441600,
+        "coreflow_resident_adapter_parameters": 428441600,
+        "resident_parameter_reduction_pct": 66.50870901639344,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.4722637856178023,
+        "median": 0.48339998722076416,
+        "p95": 0.824576810002327,
+        "worst": 0.912021815776825
+      },
+      "kind": "core",
+      "label": "core_q160",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.29995584775294576,
+        "median": 0.25668013095855713,
+        "p95": 0.664779394865036,
+        "worst": 0.9120085835456848
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q160_bf16",
+      "efficiency": {
+        "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+        "budget_gap_fraction_of_budget": 1.015774378585086e-05,
+        "budget_gap_parameters": 4352,
+        "budget_parameters": 428441600,
+        "mean_retained_energy": 0.7643627282049046,
+        "min_retained_energy": 0.0,
+        "rank_entries": 1120,
+        "source_full_parameters": 1279262720,
+        "used_parameters": 428437248,
+        "zero_rank_entries": 27
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.3932018541943632,
+        "median": 0.398760586977005,
+        "p95": 0.8065103143453598,
+        "worst": 1.007580280303955
+      },
+      "kind": "isvd",
+      "label": "isvd_q160",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.4235635086648732,
+        "median": 0.3910599946975708,
+        "p95": 0.9229897856712341,
+        "worst": 1.0000001192092896
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets/core_banks/k5_code/q185_bf16",
+      "efficiency": {
+        "adapter_macs_reduction_pct": 60.870774065861944,
+        "coreflow_adapter_macs_per_token": 500565600,
+        "coreflow_resident_adapter_parameters": 500565600,
+        "resident_parameter_reduction_pct": 60.870774065861944,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.435765950071852,
+        "median": 0.4383982717990875,
+        "p95": 0.7897028475999832,
+        "worst": 0.8871795535087585
+      },
+      "kind": "core",
+      "label": "core_q185",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.2778494097458731,
+        "median": 0.23821736872196198,
+        "p95": 0.622751486301422,
+        "worst": 0.8871454000473022
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks/k5_code/matched_q185_bf16",
+      "efficiency": {
+        "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+        "budget_gap_fraction_of_budget": 1.1954477095509559e-05,
+        "budget_gap_parameters": 5984,
+        "budget_parameters": 500565600,
+        "mean_retained_energy": 0.7863861403578927,
+        "min_retained_energy": 0.0,
+        "rank_entries": 1120,
+        "source_full_parameters": 1279262720,
+        "used_parameters": 500559616,
+        "zero_rank_entries": 18
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.33573064195879204,
+        "median": 0.27606138586997986,
+        "p95": 0.7464997917413712,
+        "worst": 0.9996055960655212
+      },
+      "kind": "isvd",
+      "label": "isvd_q185",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.38771408898984583,
+        "median": 0.3437618911266327,
+        "p95": 0.870380312204361,
+        "worst": 1.0000001192092896
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q224_bf16",
+      "efficiency": {
+        "adapter_macs_reduction_pct": 51.85706967213115,
+        "coreflow_adapter_macs_per_token": 615874560,
+        "coreflow_resident_adapter_parameters": 615874560,
+        "resident_parameter_reduction_pct": 51.85706967213115,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.3732348327217291,
+        "median": 0.3632151782512665,
+        "p95": 0.7144709378480911,
+        "worst": 0.8247697353363037
+      },
+      "kind": "core",
+      "label": "core_q224",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.24767772947005662,
+        "median": 0.21529620885849,
+        "p95": 0.530957609415054,
+        "worst": 0.8245391249656677
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q224_bf16",
+      "efficiency": {
+        "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+        "budget_gap_fraction_of_budget": 1.0391726523011439e-05,
+        "budget_gap_parameters": 6400,
+        "budget_parameters": 615874560,
+        "mean_retained_energy": 0.8260636504027432,
+        "min_retained_energy": 0.0,
+        "rank_entries": 1120,
+        "source_full_parameters": 1279262720,
+        "used_parameters": 615868160,
+        "zero_rank_entries": 3
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.23471049315430395,
+        "median": 0.12629607319831848,
+        "p95": 0.6404327601194382,
+        "worst": 1.0051279067993164
+      },
+      "kind": "isvd",
+      "label": "isvd_q224",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.3362654840821051,
+        "median": 0.25692862272262573,
+        "p95": 0.8296100825071335,
+        "worst": 1.0
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q256_bf16",
+      "efficiency": {
+        "adapter_macs_reduction_pct": 44.26229508196722,
+        "coreflow_adapter_macs_per_token": 713031680,
+        "coreflow_resident_adapter_parameters": 713031680,
+        "resident_parameter_reduction_pct": 44.26229508196722,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.3146735747234613,
+        "median": 0.30540651082992554,
+        "p95": 0.6444224417209625,
+        "worst": 0.7446035742759705
+      },
+      "kind": "core",
+      "label": "core_q256",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.2185661949583196,
+        "median": 0.18681637942790985,
+        "p95": 0.4765483275055884,
+        "worst": 0.765225887298584
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q256_bf16",
+      "efficiency": {
+        "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+        "budget_gap_fraction_of_budget": 1.0770909926470588e-06,
+        "budget_gap_parameters": 768,
+        "budget_parameters": 713031680,
+        "mean_retained_energy": 0.8626498785538717,
+        "min_retained_energy": 0.12211315452322341,
+        "rank_entries": 1120,
+        "source_full_parameters": 1279262720,
+        "used_parameters": 713030912,
+        "zero_rank_entries": 0
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.15947578212861963,
+        "median": 0.08497984707355499,
+        "p95": 0.5573842078447342,
+        "worst": 0.9840800166130066
+      },
+      "kind": "isvd",
+      "label": "isvd_q256",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.29717301169366694,
+        "median": 0.20941884815692902,
+        "p95": 0.816591539978981,
+        "worst": 0.9873788952827454
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A1_bilateral_no_norm",
+      "efficiency": {
+        "resident_parameter_reduction_pct": 60.870774065861944,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720,
+        "variant_adapter_macs_per_token": 500565600,
+        "variant_resident_adapter_parameters": 500565600
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.38356632218268977,
+        "median": 0.3801739513874054,
+        "p95": 0.6263463497161865,
+        "worst": 0.9436686038970947
+      },
+      "kind": "core",
+      "label": "A1_bilateral_no_norm",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.39726245261928333,
+        "median": 0.392609566450119,
+        "p95": 0.818828734755516,
+        "worst": 0.9650316834449768
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A2_input_only",
+      "efficiency": {
+        "a0_target_macs_per_token": 500565600,
+        "a0_target_parameters": 500565600,
+        "budget_gap_parameters": 2704992,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720,
+        "variant_adapter_macs_per_token": 497860608,
+        "variant_resident_adapter_parameters": 497860608
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.6018452154824315,
+        "median": 0.6896581053733826,
+        "p95": 0.9004343599081039,
+        "worst": 0.9795240759849548
+      },
+      "kind": "input",
+      "label": "A2_input_only",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.2934021860793499,
+        "median": 0.17987506091594696,
+        "p95": 0.8659317880868911,
+        "worst": 0.9797117114067078
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A3_output_only",
+      "efficiency": {
+        "a0_target_macs_per_token": 500565600,
+        "a0_target_parameters": 500565600,
+        "budget_gap_parameters": 2606688,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720,
+        "variant_adapter_macs_per_token": 497958912,
+        "variant_resident_adapter_parameters": 497958912
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.5897337274200254,
+        "median": 0.6202253699302673,
+        "p95": 0.9341619908809662,
+        "worst": 0.9813727140426636
+      },
+      "kind": "output",
+      "label": "A3_output_only",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.37926329470106535,
+        "median": 0.32865944504737854,
+        "p95": 0.8324206858873364,
+        "worst": 0.9812751412391663
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A4_plain_concat_svd",
+      "efficiency": {
+        "resident_parameter_reduction_pct": 60.870774065861944,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720,
+        "variant_adapter_macs_per_token": 500565600,
+        "variant_resident_adapter_parameters": 500565600
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.5746567859704166,
+        "median": 0.6206895112991333,
+        "p95": 0.762565866112709,
+        "worst": 0.9216293096542358
+      },
+      "kind": "core",
+      "label": "A4_plain_concat_svd",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.4833709532128913,
+        "median": 0.5177606344223022,
+        "p95": 0.782298657298088,
+        "worst": 1.1011971235275269
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A5_gate_frequency_weighted",
+      "efficiency": {
+        "resident_parameter_reduction_pct": 60.870774065861944,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720,
+        "variant_adapter_macs_per_token": 500565600,
+        "variant_resident_adapter_parameters": 500565600
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.4011889543126017,
+        "median": 0.4063856303691864,
+        "p95": 0.6595295816659927,
+        "worst": 0.7198907732963562
+      },
+      "kind": "core",
+      "label": "A5_gate_frequency_weighted",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.314839821784491,
+        "median": 0.29971596598625183,
+        "p95": 0.5740795284509659,
+        "worst": 0.7196407914161682
+      }
+    },
+    {
+      "bank_dir": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A6_random_orthogonal",
+      "efficiency": {
+        "resident_parameter_reduction_pct": 60.870774065861944,
+        "source_adapter_macs_per_token": 1279262720,
+        "source_resident_adapter_parameters": 1279262720,
+        "variant_adapter_macs_per_token": 500565600,
+        "variant_resident_adapter_parameters": 500565600
+      },
+      "fused_relative_output_error": {
+        "count": 14336,
+        "mean": 0.9992500945601412,
+        "median": 0.9993557333946228,
+        "p95": 1.0009457468986511,
+        "worst": 1.0174369812011719
+      },
+      "kind": "core",
+      "label": "A6_random_orthogonal",
+      "per_expert_relative_output_error": {
+        "count": 1120,
+        "mean": 0.9993548541728939,
+        "median": 0.9993864297866821,
+        "p95": 1.0031619250774384,
+        "worst": 1.017702341079712
+      }
+    }
+  ],
+  "protocol_id": "coreflow-applsci-phase2b-s6s7-v1.3",
+  "selection_forbidden": true,
+  "status": "ANALYZED"
+}

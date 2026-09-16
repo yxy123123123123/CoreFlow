@@ -1,0 +1,10 @@
+method,method_name,seed,rows,correct,pass_at_1
+full,LoRA-Flow (K=5),41,250,35,0.14
+full,LoRA-Flow (K=5),42,250,47,0.188
+full,LoRA-Flow (K=5),43,250,41,0.164
+core,CoreFlow q185,41,250,36,0.144
+core,CoreFlow q185,42,250,48,0.192
+core,CoreFlow q185,43,250,38,0.152
+isvd,Per-Expert SVD matched-q185,41,250,34,0.136
+isvd,Per-Expert SVD matched-q185,42,250,51,0.204
+isvd,Per-Expert SVD matched-q185,43,250,38,0.152

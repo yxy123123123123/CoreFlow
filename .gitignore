@@ -1,0 +1,43 @@
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.partial
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Models, adapters, gates and compiled banks
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+models/
+checkpoints/
+banks/
+core_banks/
+lora_assets/
+
+# Large experiment products
+*.tar
+*.tar.gz
+*.zip
+*.trace
+*.sqlite
+*.db
+raw_results/
+results/raw/
+generations.jsonl
+executor_results.jsonl
+
+# Third-party benchmark payloads (keep manifests/prompts only)
+raw_sources/
+data/*formal*.jsonl
+data/*dev*.jsonl
+data/*qualification*.jsonl
+data/*reserve*.jsonl
+

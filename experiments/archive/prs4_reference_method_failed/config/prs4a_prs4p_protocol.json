@@ -1,0 +1,117 @@
+{
+  "protocol_id": "coreflow-prs4a-prs4p-pilot-v1",
+  "protocol_date": "2026-08-05",
+  "status": "PLANNED_SEAL_REQUIRED_BEFORE_PILOT_GPU_OUTPUTS",
+  "scope": {
+    "A": "Archive the previously observed Stage-1 full-vectorized 0/64 qualification result without relabelling it as an Original LoRA-Flow PRS-4Q run.",
+    "B": "Run a metric/evaluator pilot on the frozen first 16 already-exposed qualification problems with three frozen methods and gate seed 41.",
+    "formal164": "CLOSED_AND_FORBIDDEN"
+  },
+  "defaults": {
+    "model": "/root/autodl-tmp/Model",
+    "source_work_root": "/root/autodl-tmp/coreflow_m0",
+    "m2_asset_root": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets",
+    "m2_asset_lock": "/root/autodl-tmp/coreflow_formal_v1_workspace/reports/m2_assets/asset_lock.json",
+    "formal_v2_work_root": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace",
+    "legacy_stage1_work_root": "/root/autodl-tmp/coreflow_submission_final_stage1_v1_workspace",
+    "work_root": "/root/autodl-tmp/coreflow_prs4a_prs4p_pilot_v1_workspace",
+    "cuda_device": "0"
+  },
+  "hardware": {
+    "required_gpu_substring": "RTX 4090",
+    "required_visible_gpu_count": 1,
+    "precision": "bfloat16",
+    "execution": "single_gpu_exclusive_serial"
+  },
+  "expert_order": ["zh", "ru", "es", "math", "code"],
+  "methods": [
+    {
+      "id": "full_legacy_original",
+      "paper_name": "LoRA-Flow (K=5)",
+      "kind": "full",
+      "port": 7100
+    },
+    {
+      "id": "coreflow_q185_frozen",
+      "paper_name": "CoreFlow q185",
+      "kind": "core",
+      "port": 7101
+    },
+    {
+      "id": "isvd_legacy_padded_matched_q185",
+      "paper_name": "Per-Expert SVD (padded matched-q185 runtime)",
+      "kind": "isvd",
+      "port": 7102
+    }
+  ],
+  "assets": {
+    "gate_seed": 41,
+    "gate_pattern": "gates/code_k5_code_seed{seed}.pt",
+    "gate_sha256": "640e1a72f66d965731a2033c4326c634d49515e8fd8b74e0750d72f235e1d2c7",
+    "core_bank": "core_banks/k5_code/q185_bf16",
+    "core_bank_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+    "isvd_bank": "isvd_banks/k5_code/matched_q185_bf16",
+    "isvd_bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+    "experts": {
+      "zh": {"relative": "zh_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "46b992598135f1f1351613d4fa50e6aad5650f24eb0ef7a80d233aceba1b83fb"},
+      "ru": {"relative": "ru_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "b2e6becfbe82a70690d3632ff2028ba9c22a005658ffc04cb09e2202e1ce41c2"},
+      "es": {"relative": "es_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "00826c33ff5b61307cfcaa88ec424d263b52eb3bfb2df041698566090beae9da"},
+      "math": {"relative": "math_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "8b938cfe4941860068aebbfa0e11816c0733b3a40ff5862246f6c9440fb66e61"},
+      "code": {"relative": "code_lora", "config_sha256": "9d0dce1fd43678f5e9d2ba776d0f5d97e004b934f83d6d479821fb01a5861520", "checkpoint_sha256": "929e484e57b64bb6676ac22850ad05a1f585b9952bb45f52c0463aa281c2b0c4"}
+    }
+  },
+  "data": {
+    "source_dataset": "livecodebench/code_generation_lite",
+    "source_commit": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "qualification64_sha256": "e037526e7d5482842651caf211311fc43ce2b49fd5113f5de7c1f166916d46a6",
+    "pilot_file": "livecodebench_qualification_first16.jsonl",
+    "pilot_rows": 16,
+    "pilot_sha256": "853b162c93eaeda96b8dc8bdec28e64d8c098922848aadd5fe3dcbd1c7372892",
+    "pilot_question_ids": ["3817", "abc380_c", "abc386_b", "3559", "3677", "abc390_a", "abc396_a", "3593", "abc397_b", "3768", "3656", "abc367_c", "3626", "3487", "3627", "abc395_c"],
+    "selection": "first 16 rows in original frozen order; selected before new pilot outputs",
+    "exposure": "already exposed qualification split; exploratory metric-pipeline pilot only",
+    "formal164_embedded": false
+  },
+  "legacy_A": {
+    "source_protocol": "coreflow-submission-final-stage1-v1",
+    "actual_method": "full_vectorized",
+    "gate_seed": 41,
+    "rows": 64,
+    "correct": 0,
+    "minimum_correct": 6,
+    "archival_decision": "NO_GO_DATASET_FLOOR",
+    "raw_archive_optional_path": "results/stage1/qualification/full_seed41",
+    "method_mismatch_note": "This is not a PRS-v2 Original LoRA-Flow qualification run and must never be relabelled as one."
+  },
+  "pilot_B": {
+    "gate_seed": 41,
+    "max_input_tokens": 4096,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "per_test_timeout_seconds": 6,
+    "per_problem_global_timeout_seconds": 180,
+    "expected_records": 48,
+    "method_order": ["full_legacy_original", "coreflow_q185_frozen", "isvd_legacy_padded_matched_q185"],
+    "role": "exploratory metric/evaluator pipeline verification; not qualification; not formal evidence"
+  },
+  "forbidden_claims": [
+    "PRS-4Q qualification passed or failed based on the 16-problem pilot",
+    "formal164 may be opened",
+    "cross-dataset confirmation",
+    "method superiority, non-inferiority, or q selection",
+    "the archived full-vectorized 0/64 is an Original LoRA-Flow run"
+  ],
+  "execution_contract": {
+    "seal_before_pilot_gpu_outputs": true,
+    "formal164_file_forbidden_in_package": true,
+    "formal164_runtime_access_forbidden": true,
+    "single_gpu_serial": true,
+    "no_training": true,
+    "no_q_or_k_selection": true,
+    "no_automatic_retry": true,
+    "retain_partial_on_failure": true,
+    "skip_only_complete_outputs": true
+  }
+}

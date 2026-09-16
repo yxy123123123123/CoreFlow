@@ -1,0 +1,39 @@
+{
+  "role": "development baseline identity audit; no q selection",
+  "seeds": [
+    {
+      "both_fail": 105,
+      "both_pass": 19,
+      "original_full_correct": 21,
+      "original_only": 2,
+      "phase2b_full_vectorized_correct": 21,
+      "raw_outputs_identical": 45,
+      "rows": 128,
+      "seed": 41,
+      "vectorized_only": 2
+    },
+    {
+      "both_fail": 97,
+      "both_pass": 28,
+      "original_full_correct": 30,
+      "original_only": 2,
+      "phase2b_full_vectorized_correct": 29,
+      "raw_outputs_identical": 47,
+      "rows": 128,
+      "seed": 42,
+      "vectorized_only": 1
+    },
+    {
+      "both_fail": 100,
+      "both_pass": 20,
+      "original_full_correct": 26,
+      "original_only": 6,
+      "phase2b_full_vectorized_correct": 22,
+      "raw_outputs_identical": 31,
+      "rows": 128,
+      "seed": 43,
+      "vectorized_only": 2
+    }
+  ],
+  "status": "ANALYZED_IMPLEMENTATION_SENSITIVITY"
+}

@@ -1,0 +1,113 @@
+{
+  "ablation": {
+    "A0_bilateral_normed_joint": {
+      "path": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets/core_banks/k5_code/q185_bf16",
+      "serialized_bytes": 1001186560,
+      "sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+      "status": "REUSE_FROZEN_Q185"
+    },
+    "A1_bilateral_no_norm": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A1_bilateral_no_norm",
+      "serialized_bytes": 1001186560,
+      "sha256": "c61f1cdc804f02de574861ac35fb7687eed16195667b89f625aa28122816e865",
+      "status": "BUILT"
+    },
+    "A2_input_only": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A2_input_only",
+      "serialized_bytes": 995758032,
+      "sha256": "fe3e171e803b8f5cb93af4b038e04ac2ffc6764332f675da7305be9e31ded616",
+      "status": "BUILT"
+    },
+    "A3_output_only": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A3_output_only",
+      "serialized_bytes": 995954640,
+      "sha256": "580b417198b1937fea071b7499d6af32fe3ad9d4ddc8602b905bc21c01b3f775",
+      "status": "BUILT"
+    },
+    "A4_plain_concat_svd": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A4_plain_concat_svd",
+      "serialized_bytes": 1001186560,
+      "sha256": "8821bc20aea9dfaacbd614d4843c9a6900c45df9edb7f012c7e86479b957d796",
+      "status": "BUILT"
+    },
+    "A5_gate_frequency_weighted": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A5_gate_frequency_weighted",
+      "serialized_bytes": 1001186560,
+      "sha256": "211c79059f24e7c200f01da30aee92d652ef536fc48d1318a8148274827d2833",
+      "status": "BUILT"
+    },
+    "A6_random_orthogonal": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/ablation/A6_random_orthogonal",
+      "serialized_bytes": 1001186560,
+      "sha256": "47f124548da607f37a2c07f9498e6ad02aa08795f501f28449d556c4e830cfdb",
+      "status": "BUILT"
+    }
+  },
+  "core": {
+    "128": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q128_bf16",
+      "serialized_bytes": 676386808,
+      "sha256": "9c23a9e3c115ee9e36ebf1ff586733705ab1d95b026abb205fb5efce0a47d1f1",
+      "status": "BUILT"
+    },
+    "160": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q160_bf16",
+      "serialized_bytes": 856938536,
+      "sha256": "5105db34d285c03dfdc2023e4bf33fbf610d5338806f57e4ffa12b701726d059",
+      "status": "BUILT"
+    },
+    "185": {
+      "path": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets/core_banks/k5_code/q185_bf16",
+      "serialized_bytes": 1001186560,
+      "sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+      "status": "REUSE_FROZEN"
+    },
+    "224": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q224_bf16",
+      "serialized_bytes": 1231804760,
+      "sha256": "392cf4f2d3bd50fbfba22bafce0e08c1a600e73136e99efb1c3374b787a89e10",
+      "status": "BUILT"
+    },
+    "256": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/core/q256_bf16",
+      "serialized_bytes": 1426119160,
+      "sha256": "f0ea8617959c309eb40c2e956095ce8894c50a1e7388b97211a13ffb98ff0068",
+      "status": "BUILT"
+    }
+  },
+  "isvd": {
+    "128": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q128_bf16",
+      "serialized_bytes": 3031592680,
+      "sha256": "6c385ff317959e87a9f9f8f0bb50ed383799954d74215cd8f87bb0710c2c324a",
+      "status": "BUILT"
+    },
+    "160": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q160_bf16",
+      "serialized_bytes": 3883911536,
+      "sha256": "e2f69279363ee94e9e04e48cdcd022bca9eb72d12cb8bb4f85874317a47a382a",
+      "status": "BUILT"
+    },
+    "185": {
+      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks/k5_code/matched_q185_bf16",
+      "serialized_bytes": 4552511928,
+      "sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+      "status": "REUSE_FROZEN"
+    },
+    "224": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q224_bf16",
+      "serialized_bytes": 5534028832,
+      "sha256": "12d7d2db177981d0c257b82db49bbb3c7cb6b8eb3cd623e9aa2433c688fb4d98",
+      "status": "BUILT"
+    },
+    "256": {
+      "path": "/root/autodl-tmp/coreflow_applsci_phase2b_s6s7_v1_hotfix5_workspace/banks/phase2b/isvd/q256_bf16",
+      "serialized_bytes": 6115819640,
+      "sha256": "e4c58a8326229ea930ffb770af1943ae03bece32754cf78d2579124066538060",
+      "status": "BUILT"
+    }
+  },
+  "protocol_id": "coreflow-applsci-phase2b-s6s7-v1.3",
+  "status": "PASS",
+  "timestamp_utc": "2026-07-31T18:02:01.735659+00:00"
+}

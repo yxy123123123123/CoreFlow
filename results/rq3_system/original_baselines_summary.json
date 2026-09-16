@@ -1,0 +1,778 @@
+{
+  "claim_limits": [
+    "The historical Phase2A 2.02x total-token result is not treated as the replication target.",
+    "New system evidence uses fixed-length decode tokens/s.",
+    "Phase2A Full-vectorized remains implementation-sensitivity evidence, not a method in this formal three-way matrix.",
+    "LCB and compact ISVD are excluded.",
+    "R1 uses dev128 and is not new confirmatory quality evidence."
+  ],
+  "hierarchical_decision": {
+    "H1_core_vs_original_full": "PASS",
+    "H2_core_vs_original_isvd": "PASS"
+  },
+  "protocol_id": "coreflow-applsci-original-baselines-v1.1",
+  "r1_original_full_replay": {
+    "role": "development baseline identity audit; no q selection",
+    "seeds": [
+      {
+        "both_fail": 105,
+        "both_pass": 19,
+        "original_full_correct": 21,
+        "original_only": 2,
+        "phase2b_full_vectorized_correct": 21,
+        "raw_outputs_identical": 45,
+        "rows": 128,
+        "seed": 41,
+        "vectorized_only": 2
+      },
+      {
+        "both_fail": 97,
+        "both_pass": 28,
+        "original_full_correct": 30,
+        "original_only": 2,
+        "phase2b_full_vectorized_correct": 29,
+        "raw_outputs_identical": 47,
+        "rows": 128,
+        "seed": 42,
+        "vectorized_only": 1
+      },
+      {
+        "both_fail": 100,
+        "both_pass": 20,
+        "original_full_correct": 26,
+        "original_only": 6,
+        "phase2b_full_vectorized_correct": 22,
+        "raw_outputs_identical": 31,
+        "rows": 128,
+        "seed": 43,
+        "vectorized_only": 2
+      }
+    ],
+    "status": "ANALYZED_IMPLEMENTATION_SENSITIVITY"
+  },
+  "r2_systems": {
+    "b1_l1024_o128": {
+      "core_vs_full": {
+        "blocks": 6,
+        "candidate": "coreflow_q185_frozen",
+        "ci95": [
+          1.9249937054548456,
+          2.0193394331840473
+        ],
+        "decision": "LOWER_CI_GT_1",
+        "paired_geometric_speedup": 1.9707601933391068,
+        "reference": "full_legacy_original"
+      },
+      "core_vs_isvd": {
+        "blocks": 6,
+        "candidate": "coreflow_q185_frozen",
+        "ci95": [
+          1.2904877303928275,
+          1.3150476313567838
+        ],
+        "decision": "LOWER_CI_GT_1",
+        "paired_geometric_speedup": 1.3030199243577132,
+        "reference": "isvd_legacy_padded_matched_q185"
+      },
+      "memory_core_minus_full": {
+        "incremental_peak_allocated_bytes_difference_gib": {
+          "iqr": [
+            -0.0008950233459472656,
+            -0.0008950233459472656
+          ],
+          "max": -0.0008950233459472656,
+          "median": -0.0008950233459472656,
+          "min": -0.0008950233459472656
+        },
+        "incremental_peak_reserved_bytes_difference_gib": {
+          "iqr": [
+            -0.009765625,
+            -0.009765625
+          ],
+          "max": -0.009765625,
+          "median": -0.009765625,
+          "min": -0.009765625
+        },
+        "peak_memory_allocated_bytes_difference_gib": {
+          "iqr": [
+            -1.39406156539917,
+            -1.39406156539917
+          ],
+          "max": -1.39406156539917,
+          "median": -1.39406156539917,
+          "min": -1.39406156539917
+        },
+        "peak_memory_reserved_bytes_difference_gib": {
+          "iqr": [
+            -1.099609375,
+            -1.099609375
+          ],
+          "max": -1.099609375,
+          "median": -1.099609375,
+          "min": -1.099609375
+        },
+        "startup_resident_allocated_bytes_difference_gib": {
+          "iqr": [
+            -1.3931665420532227,
+            -1.3931665420532227
+          ],
+          "max": -1.3931665420532227,
+          "median": -1.3931665420532227,
+          "min": -1.3931665420532227
+        },
+        "startup_resident_reserved_bytes_difference_gib": {
+          "iqr": [
+            -1.08984375,
+            -1.08984375
+          ],
+          "max": -1.08984375,
+          "median": -1.08984375,
+          "min": -1.08984375
+        }
+      },
+      "memory_core_minus_isvd": {
+        "incremental_peak_allocated_bytes_difference_gib": {
+          "iqr": [
+            -0.026062488555908203,
+            -0.026062488555908203
+          ],
+          "max": -0.026062488555908203,
+          "median": -0.026062488555908203,
+          "min": -0.026062488555908203
+        },
+        "incremental_peak_reserved_bytes_difference_gib": {
+          "iqr": [
+            -0.11328125,
+            -0.11328125
+          ],
+          "max": -0.11328125,
+          "median": -0.11328125,
+          "min": -0.11328125
+        },
+        "peak_memory_allocated_bytes_difference_gib": {
+          "iqr": [
+            -3.31644344329834,
+            -3.31644344329834
+          ],
+          "max": -3.31644344329834,
+          "median": -3.31644344329834,
+          "min": -3.31644344329834
+        },
+        "peak_memory_reserved_bytes_difference_gib": {
+          "iqr": [
+            -3.185546875,
+            -3.185546875
+          ],
+          "max": -3.185546875,
+          "median": -3.185546875,
+          "min": -3.185546875
+        },
+        "startup_resident_allocated_bytes_difference_gib": {
+          "iqr": [
+            -3.2903809547424316,
+            -3.2903809547424316
+          ],
+          "max": -3.2903809547424316,
+          "median": -3.2903809547424316,
+          "min": -3.2903809547424316
+        },
+        "startup_resident_reserved_bytes_difference_gib": {
+          "iqr": [
+            -3.072265625,
+            -3.072265625
+          ],
+          "max": -3.072265625,
+          "median": -3.072265625,
+          "min": -3.072265625
+        }
+      },
+      "methods": {
+        "coreflow_q185_frozen": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              18.959945847219778,
+              19.418652330322278
+            ],
+            "max": 19.704679454262877,
+            "median": 19.164992063168413,
+            "min": 18.881220718143794
+          },
+          "launches": 6
+        },
+        "full_legacy_original": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              9.643205116879898,
+              9.8730343907534
+            ],
+            "max": 10.028165794375779,
+            "median": 9.732680711828094,
+            "min": 9.497757325029337
+          },
+          "launches": 6
+        },
+        "isvd_legacy_padded_matched_q185": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              14.75286414437938,
+              14.86801588357064
+            ],
+            "max": 14.871683794044532,
+            "median": 14.836132655328244,
+            "min": 14.429314598333141
+          },
+          "launches": 6
+        }
+      },
+      "role": "descriptive_boundary"
+    },
+    "b1_l512_o128": {
+      "core_vs_full": {
+        "blocks": 12,
+        "candidate": "coreflow_q185_frozen",
+        "ci95": [
+          1.8742622006977923,
+          1.9319480905742472
+        ],
+        "decision": "LOWER_CI_GT_1",
+        "paired_geometric_speedup": 1.902295733298645,
+        "reference": "full_legacy_original"
+      },
+      "core_vs_isvd": {
+        "blocks": 12,
+        "candidate": "coreflow_q185_frozen",
+        "ci95": [
+          1.272318632662519,
+          1.3010612262361594
+        ],
+        "decision": "LOWER_CI_GT_1",
+        "paired_geometric_speedup": 1.2865500444552078,
+        "reference": "isvd_legacy_padded_matched_q185"
+      },
+      "memory_core_minus_full": {
+        "incremental_peak_allocated_bytes_difference_gib": {
+          "iqr": [
+            0.0017828941345214844,
+            0.0017828941345214844
+          ],
+          "max": 0.0017828941345214844,
+          "median": 0.0017828941345214844,
+          "min": 0.0017828941345214844
+        },
+        "incremental_peak_reserved_bytes_difference_gib": {
+          "iqr": [
+            -0.240234375,
+            -0.240234375
+          ],
+          "max": -0.240234375,
+          "median": -0.240234375,
+          "min": -0.240234375
+        },
+        "peak_memory_allocated_bytes_difference_gib": {
+          "iqr": [
+            -1.3913836479187012,
+            -1.3913836479187012
+          ],
+          "max": -1.3913836479187012,
+          "median": -1.3913836479187012,
+          "min": -1.3913836479187012
+        },
+        "peak_memory_reserved_bytes_difference_gib": {
+          "iqr": [
+            -1.330078125,
+            -1.330078125
+          ],
+          "max": -1.330078125,
+          "median": -1.330078125,
+          "min": -1.330078125
+        },
+        "startup_resident_allocated_bytes_difference_gib": {
+          "iqr": [
+            -1.3931665420532227,
+            -1.3931665420532227
+          ],
+          "max": -1.3931665420532227,
+          "median": -1.3931665420532227,
+          "min": -1.3931665420532227
+        },
+        "startup_resident_reserved_bytes_difference_gib": {
+          "iqr": [
+            -1.08984375,
+            -1.08984375
+          ],
+          "max": -1.08984375,
+          "median": -1.08984375,
+          "min": -1.08984375
+        }
+      },
+      "memory_core_minus_isvd": {
+        "incremental_peak_allocated_bytes_difference_gib": {
+          "iqr": [
+            -0.025681018829345703,
+            -0.025681018829345703
+          ],
+          "max": -0.025681018829345703,
+          "median": -0.025681018829345703,
+          "min": -0.025681018829345703
+        },
+        "incremental_peak_reserved_bytes_difference_gib": {
+          "iqr": [
+            -0.2265625,
+            -0.2265625
+          ],
+          "max": -0.2265625,
+          "median": -0.2265625,
+          "min": -0.2265625
+        },
+        "peak_memory_allocated_bytes_difference_gib": {
+          "iqr": [
+            -3.3160619735717773,
+            -3.3160619735717773
+          ],
+          "max": -3.3160619735717773,
+          "median": -3.3160619735717773,
+          "min": -3.3160619735717773
+        },
+        "peak_memory_reserved_bytes_difference_gib": {
+          "iqr": [
+            -3.298828125,
+            -3.298828125
+          ],
+          "max": -3.298828125,
+          "median": -3.298828125,
+          "min": -3.298828125
+        },
+        "startup_resident_allocated_bytes_difference_gib": {
+          "iqr": [
+            -3.2903809547424316,
+            -3.2903809547424316
+          ],
+          "max": -3.2903809547424316,
+          "median": -3.2903809547424316,
+          "min": -3.2903809547424316
+        },
+        "startup_resident_reserved_bytes_difference_gib": {
+          "iqr": [
+            -3.072265625,
+            -3.072265625
+          ],
+          "max": -3.072265625,
+          "median": -3.072265625,
+          "min": -3.072265625
+        }
+      },
+      "methods": {
+        "coreflow_q185_frozen": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              18.612850769784067,
+              19.168363668429706
+            ],
+            "max": 19.244346047615082,
+            "median": 18.921327209944785,
+            "min": 18.03451482078667
+          },
+          "launches": 12
+        },
+        "full_legacy_original": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              9.847087023500757,
+              10.000237952491917
+            ],
+            "max": 10.178706937371723,
+            "median": 9.925266951315004,
+            "min": 9.555281792313881
+          },
+          "launches": 12
+        },
+        "isvd_legacy_padded_matched_q185": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              14.559549755120717,
+              14.706915022578379
+            ],
+            "max": 15.020163431126232,
+            "median": 14.61094443910358,
+            "min": 14.216602455463882
+          },
+          "launches": 12
+        }
+      },
+      "role": "primary"
+    },
+    "b4_l512_o128": {
+      "core_vs_full": {
+        "blocks": 6,
+        "candidate": "coreflow_q185_frozen",
+        "ci95": [
+          1.9238823117070498,
+          2.0120712121825366
+        ],
+        "decision": "LOWER_CI_GT_1",
+        "paired_geometric_speedup": 1.962762271953621,
+        "reference": "full_legacy_original"
+      },
+      "core_vs_isvd": {
+        "blocks": 6,
+        "candidate": "coreflow_q185_frozen",
+        "ci95": [
+          1.2987476998611192,
+          1.3249219804086405
+        ],
+        "decision": "LOWER_CI_GT_1",
+        "paired_geometric_speedup": 1.3107537913926957,
+        "reference": "isvd_legacy_padded_matched_q185"
+      },
+      "memory_core_minus_full": {
+        "incremental_peak_allocated_bytes_difference_gib": {
+          "iqr": [
+            -0.0005917549133300781,
+            -0.0005917549133300781
+          ],
+          "max": -0.0005612373352050781,
+          "median": -0.0005917549133300781,
+          "min": -0.0005917549133300781
+        },
+        "incremental_peak_reserved_bytes_difference_gib": {
+          "iqr": [
+            0.2265625,
+            0.2265625
+          ],
+          "max": 0.2265625,
+          "median": 0.2265625,
+          "min": 0.220703125
+        },
+        "peak_memory_allocated_bytes_difference_gib": {
+          "iqr": [
+            -1.3937582969665527,
+            -1.3937582969665527
+          ],
+          "max": -1.3937277793884277,
+          "median": -1.3937582969665527,
+          "min": -1.3937582969665527
+        },
+        "peak_memory_reserved_bytes_difference_gib": {
+          "iqr": [
+            -0.86328125,
+            -0.86328125
+          ],
+          "max": -0.86328125,
+          "median": -0.86328125,
+          "min": -0.869140625
+        },
+        "startup_resident_allocated_bytes_difference_gib": {
+          "iqr": [
+            -1.3931665420532227,
+            -1.3931665420532227
+          ],
+          "max": -1.3931665420532227,
+          "median": -1.3931665420532227,
+          "min": -1.3931665420532227
+        },
+        "startup_resident_reserved_bytes_difference_gib": {
+          "iqr": [
+            -1.08984375,
+            -1.08984375
+          ],
+          "max": -1.08984375,
+          "median": -1.08984375,
+          "min": -1.08984375
+        }
+      },
+      "memory_core_minus_isvd": {
+        "incremental_peak_allocated_bytes_difference_gib": {
+          "iqr": [
+            -0.024418354034423828,
+            -0.024418354034423828
+          ],
+          "max": -0.024387836456298828,
+          "median": -0.024418354034423828,
+          "min": -0.024418354034423828
+        },
+        "incremental_peak_reserved_bytes_difference_gib": {
+          "iqr": [
+            0.220703125,
+            0.220703125
+          ],
+          "max": 0.220703125,
+          "median": 0.220703125,
+          "min": 0.21484375
+        },
+        "peak_memory_allocated_bytes_difference_gib": {
+          "iqr": [
+            -3.3147993087768555,
+            -3.3147993087768555
+          ],
+          "max": -3.3147687911987305,
+          "median": -3.3147993087768555,
+          "min": -3.3147993087768555
+        },
+        "peak_memory_reserved_bytes_difference_gib": {
+          "iqr": [
+            -2.8515625,
+            -2.8515625
+          ],
+          "max": -2.8515625,
+          "median": -2.8515625,
+          "min": -2.857421875
+        },
+        "startup_resident_allocated_bytes_difference_gib": {
+          "iqr": [
+            -3.2903809547424316,
+            -3.2903809547424316
+          ],
+          "max": -3.2903809547424316,
+          "median": -3.2903809547424316,
+          "min": -3.2903809547424316
+        },
+        "startup_resident_reserved_bytes_difference_gib": {
+          "iqr": [
+            -3.072265625,
+            -3.072265625
+          ],
+          "max": -3.072265625,
+          "median": -3.072265625,
+          "min": -3.072265625
+        }
+      },
+      "methods": {
+        "coreflow_q185_frozen": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              73.04525005731179,
+              73.99186654829329
+            ],
+            "max": 74.38515373630408,
+            "median": 73.452612284732,
+            "min": 72.63499969040221
+          },
+          "launches": 6
+        },
+        "full_legacy_original": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              37.38145553042713,
+              38.01516023864247
+            ],
+            "max": 38.492757021115686,
+            "median": 37.47264121998198,
+            "min": 35.45342733036937
+          },
+          "launches": 6
+        },
+        "isvd_legacy_padded_matched_q185": {
+          "launch_median_decode_tokens_per_second": {
+            "iqr": [
+              55.880265258945826,
+              56.068158821334535
+            ],
+            "max": 56.63402583321082,
+            "median": 55.98916746677653,
+            "min": 55.43234400395647
+          },
+          "launches": 6
+        }
+      },
+      "role": "descriptive_boundary"
+    }
+  },
+  "r3_light_profiler": {
+    "coreflow_q185_frozen": {
+      "active_generation_steps": 3,
+      "adapter_scopes": {
+        "adapter_scope::coreflow_delta": {
+          "calls": 4032,
+          "cpu_time_total_us": 542042.3540000003,
+          "cuda_time_total_us": 387074.94600000756
+        }
+      },
+      "definitions": {
+        "adapter_scope": "Core/ISVD fused delta; Full covers LoRA A/B projections and excludes base linear/addition",
+        "kernel_events_cuda": "individual profiler CUDA device events; not CPU operator calls",
+        "operator_calls_cpu": "individual profiler CPU operator events"
+      },
+      "full_projection_modules_wrapped": 0,
+      "gate": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+        "copied_tensors": 64,
+        "loaded_gate": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets/gates/code_k5_code_seed41.pt",
+        "lora_num": 5,
+        "max_abs_error_after_dtype_cast": 0.0,
+        "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+        "rewrite_performed": false,
+        "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+        "task": null,
+        "temperature": 1.1
+      },
+      "install": {
+        "bank_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+        "device_counts": {
+          "cuda:0": 224
+        },
+        "expert_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "installed_modules": 224,
+        "q": 185,
+        "scaling_absorbed_into_core": true,
+        "schema_version": 2,
+        "uniform": false
+      },
+      "kernel_events_cuda": 29148,
+      "load_install_seconds": 33.02146089822054,
+      "method": "coreflow_q185_frozen",
+      "operator_calls_cpu": 225514,
+      "protocol_id": "coreflow-applsci-original-baselines-v1.1",
+      "status": "PASS",
+      "trace_exported": false
+    },
+    "full_legacy_original": {
+      "active_generation_steps": 3,
+      "adapter_scopes": {
+        "adapter_scope::full_lora_projection": {
+          "calls": 40320,
+          "cpu_time_total_us": 1160070.3799999976,
+          "cuda_time_total_us": 219620.2690000285
+        }
+      },
+      "definitions": {
+        "adapter_scope": "Core/ISVD fused delta; Full covers LoRA A/B projections and excludes base linear/addition",
+        "kernel_events_cuda": "individual profiler CUDA device events; not CPU operator calls",
+        "operator_calls_cpu": "individual profiler CPU operator events"
+      },
+      "full_projection_modules_wrapped": 2240,
+      "gate": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+        "copied_tensors": 64,
+        "loaded_gate": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets/gates/code_k5_code_seed41.pt",
+        "lora_num": 5,
+        "max_abs_error_after_dtype_cast": 0.0,
+        "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+        "rewrite_performed": false,
+        "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+        "task": null,
+        "temperature": 1.1
+      },
+      "install": null,
+      "kernel_events_cuda": 76956,
+      "load_install_seconds": 44.541471999138594,
+      "method": "full_legacy_original",
+      "operator_calls_cpu": 405802,
+      "protocol_id": "coreflow-applsci-original-baselines-v1.1",
+      "status": "PASS",
+      "trace_exported": false
+    },
+    "isvd_legacy_padded_matched_q185": {
+      "active_generation_steps": 3,
+      "adapter_scopes": {
+        "adapter_scope::isvd_padded_delta": {
+          "calls": 4032,
+          "cpu_time_total_us": 748477.1230000023,
+          "cuda_time_total_us": 646921.8099999834
+        }
+      },
+      "definitions": {
+        "adapter_scope": "Core/ISVD fused delta; Full covers LoRA A/B projections and excludes base linear/addition",
+        "kernel_events_cuda": "individual profiler CUDA device events; not CPU operator calls",
+        "operator_calls_cpu": "individual profiler CPU operator events"
+      },
+      "full_projection_modules_wrapped": 0,
+      "gate": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+        "copied_tensors": 64,
+        "loaded_gate": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets/gates/code_k5_code_seed41.pt",
+        "lora_num": 5,
+        "max_abs_error_after_dtype_cast": 0.0,
+        "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+        "rewrite_performed": false,
+        "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+        "task": null,
+        "temperature": 1.1
+      },
+      "install": {
+        "bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+        "budget": {
+          "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+          "budget_gap_fraction_of_budget": 1.1954477095509559e-05,
+          "budget_gap_parameters": 5984,
+          "budget_parameters": 500565600,
+          "mean_retained_energy": 0.7863861403578927,
+          "min_retained_energy": 0.0,
+          "rank_entries": 1120,
+          "source_full_parameters": 1279262720,
+          "used_parameters": 500559616,
+          "zero_rank_entries": 18
+        },
+        "device_counts": {
+          "cuda:0": 224
+        },
+        "expert_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "installed_modules": 224,
+        "schema_version": 1
+      },
+      "kernel_events_cuda": 31314,
+      "load_install_seconds": 39.161169338971376,
+      "method": "isvd_legacy_padded_matched_q185",
+      "operator_calls_cpu": 260131,
+      "protocol_id": "coreflow-applsci-original-baselines-v1.1",
+      "status": "PASS",
+      "trace_exported": false
+    }
+  },
+  "r4_deployment_from_r2_fresh_processes": {
+    "coreflow_q185_frozen": {
+      "client_startup_to_health_seconds_median": 20.062638660892844,
+      "fresh_process_launches": 12,
+      "model_load_seconds_median": 17.302965445443988,
+      "runtime_install_seconds_median": 1.23646049387753,
+      "startup_allocated_gib_median": 13.623595237731934
+    },
+    "full_legacy_original": {
+      "client_startup_to_health_seconds_median": 20.05903803743422,
+      "fresh_process_launches": 12,
+      "model_load_seconds_median": 17.043611964210868,
+      "runtime_install_seconds_median": 2.1923333406448364e-06,
+      "startup_allocated_gib_median": 15.016761779785156
+    },
+    "isvd_legacy_padded_matched_q185": {
+      "client_startup_to_health_seconds_median": 24.064625622704625,
+      "fresh_process_launches": 12,
+      "model_load_seconds_median": 17.138418091461062,
+      "runtime_install_seconds_median": 5.40553067997098,
+      "startup_allocated_gib_median": 16.913976192474365
+    }
+  },
+  "status": "ANALYZED"
+}

@@ -1,0 +1,7 @@
+Write a correct Python function for the following problem.
+
+You must define a function named `{entry_point}`.
+Return only Python code. Do not include examples, tests, explanations, markdown fences, or Input/Output sections.
+
+Problem:
+{problem}

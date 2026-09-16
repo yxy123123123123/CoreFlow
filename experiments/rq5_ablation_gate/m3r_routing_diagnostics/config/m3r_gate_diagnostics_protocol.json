@@ -1,0 +1,28 @@
+{
+  "protocol_id": "coreflow-m3r-gate-diagnostics-v1",
+  "protocol_date": "2026-07-29",
+  "scope": "post-hoc diagnostic analysis of M3-mini K-scaling; no bank rebuild; no model generation",
+  "pools": ["k5_formal", "k8_strict"],
+  "primary_pool": "k8_strict",
+  "activation_samples_per_module": 4,
+  "random_seed": 20260729,
+  "max_modules_per_pool": 224,
+  "gate_families": {
+    "one_hot": {"draws": 16},
+    "topk": {"ks": [2, 3, 4], "draws_per_k": 16},
+    "dirichlet": {"alphas": [0.03, 0.1, 0.3, 1.0, 3.0, 10.0], "draws_per_alpha": 16},
+    "softmax_temperature": {"temperatures": [0.05, 0.1, 0.2, 0.5, 1.0, 2.0, 5.0], "draws_per_temperature": 16}
+  },
+  "entropy_bins": [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.000001],
+  "diagnostics": [
+    "fused-output error as a function of normalized gate entropy",
+    "residual pairwise cosine by method",
+    "uniform cancellation ratio by method",
+    "sparse-vs-dense regime threshold"
+  ],
+  "interpretation_rules": [
+    "M3R is diagnostic only and does not modify M3-mini or formal-v2 primary decisions.",
+    "Synthetic gate distributions are used to explain mechanisms, not to claim endpoint quality.",
+    "If CoreFlow wins in sparse entropy bins but loses in dense bins, the K-scaling claim must be gate-distribution dependent."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-formal-v2-primary-v1",
+  "source": "downloaded primary results: E:\\LoRA\\tmp\\coreflow_figure_sources_20260805\\coreflow_formal_v2_primary_results\\reports\\formal_v2_primary\\isvd_asset_lock.json",
+  "banks": {
+    "k5_math": {
+      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks/k5_math/matched_q185_bf16",
+      "budget_parameters": 500565600,
+      "isvd_bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+      "isvd_config_sha256": "3bb89fcb6ddbac70dc1c1527f564be264f9238caa5567d3a4a24a1a260b021a9"
+    },
+    "k5_code": {
+      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks/k5_code/matched_q185_bf16",
+      "budget_parameters": 500565600,
+      "isvd_bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+      "isvd_config_sha256": "3bb89fcb6ddbac70dc1c1527f564be264f9238caa5567d3a4a24a1a260b021a9"
+    }
+  }
+}

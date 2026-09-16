@@ -1,0 +1,15 @@
+# Install a CUDA-compatible PyTorch build separately.
+numpy==1.26.4
+transformers==4.36.2
+accelerate==0.25.0
+safetensors==0.8.0
+Flask==3.0.0
+psutil==5.9.7
+pandas==2.1.4
+tqdm==4.66.1
+sentencepiece==0.1.99
+
+# The formal runtime used the LoRA-Flow PEFT fork reported as 0.7.2.dev0.
+# Install that fork from the LoRA-Flow source tree; a PyPI peft release is not
+# guaranteed to provide the required dynamic multi-LoRA interface.
+

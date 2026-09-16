@@ -1,0 +1,46 @@
+{
+  "datasets": {
+    "formal164": {
+      "path": "data/livecodebench_formal164.jsonl",
+      "rows": 164,
+      "sha256": "53e0f1add2c4e52df4b6adf606321f297f49b7db68a621d3281afb20cb8baeab"
+    },
+    "qualification64": {
+      "path": "data/livecodebench_qualification64.jsonl",
+      "rows": 64,
+      "sha256": "e037526e7d5482842651caf211311fc43ce2b49fd5113f5de7c1f166916d46a6"
+    },
+    "reserve16": {
+      "path": "data/livecodebench_reserve16.jsonl",
+      "rows": 16,
+      "sha256": "6601aec1f0d419b224ee4e1e7ed202aeb6e85b9b40ce06f2debdf1d5b888be58"
+    }
+  },
+  "identity": {
+    "file_count": 4,
+    "files": [
+      {
+        "bytes": 375095122,
+        "path": "data/livecodebench_formal164.jsonl",
+        "sha256": "53e0f1add2c4e52df4b6adf606321f297f49b7db68a621d3281afb20cb8baeab"
+      },
+      {
+        "bytes": 232652534,
+        "path": "data/livecodebench_qualification64.jsonl",
+        "sha256": "e037526e7d5482842651caf211311fc43ce2b49fd5113f5de7c1f166916d46a6"
+      },
+      {
+        "bytes": 46959520,
+        "path": "data/livecodebench_reserve16.jsonl",
+        "sha256": "6601aec1f0d419b224ee4e1e7ed202aeb6e85b9b40ce06f2debdf1d5b888be58"
+      },
+      {
+        "bytes": 2474,
+        "path": "data/livecodebench_split_manifest.json",
+        "sha256": "91ce0efbb688e27718c71e00ee54c08689cc4830b70bef0c81585a9ae49df33f"
+      }
+    ],
+    "sha256": "bde6e274f79ab86b49eb5f3f263eb1d099f766437b92bdcd13e55f6edd7ad046"
+  },
+  "split_manifest_sha256": "91ce0efbb688e27718c71e00ee54c08689cc4830b70bef0c81585a9ae49df33f"
+}

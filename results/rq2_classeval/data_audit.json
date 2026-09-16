@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-indep-confirm-classeval-v1",
+  "timestamp_utc": "2026-08-07T14:13:40.444589+00:00",
+  "splits": {
+    "qualification": {
+      "path": "/root/autodl-tmp/coreflow_indep_confirm_v1_workspace/data/indep_confirm_classeval/classeval_qualification.jsonl",
+      "rows": 98,
+      "sha256": "848f3e0e77d28ca80c2f0f0dc273e54fcad4cca6df1c6e866625ee5144c5a740"
+    },
+    "formal": {
+      "path": "/root/autodl-tmp/coreflow_indep_confirm_v1_workspace/data/indep_confirm_classeval/classeval_formal.jsonl",
+      "rows": 202,
+      "sha256": "03c8e7dc1170ed3c35cbeed5c68b585bc098e6ad63f0882664688f54712cdf57"
+    },
+    "reserve": {
+      "path": "/root/autodl-tmp/coreflow_indep_confirm_v1_workspace/data/indep_confirm_classeval/classeval_reserve.jsonl",
+      "rows": 39,
+      "sha256": "6bad0e5ee794e8666c4dcaa8ef96d5ef047b4a3b9fc2d47b3d77ece1815f3571"
+    }
+  },
+  "prompt_checks": {
+    "code_file": "prompt_classeval.txt",
+    "code_sha256": "e436746fcfca2936e667927d69dd0c71291195d0fe342126403854168364a49b"
+  },
+  "manifest_sha256": "ac8855291bcd1cdacb787063c1232650860d6aaa48968a71d315ff7dc9300b37",
+  "leak_scan": "solution/test strings not found in prompts",
+  "formal_candidate_generation_allowed": false
+}

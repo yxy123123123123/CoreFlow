@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-formal-v2-primary-v1",
+  "timestamp_utc": "2026-07-29T01:36:48.940953+00:00",
+  "splits": {
+    "cmath_dev128": {
+      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/data/formal_v2_primary/cmath_dev128.jsonl",
+      "rows": 128,
+      "sha256": "b0e317282472be0bd39a3bb4dfb2afcdaa26e6ad0462154507e96c2ecadaf871"
+    },
+    "mbppplus_dev128": {
+      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/data/formal_v2_primary/mbppplus_dev128.jsonl",
+      "rows": 128,
+      "sha256": "016d3884caa8177fb487bebbf07aca93e3609c9baafb6bdde2998b329a3b8a0b"
+    },
+    "mbppplus_formal_candidate250": {
+      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/data/formal_v2_primary/mbppplus_formal_candidate250.jsonl",
+      "rows": 250,
+      "sha256": "049c4fd2aab859f87806d127794e80cc22cab9eb45f71ba6b654efc1a4d7d594"
+    }
+  },
+  "prompt_checks": {
+    "code": "c40cc1a112e3df54a00070ddbe1a2e78f9ab9707d687b28eadac8179f43dea75",
+    "math": "07762b59d6be1fb93513bf95363c97effea94a7c5558f1fe7041f870ac25c3de"
+  },
+  "mbppplus_manifest_sha256": "2d1a9c00a17e577789d9ce1c81d2933ca1a1319fbfbd7a6c19a997dcf65c7809",
+  "formal_candidate_generation_allowed": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "SEALED_BEFORE_FORMAL_MODEL_OUTPUTS",
+  "protocol_id": "coreflow-indep-confirm-classeval-v1",
+  "timestamp_utc": "2026-08-07T14:41:00.876089+00:00",
+  "formal_candidate_generation_allowed": false,
+  "config_sha256": "3d66e3c0ae907d36b2dc8d5c639adf38b13e977c82edd1be17f62ff8ba71cfe7",
+  "prerequisites": {
+    "preflight": "42059fdba3f03012599391febd66fa72e6f85ad4043c1ac620d40130f73dfaf8",
+    "data_audit": "29d2d94507497590db0dc61fb08b6d02ec76aa574a15faf0293de42ec95d99b6",
+    "isvd_asset_lock": "a28b7ed3b5d80e4e5f66796ee014cdd35da856f191a0b5c40e3607ea87fbc6b3",
+    "evaluator_seal": "7a1dffcfd01f3baf9bb555d60b5330a3819696812839cbfb3b432bc76ea0a09d"
+  }
+}

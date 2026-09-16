@@ -1,0 +1,176 @@
+{
+  "claims_allowed": [
+    "The previous Stage-1 full-vectorized 0/64 result was archived as a low-floor failure.",
+    "The three-method first16 pilot did or did not validate the metric/evaluator pipeline, according to pipeline_status.",
+    "Pilot outcomes may be reported only as exploratory diagnostics on an already-exposed subset."
+  ],
+  "claims_forbidden": [
+    "PRS-4Q qualification passed or failed based on the 16-problem pilot",
+    "formal164 may be opened",
+    "cross-dataset confirmation",
+    "method superiority, non-inferiority, or q selection",
+    "the archived full-vectorized 0/64 is an Original LoRA-Flow run"
+  ],
+  "formal164_accessed": false,
+  "formal164_branch": "CLOSED",
+  "protocol_id": "coreflow-prs4a-prs4p-pilot-v1",
+  "prs4q_original_loraflow_status": "NOT_RUN",
+  "scheme_a": {
+    "console_diagnostics": {
+      "path": "/root/autodl-tmp/coreflow_prs4a_prs4p_pilot_v1_upload/evidence/legacy_stage1_qualification_console_diagnostics.txt",
+      "sha256": "33ac208f5e695d732c97a332c7dda7ccd737b5a63e8cf8ac0ab8132495c4aaaf"
+    },
+    "evidence_strength": "FULL_RAW_ARCHIVE_VERIFIED",
+    "formal164_branch": "CLOSED",
+    "formal164_may_be_opened": false,
+    "interpretation": "The previous Stage-1 full-vectorized run observed a 0/64 floor and closed that branch. It is preserved as failure evidence, but it is not relabelled as the PRS-v2 Original LoRA-Flow qualification.",
+    "legacy_actual_method": "full_vectorized",
+    "legacy_gate_seed": 41,
+    "legacy_protocol": "coreflow-submission-final-stage1-v1",
+    "legacy_result": {
+      "correct": 0,
+      "minimum_correct": 6,
+      "rows": 64,
+      "stage1_decision": "NO_GO_DATASET_FLOOR"
+    },
+    "method_mismatch_note": "This is not a PRS-v2 Original LoRA-Flow qualification run and must never be relabelled as one.",
+    "protocol_id": "coreflow-prs4a-prs4p-pilot-v1",
+    "prs4q_original_loraflow_status": "NOT_RUN_BY_THIS_ARCHIVE",
+    "qualification64_sha256": "e037526e7d5482842651caf211311fc43ce2b49fd5113f5de7c1f166916d46a6",
+    "raw_archive": {
+      "available": true,
+      "complete_sha256": "1531bdea6659d32f90ace2c14829df9bd4977f43012c087f6484ebdd5c4415dc",
+      "executor_rows": 64,
+      "executor_sha256": "000f4ca45bf08695682cb57c254fe82904f99d57248c65bda05a7ba00ffb4cb0",
+      "generation_rows": 64,
+      "generations_sha256": "2187c3a1b07f19ff309d45626749fc259cc13433f5ad48bedd04ff1121a4b59d",
+      "path": "/root/autodl-tmp/coreflow_submission_final_stage1_v1_workspace/results/stage1/qualification/full_seed41"
+    },
+    "scheme": "A",
+    "status": "ARCHIVED",
+    "timestamp_utc": "2026-08-05T05:55:40.652756+00:00"
+  },
+  "scheme_b": {
+    "expected_records": 48,
+    "methods": {
+      "coreflow_q185_frozen": {
+        "at_least_one_test_pass": 10,
+        "at_least_one_test_pass_rate": 0.625,
+        "evaluator_execution_success": 16,
+        "new_tokens": {
+          "max": 768,
+          "median": 561.0,
+          "min": 105,
+          "p95": 768
+        },
+        "paper_name": "CoreFlow q185",
+        "parse_success": 13,
+        "parse_success_rate": 0.8125,
+        "raw_output_chars": {
+          "max": 3644,
+          "median": 1410.0,
+          "min": 414,
+          "p95": 3236
+        },
+        "rows": 16,
+        "status_counts": {
+          "WRONG_ANSWER_OR_RUNTIME": 16
+        },
+        "strict_correct": 0,
+        "strict_pass_at_1": 0.0,
+        "timeout": 0,
+        "truncation_at_max_new_tokens": 8
+      },
+      "full_legacy_original": {
+        "at_least_one_test_pass": 10,
+        "at_least_one_test_pass_rate": 0.625,
+        "evaluator_execution_success": 16,
+        "new_tokens": {
+          "max": 768,
+          "median": 302.0,
+          "min": 62,
+          "p95": 768
+        },
+        "paper_name": "LoRA-Flow (K=5)",
+        "parse_success": 13,
+        "parse_success_rate": 0.8125,
+        "raw_output_chars": {
+          "max": 3202,
+          "median": 1028.0,
+          "min": 217,
+          "p95": 1972
+        },
+        "rows": 16,
+        "status_counts": {
+          "WRONG_ANSWER_OR_RUNTIME": 16
+        },
+        "strict_correct": 0,
+        "strict_pass_at_1": 0.0,
+        "timeout": 0,
+        "truncation_at_max_new_tokens": 4
+      },
+      "isvd_legacy_padded_matched_q185": {
+        "at_least_one_test_pass": 8,
+        "at_least_one_test_pass_rate": 0.5,
+        "evaluator_execution_success": 16,
+        "new_tokens": {
+          "max": 768,
+          "median": 288.0,
+          "min": 62,
+          "p95": 768
+        },
+        "paper_name": "Per-Expert SVD (padded matched-q185 runtime)",
+        "parse_success": 15,
+        "parse_success_rate": 0.9375,
+        "raw_output_chars": {
+          "max": 2095,
+          "median": 1020.0,
+          "min": 217,
+          "p95": 1910
+        },
+        "rows": 16,
+        "status_counts": {
+          "WRONG_ANSWER_OR_RUNTIME": 16
+        },
+        "strict_correct": 0,
+        "strict_pass_at_1": 0.0,
+        "timeout": 0,
+        "truncation_at_max_new_tokens": 3
+      }
+    },
+    "paired_descriptive": {
+      "coreflow_q185_frozen_vs_full_legacy_original": {
+        "both_fail": 16,
+        "both_pass": 0,
+        "exact_raw_output_matches": 2,
+        "left_only_pass": 0,
+        "right_only_pass": 0,
+        "role": "descriptive pilot only; no inferential or qualification claim",
+        "strict_pass_rate_difference_pp": 0.0
+      },
+      "coreflow_q185_frozen_vs_isvd_legacy_padded_matched_q185": {
+        "both_fail": 16,
+        "both_pass": 0,
+        "exact_raw_output_matches": 1,
+        "left_only_pass": 0,
+        "right_only_pass": 0,
+        "role": "descriptive pilot only; no inferential or qualification claim",
+        "strict_pass_rate_difference_pp": 0.0
+      },
+      "isvd_legacy_padded_matched_q185_vs_full_legacy_original": {
+        "both_fail": 16,
+        "both_pass": 0,
+        "exact_raw_output_matches": 6,
+        "left_only_pass": 0,
+        "right_only_pass": 0,
+        "role": "descriptive pilot only; no inferential or qualification claim",
+        "strict_pass_rate_difference_pp": 0.0
+      }
+    },
+    "pipeline_status": "METRIC_PIPELINE_VALID",
+    "records": 48,
+    "system_evaluator_errors": 0
+  },
+  "status": "ANALYZED_EXPLORATORY_ONLY",
+  "timestamp_utc": "2026-08-05T06:21:35.942026+00:00"
+}

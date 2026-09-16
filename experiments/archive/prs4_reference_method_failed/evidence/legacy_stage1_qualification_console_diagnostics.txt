@@ -1,0 +1,145 @@
+=== aggregate diagnostics ===
+rows: 64
+empty_outputs: 0
+outputs_with_fence: 64
+output_length_median: 890.5
+postprocess_modes: Counter({'last_complete_fenced_block': 51, 'raw_text_syntax_error': 8, 'last_complete_fenced_block_syntax_error': 4, 'last_complete_fenced_block_ast_prefix': 1})
+status_counts: Counter({'WRONG_ANSWER_OR_RUNTIME': 64})
+passed_at_least_one_test: 48
+passed_test_distribution: Counter({1: 44, 0: 16, 13: 1, 3: 1, 2: 1, 5: 1})
+
+=== first six examples ===
+
+---
+question_id: 3817
+platform/difficulty: leetcode easy
+starter_code: True
+status: WRONG_ANSWER_OR_RUNTIME
+tests: 0 / 33
+postprocess: last_complete_fenced_block
+metadata: {'error_code': -2, 'error_message': 'Wrong Answer', 'expected': '4', 'inputs': '[2, 3, 15]', 'output': '0'}
+timing: {'input_tokens': 339, 'new_tokens': 78, 'peak_memory_allocated_bytes': 16559745536, 'peak_memory_reserved_bytes': 16718495744, 'tokens_per_second_total': 14.243740961488626, 'total_latency_seconds': 5.4760894775390625}
+raw_output:
+'```python\nclass Solution:\n    def maxContainers(self, n: int, w: int, maxWeight: int) -> int:\n        return n * w // maxWeight\n```\n\nThe solution is to simply calculate the maximum number of containers that can be loaded onto the ship by dividing the number of cells by the weight of each container.'
+
+---
+question_id: abc380_c
+platform/difficulty: atcoder medium
+starter_code: False
+status: WRONG_ANSWER_OR_RUNTIME
+tests: 1 / 42
+postprocess: raw_text_syntax_error
+metadata: {'error_code': -4, 'error_message': 'Error during testing: invalid syntax (<string>, line 1)'}
+timing: {'input_tokens': 724, 'new_tokens': 768, 'peak_memory_allocated_bytes': 17697384448, 'peak_memory_reserved_bytes': 18373148672, 'tokens_per_second_total': 15.477659882531054, 'total_latency_seconds': 49.61990416049957}
+raw_output:
+'```python\ndef move_1_block(S, K):\n    l = 0\n    r = len(S) - 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n            break\n    if l == r:\n        return S\n    l += 1\n    while l < r:\n        if S[l] == 1:\n            l += 1\n        else:\n '
+
+---
+question_id: abc386_b
+platform/difficulty: atcoder easy
+starter_code: False
+status: WRONG_ANSWER_OR_RUNTIME
+tests: 1 / 43
+postprocess: last_complete_fenced_block
+metadata: {'error_code': -4, 'error_message': 'Error during testing: expected an indented block after function definition on line 38 (<string>, line 38)'}
+timing: {'input_tokens': 415, 'new_tokens': 131, 'peak_memory_allocated_bytes': 16685292032, 'peak_memory_reserved_bytes': 18373148672, 'tokens_per_second_total': 15.495550844797563, 'total_latency_seconds': 8.454039569944143}
+raw_output:
+'\n```python\n# YOUR CODE HERE\n```\n\n### Explanation:\n\nThe calculator has 10 buttons, and each button can be pressed once. Therefore, the minimum number of button presses required to display a string S is the length of S.\n\nFor example, to display the string 1000000007, you can press the buttons 1, 00, 00, 00, 00, 7 in this order. The total number of button presses is 6, and this is the minimum possible.'
+
+---
+question_id: 3559
+platform/difficulty: leetcode medium
+starter_code: True
+status: WRONG_ANSWER_OR_RUNTIME
+tests: 0 / 43
+postprocess: last_complete_fenced_block
+metadata: {'error_code': -2, 'error_message': 'Wrong Answer', 'expected': '3', 'inputs': "[['abc', 'aaaaa', 'bcdef'], 'aabcdabc']", 'output': '8'}
+timing: {'input_tokens': 451, 'new_tokens': 412, 'peak_memory_allocated_bytes': 17016953856, 'peak_memory_reserved_bytes': 18373148672, 'tokens_per_second_total': 15.388928046246079, 'total_latency_seconds': 26.772495053708553}
+raw_output:
+'```python\nclass Solution:\n    def minValidStrings(self, words: List[str], target: str) -> int:\n        def valid_prefix(word: str, target: str) -> bool:\n            if len(word) < len(target):\n                return False\n            for i in range(len(target)):\n                if word[i] != target[i]:\n                    return False\n            return True\n\n        def min_valid_strings(words: List[str], target: str) -> int:\n            if len(target) == 0:\n                return 0\n            if len(target) == 1:\n                return 1\n            if len(target) == 2:\n                return 2\n            if len(target) == 3:\n                return 3\n            if len(target) == 4:\n                return 4\n            if len(target) == 5:\n                return 5\n            if len(target) == 6:\n                return 6\n            if len(target) == 7:\n                return 7\n            if len(target) == 8:\n                return 8\n            if len(target) == 9:\n                return 9\n            if len(target) == 10:\n                return 10\n            return -1\n\n        return min_valid_strings(words, target)\n```\n\nThe solution uses a recursive function `min_valid_str'
+
+---
+question_id: 3677
+platform/difficulty: leetcode medium
+starter_code: True
+status: WRONG_ANSWER_OR_RUNTIME
+tests: 0 / 42
+postprocess: last_complete_fenced_block
+metadata: {'error_code': -2, 'error_message': 'Wrong Answer', 'expected': '8', 'inputs': '[[[0, 1, -1], [1, -2, 3], [2, -3, 4]]]', 'output': '7'}
+timing: {'input_tokens': 719, 'new_tokens': 296, 'peak_memory_allocated_bytes': 17177671680, 'peak_memory_reserved_bytes': 18373148672, 'tokens_per_second_total': 15.511670382583448, 'total_latency_seconds': 19.082406517118216}
+raw_output:
+'\n```python\nclass Solution:\n    def maximumAmount(self, coins: List[List[int]]) -> int:\n        m, n = len(coins), len(coins[0])\n        dp = [[0] * (n + 1) for _ in range(m + 1)]\n        for i in range(m):\n            for j in range(n):\n                if coins[i][j] >= 0:\n                    dp[i + 1][j + 1] = dp[i][j] + coins[i][j]\n                elif coins[i][j] < 0:\n                    dp[i + 1][j + 1] = max(dp[i][j], dp[i + 1][j] + abs(coins[i][j]))\n        return dp[m][n]\n```\n\n### Explanation:\n\nThe solution uses dynamic programming to find the maximum profit the robot can gain on the route. The dp array is initialized with zeros, and for each cell in the grid, the maximum profit is calculated by adding the coins in that cell to the maximum profit so far, or by taking the maximum of the maximum profit so far and the profit gained by moving to the cell without the robber.'
+
+---
+question_id: abc390_a
+platform/difficulty: atcoder easy
+starter_code: False
+status: WRONG_ANSWER_OR_RUNTIME
+tests: 1 / 44
+postprocess: raw_text_syntax_error
+metadata: {'error_code': -4, 'error_message': 'Error during testing: invalid syntax (<string>, line 1)'}
+timing: {'input_tokens': 398, 'new_tokens': 768, 'peak_memory_allocated_bytes': 17334818304, 'peak_memory_reserved_bytes': 18373148672, 'tokens_per_second_total': 15.609894713216844, 'total_latency_seconds': 49.19956310465932}
+raw_output:
+'\n```python\ndef can_be_sorted_by_one_swap(A):\n    # Sort A in ascending order\n    A.sort()\n\n    # If A is already sorted, return True\n    if A == sorted(A):\n        return True\n\n    # If A is already sorted in descending order, return False\n    if A == sorted(A, reverse=True):\n        return False\n\n    # If A is already sorted in ascending order, return False\n    if A == sorted(A, reverse=False):\n        return False\n\n    # If A is already sorted in descending order, return False\n    if A == sorted(A, reverse=True):\n        return False\n\n    # If A is already sorted in ascending order, return False\n    if A == sorted(A, reverse=False):\n        return False\n\n    # If A is already sorted in ascending order, return False\n    if A == sorted(A, reverse=True):\n        return False\n\n    # If A is already sorted in descending order, return False\n    if A == sorted(A, reverse=False):\n        return False\n\n    # If A is already sorted in ascending order, return False\n    if A == sorted(A, reverse=True):\n        return False\n\n    # If A is already sorted in descending order, return False\n    if A == sorted(A, reverse=False):\n        return False\n\n    # If A is already sorted in ascending order'
+
+=== server log tail ===
+127.0.0.1 - - [02/Aug/2026 14:18:30] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:19:19] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:19:33] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:19:51] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:20:00] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:20:10] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:20:57] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:21:10] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:21:19] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:22:08] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:22:28] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:22:59] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:23:04] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:23:13] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:23:28] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:24:12] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:25:03] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:25:51] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:26:17] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:26:35] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:26:45] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:27:33] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:27:48] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:28:09] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:28:58] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:29:47] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:30:05] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:30:20] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:30:42] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:31:33] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:31:46] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:32:36] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:32:47] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:33:37] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:33:51] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:34:07] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:34:17] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:34:28] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:34:36] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:35:27] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:35:40] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:36:29] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:36:42] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:37:31] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:37:43] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:37:53] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:38:18] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:39:07] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:39:23] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:39:44] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:39:57] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:40:48] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:41:05] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:41:34] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:41:46] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:41:58] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:42:11] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:42:33] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:42:43] "POST /infer HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2026 14:42:52] "POST /infer HTTP/1.1" 200 -

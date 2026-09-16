@@ -1,0 +1,32 @@
+{
+  "protocol_id": "coreflow-m3g-real-gate-entropy-v1",
+  "protocol_date": "2026-07-29",
+  "scope": "post-formal diagnostic audit of real K5 gate entropy on MBPP+ formal prompts; no generation; no training",
+  "task": "code",
+  "pool": "k5_code",
+  "expert_order": ["zh", "ru", "es", "math", "code"],
+  "gate_seeds": [41, 42, 43],
+  "dataset": "mbppplus_formal_candidate250.jsonl",
+  "prompt_file": "prompt_code_mbppplus.txt",
+  "max_input_tokens": 2048,
+  "limit_rows": null,
+  "entropy_bins": [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.000001],
+  "decision_thresholds": {
+    "strong_sparse_entropy_lt_0_10_fraction": 0.5,
+    "qualified_sparse_entropy_lt_0_25_fraction": 0.5,
+    "dense_entropy_ge_0_50_fraction": 0.5
+  },
+  "metrics": [
+    "softmax normalized entropy per layer/token",
+    "softmax top1 mass",
+    "softmax top2 mass",
+    "post-bias effective weight sum/min/negative fraction",
+    "per-layer entropy and sparsity"
+  ],
+  "interpretation_rules": [
+    "Entropy is computed on the softmax gate probabilities before weight_bias.",
+    "Runtime effective weights equal softmax probabilities plus learned weight_bias; effective weight diagnostics are reported separately.",
+    "This audit does not change formal-v2 primary or M3/M3R decisions.",
+    "If real gate entropy is mostly below 0.1/0.25, K8 endpoint follow-up is plausible; if mostly above 0.5, K8 endpoint should be paused."
+  ]
+}

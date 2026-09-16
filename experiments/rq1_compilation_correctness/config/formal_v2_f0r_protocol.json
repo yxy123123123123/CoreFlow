@@ -1,0 +1,143 @@
+{
+  "assets": {
+    "capacity_reference_q": 224,
+    "gate_seeds": [
+      41,
+      42,
+      43
+    ],
+    "isvd_budget_source": "match CoreFlow q185 resident adapter parameters/MAC from formal-v1 m2 asset lock; greedy rank allocation without quality feedback",
+    "primary_q": 185,
+    "reuse_formal_v1_m2_assets": true
+  },
+  "data": {
+    "cmath_dev128": {
+      "file": "cmath_dev128.jsonl",
+      "role": "math_go_nogo_dev",
+      "rows": 128,
+      "sha256": "b0e317282472be0bd39a3bb4dfb2afcdaa26e6ad0462154507e96c2ecadaf871"
+    },
+    "mbppplus_dev128": {
+      "file": "mbppplus_dev128.jsonl",
+      "role": "code_floor_go_nogo_dev",
+      "rows": 128,
+      "sha256": "016d3884caa8177fb487bebbf07aca93e3609c9baafb6bdde2998b329a3b8a0b"
+    },
+    "mbppplus_formal_candidate250": {
+      "file": "mbppplus_formal_candidate250.jsonl",
+      "role": "sealed_for_future_formal_v2_not_opened_by_this_package",
+      "rows": 250,
+      "sha256": "049c4fd2aab859f87806d127794e80cc22cab9eb45f71ba6b654efc1a4d7d594"
+    }
+  },
+  "evaluator": {
+    "address_space_limit_mb": 1024,
+    "code_timeout_seconds": 8,
+    "cpu_limit_seconds": 6,
+    "file_size_limit_mb": 4,
+    "math_timeout_seconds": 1,
+    "process_limit": 32
+  },
+  "execution_contract": {
+    "data_audit_required": true,
+    "e0_correctness_required_before_seal": true,
+    "entry_point_prompt_required": true,
+    "human_scoring_forbidden": true,
+    "isvd_rank_map_frozen_before_seal": true,
+    "mbppplus_interface_repair_before_dev_generation": true,
+    "no_automatic_retry": true,
+    "no_formal_candidate_generation_in_this_package": true,
+    "partial_outputs_retained": true,
+    "preflight_required": true,
+    "seal_before_dev_model_generation": true
+  },
+  "expert_pools": {
+    "k2_code": [
+      "zh",
+      "code"
+    ],
+    "k2_math": [
+      "zh",
+      "math"
+    ],
+    "k3_code": [
+      "zh",
+      "code",
+      "math"
+    ],
+    "k5_code": [
+      "zh",
+      "ru",
+      "es",
+      "math",
+      "code"
+    ],
+    "k5_math": [
+      "zh",
+      "ru",
+      "es",
+      "math",
+      "code"
+    ]
+  },
+  "generation": {
+    "batch_size": 1,
+    "do_sample": false,
+    "max_input_tokens": 2048,
+    "max_new_tokens_code": 512,
+    "max_new_tokens_math": 256,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "warmup_requests": 2
+  },
+  "hypotheses": {
+    "bootstrap_confidence": 0.95,
+    "bootstrap_seed": 20260728,
+    "cmath_dev_isvd_red_flag_margin_pp": 10.0,
+    "f0r_repair_scope": "MBPP+ entry_point prompt/interface repair only; ISVD/CoreFlow/Full methods unchanged; formal candidate remains closed",
+    "go_nogo_only": true,
+    "mbppplus_dev_floor_confirmatory_min_correct": 20,
+    "mbppplus_dev_floor_supportive_min_correct": 10,
+    "noninferiority_margin_pp": 3.0,
+    "paired_cluster_bootstrap_samples": 20000,
+    "quality_methods_are_dev_only": true
+  },
+  "model_config_sha256": "9242e7db1bc2a17873e66084c3b1c6ed10883076e156b338fd6a7775748e2e3c",
+  "paths": {
+    "default_m2_asset_lock": "/root/autodl-tmp/coreflow_formal_v1_workspace/reports/m2_assets/asset_lock.json",
+    "default_m2_asset_root": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets",
+    "default_model": "/root/autodl-tmp/Model",
+    "default_source_work_root": "/root/autodl-tmp/coreflow_m0",
+    "default_v2_work_root": "/root/autodl-tmp/coreflow_formal_v2_f0r_mbpp_interface_workspace"
+  },
+  "phase_orders": {
+    "go_nogo_quality": [
+      "math_full_k5_seed41",
+      "math_core_q185_k5_seed41",
+      "math_isvd_q185_k5_seed41",
+      "code_full_k5_seed41",
+      "code_core_q185_k5_seed41",
+      "code_isvd_q185_k5_seed41"
+    ]
+  },
+  "prompts": {
+    "code_file": "prompt_code_mbppplus.txt",
+    "code_sha256": "c40cc1a112e3df54a00070ddbe1a2e78f9ab9707d687b28eadac8179f43dea75",
+    "entry_point_in_prompt_required": true,
+    "evaluator_only_fields": [
+      "canonical_solution",
+      "test_imports",
+      "test_list",
+      "hidden_test",
+      "golden",
+      "answer",
+      "solutions"
+    ],
+    "math_file": "prompt_math_cmath.txt",
+    "math_sha256": "07762b59d6be1fb93513bf95363c97effea94a7c5558f1fe7041f870ac25c3de",
+    "solutions_in_prompt_forbidden": true
+  },
+  "protocol_date": "2026-07-28",
+  "protocol_id": "coreflow-formal-v2-f0r-mbpp-interface-v1",
+  "protocol_status": "FROZEN_BEFORE_REPAIRED_DEV_MODEL_OUTPUTS"
+}

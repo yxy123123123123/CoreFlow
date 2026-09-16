@@ -1,0 +1,10 @@
+{
+  "chrome_trace": false,
+  "lightweight": true,
+  "methods": [
+    "full_legacy_original.json",
+    "coreflow_q185_frozen.json",
+    "isvd_legacy_padded_matched_q185.json"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,69 @@
+{
+  "protocol_id": "coreflow-applsci-original-baselines-v1.1",
+  "protocol_date": "2026-08-02",
+  "protocol_status": "FROZEN_BY_SEAL_BEFORE_NEW_GPU_OUTPUTS",
+  "scope": "Original Full replay plus an implementation-matched three-way systems comparison",
+  "methods": {
+    "full_legacy_original": {"kind": "full", "description": "formal-v2 dynamic PEFT LoRA-Flow implementation"},
+    "coreflow_q185_frozen": {"kind": "core", "description": "frozen K5 CoreFlow q185 bank"},
+    "isvd_legacy_padded_matched_q185": {"kind": "isvd", "description": "formal-v2 padded matched-budget Independent-SVD bank"}
+  },
+  "expert_order": ["zh", "ru", "es", "math", "code"],
+  "defaults": {
+    "model": "/root/autodl-tmp/Model",
+    "source_work_root": "/root/autodl-tmp/coreflow_m0",
+    "formal_v1_work_root": "/root/autodl-tmp/coreflow_formal_v1_workspace",
+    "formal_v2_work_root": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace",
+    "work_root": "/root/autodl-tmp/coreflow_applsci_original_baselines_v1_workspace",
+    "cuda_device": "0"
+  },
+  "assets": {
+    "gate_pattern": "m2_assets/gates/code_k5_code_seed{seed}.pt",
+    "gate_sha256": {
+      "41": "640e1a72f66d965731a2033c4326c634d49515e8fd8b74e0750d72f235e1d2c7",
+      "42": "28e3c1dffc97107ddc140a98186d38163b1b2296f3581c9f00a15481ee2f1966",
+      "43": "ee7bef0a196b2544598f65df88935dd7d333e6368d2d251b9aced96335a71636"
+    },
+    "core_bank": "m2_assets/core_banks/k5_code/q185_bf16",
+    "core_bank_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+    "isvd_bank": "isvd_banks/k5_code/matched_q185_bf16",
+    "isvd_bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+    "experts": {
+      "zh": {"relative": "zh_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "46b992598135f1f1351613d4fa50e6aad5650f24eb0ef7a80d233aceba1b83fb"},
+      "ru": {"relative": "ru_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "b2e6becfbe82a70690d3632ff2028ba9c22a005658ffc04cb09e2202e1ce41c2"},
+      "es": {"relative": "es_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "00826c33ff5b61307cfcaa88ec424d263b52eb3bfb2df041698566090beae9da"},
+      "math": {"relative": "math_lora", "config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50", "checkpoint_sha256": "8b938cfe4941860068aebbfa0e11816c0733b3a40ff5862246f6c9440fb66e61"},
+      "code": {"relative": "code_lora", "config_sha256": "9d0dce1fd43678f5e9d2ba776d0f5d97e004b934f83d6d479821fb01a5861520", "checkpoint_sha256": "929e484e57b64bb6676ac22850ad05a1f585b9952bb45f52c0463aa281c2b0c4"}
+    }
+  },
+  "data": {
+    "dev128_file": "mbppplus_dev128.jsonl",
+    "dev128_rows": 128,
+    "dev128_sha256": "016d3884caa8177fb487bebbf07aca93e3609c9baafb6bdde2998b329a3b8a0b",
+    "prompt_file": "prompt_code_mbppplus.txt",
+    "prompt_sha256": "c40cc1a112e3df54a00070ddbe1a2e78f9ab9707d687b28eadac8179f43dea75"
+  },
+  "r1_replay": {
+    "seeds": [41, 42, 43],
+    "max_input_tokens": 2048,
+    "max_new_tokens": 512,
+    "warmup_requests": 2,
+    "role": "baseline-identity and implementation-sensitivity audit; development evidence only"
+  },
+  "r2_systems": {
+    "gate_seed": 41,
+    "input_source_rows": 20,
+    "anchor": {"name": "b1_l512_o128", "batch_size": 1, "input_length": 512, "output_length": 128, "blocks": 12, "warmup": 3, "measurements": 8},
+    "boundaries": [
+      {"name": "b1_l1024_o128", "batch_size": 1, "input_length": 1024, "output_length": 128, "blocks": 6, "warmup": 2, "measurements": 5},
+      {"name": "b4_l512_o128", "batch_size": 4, "input_length": 512, "output_length": 128, "blocks": 6, "warmup": 2, "measurements": 5}
+    ],
+    "method_order": "all_six_permutations; anchor repeats each permutation twice; boundaries once",
+    "primary_metric": "decode_tokens_per_second",
+    "execution": "one RTX 4090, exclusive, serial, fresh process per method launch"
+  },
+  "r3_profiler": {"input_length": 512, "output_length": 3, "warmup": 3, "active_steps": 3, "launches_per_method": 1, "chrome_trace": false, "record_shapes": false, "profile_memory": false, "with_stack": false},
+  "statistics": {"bootstrap_seed": 20260802, "bootstrap_samples": 20000, "confidence": 0.95, "top_level_unit": "method-order block / fresh process", "hierarchy": ["block", "request"], "primary_estimand": "paired geometric mean speedup from within-block log ratios"},
+  "hypotheses": {"H1": "CoreFlow q185 versus Original Full", "H2": "CoreFlow q185 versus Original ISVD, tested only if H1 lower 95% CI exceeds 1.0"},
+  "execution_contract": {"preflight_before_prepare": true, "seal_before_new_gpu_outputs": true, "no_training": true, "no_q_selection": true, "no_compact_isvd": true, "no_formal250_access": true, "single_gpu_serial": true, "no_automatic_retry": true, "partial_outputs_retained": true, "skip_only_complete_outputs": true, "fixed_output_length_min_equals_max": true, "true_effective_input_lengths": true}
+}

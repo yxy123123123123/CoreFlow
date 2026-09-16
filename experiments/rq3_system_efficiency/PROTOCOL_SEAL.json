@@ -1,0 +1,13 @@
+{
+  "status": "SEALED_BEFORE_FORMAL_MODEL_OUTPUTS",
+  "protocol_id": "coreflow-formal-v2-primary-v1",
+  "timestamp_utc": "2026-07-29T01:40:38.797579+00:00",
+  "formal_candidate_generation_allowed": true,
+  "config_sha256": "d89d03f695505c52f0fe198a26836cb3a928e5430a52896a90fa971da7d22c0a",
+  "prerequisites": {
+    "preflight": "e47b25cf8cc1cf1188d0723412ab206f5707414e98b651783cf46e3da6cc7766",
+    "data_audit": "5327729d91420d3438c13d8deb7ad00cd8856206f60d20a03c2684d01d067822",
+    "isvd_asset_lock": "9a4b1de6a6abf3bc6045e0e165b55676314f15c36440c117bc91c15c354f1d1f",
+    "e0_correctness": "ba01760ef5b513a105f1b4e8d0ef67798b523890c911e1202e951ea4778ede0d"
+  }
+}

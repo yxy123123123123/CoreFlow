@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-indep-confirm-classeval-v1",
+  "timestamp_utc": "2026-08-07T14:13:38.859923+00:00",
+  "host_python": "3.12.3",
+  "runtime": {
+    "torch": "2.5.1+cu124",
+    "cuda": "12.4",
+    "cuda_available": true,
+    "device": "NVIDIA GeForce RTX 4090"
+  },
+  "work_root": "/root/autodl-tmp/coreflow_indep_confirm_v1_workspace",
+  "source_work_root": "/root/autodl-tmp/coreflow_m0",
+  "model": "/root/autodl-tmp/Model",
+  "m2_asset_root": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets",
+  "m2_asset_lock": "/root/autodl-tmp/coreflow_formal_v1_workspace/reports/m2_assets/asset_lock.json",
+  "isvd_asset_root": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks",
+  "config_sha256": "786eb4e0e9045f9ff4f2f0912769f8fc5022f11d689c68d3481967606e01868f",
+  "package_manifest_sha256": "b269b455e04422d70a48e4792a1cbad118c6e09ac8d0afdfceee2bbae8dd30fe",
+  "source_adapters": {
+    "zh": {
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "46b992598135f1f1351613d4fa50e6aad5650f24eb0ef7a80d233aceba1b83fb"
+    },
+    "ru": {
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "b2e6becfbe82a70690d3632ff2028ba9c22a005658ffc04cb09e2202e1ce41c2"
+    },
+    "es": {
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "00826c33ff5b61307cfcaa88ec424d263b52eb3bfb2df041698566090beae9da"
+    },
+    "math": {
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "8b938cfe4941860068aebbfa0e11816c0733b3a40ff5862246f6c9440fb66e61"
+    },
+    "code": {
+      "adapter_config_sha256": "9d0dce1fd43678f5e9d2ba776d0f5d97e004b934f83d6d479821fb01a5861520",
+      "checkpoint_sha256": "929e484e57b64bb6676ac22850ad05a1f585b9952bb45f52c0463aa281c2b0c4"
+    }
+  },
+  "gates_checked": 15,
+  "core_banks_checked": 10,
+  "isvd_banks_checked": {
+    "k5_code": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+    "k5_math": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433"
+  }
+}

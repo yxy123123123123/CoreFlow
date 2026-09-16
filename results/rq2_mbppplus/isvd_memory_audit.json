@@ -1,0 +1,409 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-formal-v2-primary-v1",
+  "timestamp_utc": "2026-07-29T01:43:49.969118+00:00",
+  "config_sha256": "d89d03f695505c52f0fe198a26836cb3a928e5430a52896a90fa971da7d22c0a",
+  "device": "0",
+  "audit_type": "independent_process_startup_memory_smoke",
+  "rows": [
+    {
+      "method": "code_full_k5_seed41",
+      "kind": "full",
+      "task": "code",
+      "pool": "k5_code",
+      "adapter_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "startup_memory_allocated_bytes": 16124125184,
+      "startup_memory_reserved_bytes": 16213082112,
+      "server_health": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "gate": {
+          "adapter_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+          "copied_tensors": 64,
+          "loaded_gate": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/gates/code_k5_code_seed41.pt",
+          "lora_num": 5,
+          "max_abs_error_after_dtype_cast": 0.0,
+          "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+          "rewrite_performed": false,
+          "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+          "task": null,
+          "temperature": 1.1
+        },
+        "install": null,
+        "method_kind": "full",
+        "startup_memory_allocated_bytes": 16124125184,
+        "startup_memory_reserved_bytes": 16213082112,
+        "status": "ok"
+      },
+      "elapsed_seconds": 28.553577661514282,
+      "log": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/logs/memory_audit/code_full_k5_seed41.log"
+    },
+    {
+      "method": "code_core_q185_k5_seed41",
+      "kind": "core",
+      "task": "code",
+      "pool": "k5_code",
+      "adapter_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "startup_memory_allocated_bytes": 14628224000,
+      "startup_memory_reserved_bytes": 15042871296,
+      "server_health": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "gate": {
+          "adapter_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+          "copied_tensors": 64,
+          "loaded_gate": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/gates/code_k5_code_seed41.pt",
+          "lora_num": 5,
+          "max_abs_error_after_dtype_cast": 0.0,
+          "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+          "rewrite_performed": false,
+          "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+          "task": null,
+          "temperature": 1.1
+        },
+        "install": {
+          "bank_sha256": "1a3eaf175981a2c914af8400490ee603308851fd5ca22279a6ac76c2d121eaf2",
+          "device_counts": {
+            "cuda:0": 224
+          },
+          "expert_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "installed_modules": 224,
+          "q": 185,
+          "scaling_absorbed_into_core": true,
+          "schema_version": 2,
+          "uniform": false
+        },
+        "method_kind": "core",
+        "startup_memory_allocated_bytes": 14628224000,
+        "startup_memory_reserved_bytes": 15042871296,
+        "status": "ok"
+      },
+      "elapsed_seconds": 30.478986024856567,
+      "log": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/logs/memory_audit/code_core_q185_k5_seed41.log"
+    },
+    {
+      "method": "code_isvd_q185_k5_seed41",
+      "kind": "isvd",
+      "task": "code",
+      "pool": "k5_code",
+      "adapter_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "startup_memory_allocated_bytes": 18161243648,
+      "startup_memory_reserved_bytes": 18341691392,
+      "server_health": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "gate": {
+          "adapter_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+          "copied_tensors": 64,
+          "loaded_gate": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/gates/code_k5_code_seed41.pt",
+          "lora_num": 5,
+          "max_abs_error_after_dtype_cast": 0.0,
+          "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+          "rewrite_performed": false,
+          "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+          "task": null,
+          "temperature": 1.1
+        },
+        "install": {
+          "bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+          "budget": {
+            "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+            "budget_gap_fraction_of_budget": 1.1954477095509559e-05,
+            "budget_gap_parameters": 5984,
+            "budget_parameters": 500565600,
+            "mean_retained_energy": 0.7863861403578927,
+            "min_retained_energy": 0.0,
+            "rank_entries": 1120,
+            "source_full_parameters": 1279262720,
+            "used_parameters": 500559616,
+            "zero_rank_entries": 18
+          },
+          "device_counts": {
+            "cuda:0": 224
+          },
+          "expert_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "installed_modules": 224,
+          "schema_version": 1
+        },
+        "method_kind": "isvd",
+        "startup_memory_allocated_bytes": 18161243648,
+        "startup_memory_reserved_bytes": 18341691392,
+        "status": "ok"
+      },
+      "elapsed_seconds": 36.483219146728516,
+      "log": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/logs/memory_audit/code_isvd_q185_k5_seed41.log"
+    },
+    {
+      "method": "math_full_k5_seed41",
+      "kind": "full",
+      "task": "math",
+      "pool": "k5_math",
+      "adapter_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "startup_memory_allocated_bytes": 16124125184,
+      "startup_memory_reserved_bytes": 16213082112,
+      "server_health": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "gate": {
+          "adapter_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+          "copied_tensors": 64,
+          "loaded_gate": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/gates/math_k5_math_seed41.pt",
+          "lora_num": 5,
+          "max_abs_error_after_dtype_cast": 0.0,
+          "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+          "rewrite_performed": false,
+          "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+          "task": null,
+          "temperature": 1.1
+        },
+        "install": null,
+        "method_kind": "full",
+        "startup_memory_allocated_bytes": 16124125184,
+        "startup_memory_reserved_bytes": 16213082112,
+        "status": "ok"
+      },
+      "elapsed_seconds": 28.576573133468628,
+      "log": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/logs/memory_audit/math_full_k5_seed41.log"
+    },
+    {
+      "method": "math_core_q185_k5_seed41",
+      "kind": "core",
+      "task": "math",
+      "pool": "k5_math",
+      "adapter_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "startup_memory_allocated_bytes": 14628224000,
+      "startup_memory_reserved_bytes": 15042871296,
+      "server_health": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "gate": {
+          "adapter_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+          "copied_tensors": 64,
+          "loaded_gate": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/gates/math_k5_math_seed41.pt",
+          "lora_num": 5,
+          "max_abs_error_after_dtype_cast": 0.0,
+          "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+          "rewrite_performed": false,
+          "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+          "task": null,
+          "temperature": 1.1
+        },
+        "install": {
+          "bank_sha256": "1c0bd0147455c8abd98216c680d7768316841dcc974e4c438929e17c3ca2f391",
+          "device_counts": {
+            "cuda:0": 224
+          },
+          "expert_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "installed_modules": 224,
+          "q": 185,
+          "scaling_absorbed_into_core": true,
+          "schema_version": 2,
+          "uniform": false
+        },
+        "method_kind": "core",
+        "startup_memory_allocated_bytes": 14628224000,
+        "startup_memory_reserved_bytes": 15042871296,
+        "status": "ok"
+      },
+      "elapsed_seconds": 30.479135036468506,
+      "log": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/logs/memory_audit/math_core_q185_k5_seed41.log"
+    },
+    {
+      "method": "math_isvd_q185_k5_seed41",
+      "kind": "isvd",
+      "task": "math",
+      "pool": "k5_math",
+      "adapter_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "startup_memory_allocated_bytes": 18161243648,
+      "startup_memory_reserved_bytes": 18341691392,
+      "server_health": {
+        "adapter_order": [
+          "zh",
+          "ru",
+          "es",
+          "math",
+          "code"
+        ],
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "gate": {
+          "adapter_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "canonical_sha256": "868780e64eabdfd2f563373cbebe44d5e4b022b4b89817688f7a77eb107b0681",
+          "copied_tensors": 64,
+          "loaded_gate": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/gates/math_k5_math_seed41.pt",
+          "lora_num": 5,
+          "max_abs_error_after_dtype_cast": 0.0,
+          "patched_file": "/root/autodl-tmp/coreflow_m0/vendor/LoRAFlow/UltraEval/lora-fusion/transformers/src/transformers/models/llama/modeling_llama.py",
+          "rewrite_performed": false,
+          "target_sha256": "04975b61476f15b06731a117ab4b85b464f162e0639f8d3979a2ebf5bb40346a",
+          "task": null,
+          "temperature": 1.1
+        },
+        "install": {
+          "bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+          "budget": {
+            "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+            "budget_gap_fraction_of_budget": 1.1954477095509559e-05,
+            "budget_gap_parameters": 5984,
+            "budget_parameters": 500565600,
+            "mean_retained_energy": 0.7863861403578927,
+            "min_retained_energy": 0.0,
+            "rank_entries": 1120,
+            "source_full_parameters": 1279262720,
+            "used_parameters": 500559616,
+            "zero_rank_entries": 18
+          },
+          "device_counts": {
+            "cuda:0": 224
+          },
+          "expert_order": [
+            "zh",
+            "ru",
+            "es",
+            "math",
+            "code"
+          ],
+          "installed_modules": 224,
+          "schema_version": 1
+        },
+        "method_kind": "isvd",
+        "startup_memory_allocated_bytes": 18161243648,
+        "startup_memory_reserved_bytes": 18341691392,
+        "status": "ok"
+      },
+      "elapsed_seconds": 34.63052940368652,
+      "log": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/logs/memory_audit/math_isvd_q185_k5_seed41.log"
+    }
+  ],
+  "warnings": [
+    "k5_code: ISVD allocated memory exceeds Full by >5%",
+    "k5_code: ISVD reserved memory exceeds Full by >10%",
+    "k5_math: ISVD allocated memory exceeds Full by >5%",
+    "k5_math: ISVD reserved memory exceeds Full by >10%"
+  ],
+  "interpretation": "Warnings do not block formal generation; they flag fairness issues for final analysis."
+}

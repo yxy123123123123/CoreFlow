@@ -1,0 +1,18 @@
+{
+  "status": "ANALYZED",
+  "protocol_id": "coreflow-m3-k-scaling-mini-v1",
+  "timestamp_utc": "2026-07-29T13:42:52.301604+00:00",
+  "decision": "M3_MINI_MIXED_OR_NO_GO",
+  "checks": {
+    "k8_uniform_fused_core_le_isvd": false,
+    "k8_worst_core_not_over_isvd_by_10pct": true,
+    "k8_core_speedup_over_isvd_ge_1.05": true
+  },
+  "k8_key_values": {
+    "uniform_fused_error_coreflow": 0.21586000353896193,
+    "uniform_fused_error_isvd": 0.024929308613146923,
+    "worst_expert_module_error_coreflow": 0.9776626825332642,
+    "worst_expert_module_error_isvd": 1.0,
+    "coreflow_speedup_over_isvd": 1.1725229626671376
+  }
+}

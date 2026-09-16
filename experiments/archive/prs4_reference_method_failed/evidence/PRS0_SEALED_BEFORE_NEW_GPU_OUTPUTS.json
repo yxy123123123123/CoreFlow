@@ -1,0 +1,14 @@
+{
+  "asset_audit_sha256": "1b5fbe21db4f7c1bb59983667df5453e5305fd6e84552ce29bf9f7091614a29a",
+  "config_sha256": "a0160dbb28418f411defd29489e5a54f3dab520f6624134144d87966539d136b",
+  "formal164_output_absence": true,
+  "local_preseal_sha256": "90a6dae5c76785d7a97490aa755a0ad284ca9b5c84b80b2d461523bb60dfe560",
+  "new_gpu_model_outputs_created_by_prs01": 0,
+  "next_gpu_stage_allowed_only_after_this_seal": true,
+  "package_manifest_sha256": "ae2221d3faec548fdd460dbb3fb8e807a9d03c857b1bc47e428971a1b1bf7911",
+  "protocol_id": "coreflow-prs-v2-prs01-v1",
+  "protocol_sha256": "98750c8fb390c2e3cd2d69ad39e6b61e86841d806b081069a2079fbb7e145a0d",
+  "prs1_completion_sha256": "de4c2387906c3ac32e1aff6b2c6bc42f6e4218bc095a599b018b2d100c1a8a17",
+  "status": "PRS0_SEALED_BEFORE_NEW_GPU_OUTPUTS",
+  "timestamp_utc": "2026-08-04T15:43:29.133958+00:00"
+}

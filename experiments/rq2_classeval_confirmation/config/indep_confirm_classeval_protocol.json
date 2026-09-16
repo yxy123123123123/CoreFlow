@@ -1,0 +1,195 @@
+{
+  "protocol_id": "coreflow-indep-confirm-classeval-v1",
+  "protocol_date": "2026-08-07",
+  "protocol_status": "FROZEN_BEFORE_FORMAL_MODEL_OUTPUTS",
+  "assets": {
+    "base_model": "meta-llama/Llama-2-7b-hf BF16",
+    "gate_seeds": [
+      41,
+      42,
+      43
+    ],
+    "primary_q": 185,
+    "reuse_formal_v1_m2_assets": true,
+    "reuse_primary_isvd_banks": true,
+    "isvd_budget_source": "primary formal-v2 workspace isvd_asset_lock.json",
+    "no_gate_retraining": true,
+    "no_bank_rebuild": true,
+    "no_q_reselection": true
+  },
+  "data": {
+    "qualification": {
+      "file": "classeval_qualification.jsonl",
+      "role": "qualification_floor",
+      "split_role": "qualification",
+      "rows": 98,
+      "sha256": "848f3e0e77d28ca80c2f0f0dc273e54fcad4cca6df1c6e866625ee5144c5a740"
+    },
+    "formal": {
+      "file": "classeval_formal.jsonl",
+      "role": "formal_primary_code_test",
+      "split_role": "formal",
+      "rows": 202,
+      "sha256": "03c8e7dc1170ed3c35cbeed5c68b585bc098e6ad63f0882664688f54712cdf57"
+    },
+    "reserve": {
+      "file": "classeval_reserve.jsonl",
+      "role": "reserve_not_in_this_protocol",
+      "split_role": "reserve",
+      "rows": 39,
+      "sha256": "6bad0e5ee794e8666c4dcaa8ef96d5ef047b4a3b9fc2d47b3d77ece1815f3571"
+    },
+    "split_rule": "sha256(\"coreflow-indep-confirm-classeval-v1|class|{class_task_id}\") sorted after excluding 17 non-reproducible classes; qual until >= 96 methods; formal until >= 200; remainder reserve",
+    "manifest": {
+      "file": "classeval_split_manifest.json",
+      "sha256": "ac8855291bcd1cdacb787063c1232650860d6aaa48968a71d315ff7dc9300b37"
+    }
+  },
+  "prompts": {
+    "code_file": "prompt_classeval.txt",
+    "code_sha256": "e436746fcfca2936e667927d69dd0c71291195d0fe342126403854168364a49b",
+    "template": "ClassEval official compositional style: imports + class constructor + other method signatures + target method description; outer instruction template"
+  },
+  "evaluator": {
+    "name": "classeval_method",
+    "file_sha256": "150c529ff301b5bc3804c90f03c4c1e0584c9371e7821d9081638ae243fc23a1",
+    "m2_eval_file_sha256": "11a798d202a911ce8d39e71405da2b361f34391580dbdb51ee75b2e0c605a50a",
+    "address_space_limit_mb": 4096,
+    "code_timeout_seconds": 12,
+    "cpu_limit_seconds": 8,
+    "file_size_limit_mb": 8,
+    "process_limit": 64,
+    "compositional": true,
+    "class_level_unittest": true
+  },
+  "generation": {
+    "batch_size": 1,
+    "do_sample": false,
+    "max_input_tokens": 2048,
+    "max_new_tokens_code": 768,
+    "output_token_justification": "ClassEval canonical method solutions max at 605 tokens with the LoRAFlow Llama tokenizer (only 2/410 methods exceed 512); 768 is frozen to avoid truncating long generated methods.",
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "warmup_requests": 2,
+    "no_automatic_retry": true
+  },
+  "hypotheses": {
+    "bootstrap_confidence": 0.95,
+    "bootstrap_seed": 20260806,
+    "paired_cluster_bootstrap_samples": 20000,
+    "noninferiority_margin_pp": 3.0,
+    "sensitivity_margins_pp": [
+      1,
+      2,
+      3
+    ],
+    "primary_quality_task": "classeval_formal",
+    "qualification": {
+      "min_rows": 98,
+      "min_correct": 8,
+      "p_null": 0.03,
+      "p_target": 0.15,
+      "note": "binomial calibration from 2026-08-06 table: n=98 k=8 is stronger than n=97 k=8; P(X>=8|p=0.03) < 0.01, power at p=0.15 > 0.98"
+    }
+  },
+  "model_config_sha256": "9242e7db1bc2a17873e66084c3b1c6ed10883076e156b338fd6a7775748e2e3c",
+  "no_overlap_audit": {
+    "status": "PASS",
+    "checked_at_utc": "2026-08-07T13:20:00+00:00",
+    "mbppplus_dev128_task_ids": 128,
+    "mbppplus_formal250_task_ids": 250,
+    "overlap_with_dev128": 0,
+    "overlap_with_formal250": 0,
+    "prompt_overlap_with_dev128": 0,
+    "prompt_overlap_with_formal250": 0
+  },
+  "paths": {
+    "default_m2_asset_lock": "/root/autodl-tmp/coreflow_formal_v1_workspace/reports/m2_assets/asset_lock.json",
+    "default_m2_asset_root": "/root/autodl-tmp/coreflow_formal_v1_workspace/m2_assets",
+    "default_isvd_asset_root": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks",
+    "default_isvd_lock": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/reports/formal_v2_primary/isvd_asset_lock.json",
+    "default_model": "/root/autodl-tmp/Model",
+    "default_source_work_root": "/root/autodl-tmp/coreflow_m0",
+    "default_work_root": "/root/autodl-tmp/coreflow_indep_confirm_v1_workspace",
+    "data_subdir": "indep_confirm_classeval",
+    "report_subdir": "indep_confirm_classeval",
+    "result_subdir": "indep_confirm_classeval"
+  },
+  "expert_pools": {
+    "k2_code": [
+      "zh",
+      "code"
+    ],
+    "k2_math": [
+      "zh",
+      "math"
+    ],
+    "k3_code": [
+      "zh",
+      "code",
+      "math"
+    ],
+    "k5_code": [
+      "zh",
+      "ru",
+      "es",
+      "math",
+      "code"
+    ],
+    "k5_math": [
+      "zh",
+      "ru",
+      "es",
+      "math",
+      "code"
+    ]
+  },
+  "phase_orders": {
+    "qualification": [
+      "code_full_k5_seed41"
+    ],
+    "formal_main": [
+      "code_full_k5_seed41",
+      "code_core_q185_k5_seed41",
+      "code_isvd_q185_k5_seed41",
+      "code_full_k5_seed42",
+      "code_core_q185_k5_seed42",
+      "code_isvd_q185_k5_seed42",
+      "code_full_k5_seed43",
+      "code_core_q185_k5_seed43",
+      "code_isvd_q185_k5_seed43"
+    ]
+  },
+  "execution_contract": {
+    "coreflow_remains_primary_method": true,
+    "original_loraflow_is_reference": true,
+    "per_expert_svd_is_secondary": true,
+    "data_audit_required": true,
+    "evaluator_seal_required_before_seal": true,
+    "seal_before_formal_model_generation": true,
+    "qualification_before_formal": true,
+    "formal_once_opened_must_complete_all_9_methods": true,
+    "no_automatic_retry": true,
+    "no_gate_retraining": true,
+    "no_bank_rebuild": true,
+    "no_q_reselection": true,
+    "no_human_scoring": true,
+    "partial_outputs_retained": true,
+    "gate_diagnostic_collection_optional": true
+  },
+  "scripts_sha256": {
+    "build_classeval_splits.py": "427d18d49c357849f4e60f8f581f09adb79301c184080b0f73ffe7445a824e48",
+    "run_formal_method.py": "ec5157e16b7a48b85d0f72c55ffcc15d6e387d1c16f216929c9b56895383dd2c",
+    "run_formal_parallel.py": "679c90e1b9f1900d70cbb2d333a80d535bbd5a010faba58ffd8233eaf20a5c62",
+    "v2_control.py": "e14df732f208d309d813b75de7389f26481973fd2bfd0a79fb519d0fc03793b6",
+    "seal_evaluator_classeval.py": "6feed2d74e995e51a84f8bbc3c1ce87ecaed1814dcd02a4abd3112491b74c345",
+    "decide_qualification.py": "ed0c31a0e10cd01fa50d31d63aea863e7fd4e10c2eada50f5e4f029bfc2690c4",
+    "analyze_v2_primary.py": "79119e884e148125902c49a1332d61d5d51366ccdc8f8b92ac23a848745b118d",
+    "run_indep_confirm.sh": "f5cf84d9be91af8e88a25e3a966ba103e0af0b041f454a0194cb12b726a75c26"
+  },
+  "dataset_source": {
+    "file": "raw_sources/ClassEval_data.json",
+    "sha256": "50a1ac0e4d0c238573c10c0ab11feae00b14a80ae9e4c9cc28148707ecf0b6a2",
+    "version": "ClassEval official JSON, 100 classes / 410 methods; frozen runnable subset 83 classes / 339 methods after excluding 17 classes with external non-numpy deps, current-time dependence, machine-specific values, or official dataset defects"
+  }
+}

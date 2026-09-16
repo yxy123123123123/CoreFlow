@@ -1,0 +1,320 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-m3-k-scaling-mini-v1",
+  "timestamp_utc": "2026-07-29T11:43:19.042566+00:00",
+  "q": 185,
+  "pools": {
+    "k3_strict": {
+      "expert_order": [
+        "zh",
+        "math",
+        "code"
+      ],
+      "source_full_parameters": 959447040,
+      "coreflow": {
+        "directory": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace/banks/coreflow/k3_strict/q185_bf16",
+        "core_bank_sha256": "d942ac37ab12612db8fa66aabc47367ad0f784d23fa4fb81c1c36d71ee5d7b05",
+        "efficiency": {
+          "source_resident_adapter_parameters": 959447040,
+          "coreflow_resident_adapter_parameters": 485232800,
+          "resident_parameter_reduction_pct": 49.425785919356215,
+          "source_adapter_macs_per_token": 959447040,
+          "coreflow_adapter_macs_per_token": 485232800,
+          "adapter_macs_reduction_pct": 49.425785919356215
+        }
+      },
+      "isvd": {
+        "directory": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace/banks/isvd/k3_strict/matched_q185_bf16",
+        "isvd_bank_sha256": "6a43da0134db9995ec66052c167cfc866d1f842d3c397a72269e3aa1fc4c4b22",
+        "isvd_config_sha256": "3e2426098290411008363c817361abfe826c25800691961bcf63bce069dddbcd",
+        "budget": {
+          "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+          "budget_parameters": 485232800,
+          "used_parameters": 485226496,
+          "budget_gap_parameters": 6304,
+          "budget_gap_fraction_of_budget": 1.299170212730879e-05,
+          "source_full_parameters": 959447040,
+          "rank_entries": 672,
+          "zero_rank_entries": 7,
+          "mean_retained_energy": 0.8160295948433766,
+          "min_retained_energy": 0.0
+        }
+      }
+    },
+    "k5_formal": {
+      "expert_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code"
+      ],
+      "source_full_parameters": 1279262720,
+      "coreflow": {
+        "directory": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace/banks/coreflow/k5_formal/q185_bf16",
+        "core_bank_sha256": "4830a0b657caf5edf9b8fd9bbca1594d91e262c68a96ad2dc94f736928684507",
+        "efficiency": {
+          "source_resident_adapter_parameters": 1279262720,
+          "coreflow_resident_adapter_parameters": 500565600,
+          "resident_parameter_reduction_pct": 60.870774065861944,
+          "source_adapter_macs_per_token": 1279262720,
+          "coreflow_adapter_macs_per_token": 500565600,
+          "adapter_macs_reduction_pct": 60.870774065861944
+        }
+      },
+      "isvd": {
+        "directory": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace/banks/isvd/k5_formal/matched_q185_bf16",
+        "isvd_bank_sha256": "a8b5a3bf6ba3265fd8c35ec26f100d541be6f27e5b2fb4aaf8cc37f673804433",
+        "isvd_config_sha256": "0ec962de578a074655e01a0f6daf4d7b4b36d177fc85fc9572f5d68a9617e1de",
+        "budget": {
+          "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+          "budget_parameters": 500565600,
+          "used_parameters": 500559616,
+          "budget_gap_parameters": 5984,
+          "budget_gap_fraction_of_budget": 1.1954477095509559e-05,
+          "source_full_parameters": 1279262720,
+          "rank_entries": 1120,
+          "zero_rank_entries": 18,
+          "mean_retained_energy": 0.7863861403578927,
+          "min_retained_energy": 0.0
+        }
+      }
+    },
+    "k8_strict": {
+      "expert_order": [
+        "zh",
+        "ru",
+        "es",
+        "math",
+        "code",
+        "magicoder",
+        "openwebmath",
+        "gsm8k_loftq"
+      ],
+      "source_full_parameters": 1758986240,
+      "coreflow": {
+        "directory": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace/banks/coreflow/k8_strict/q185_bf16",
+        "core_bank_sha256": "bea4c581568a92b339fb294684a6f8e51365df67464528077db44e469bfc3f87",
+        "efficiency": {
+          "source_resident_adapter_parameters": 1758986240,
+          "coreflow_resident_adapter_parameters": 523564800,
+          "resident_parameter_reduction_pct": 70.23485527663935,
+          "source_adapter_macs_per_token": 1758986240,
+          "coreflow_adapter_macs_per_token": 523564800,
+          "adapter_macs_reduction_pct": 70.23485527663935
+        }
+      },
+      "isvd": {
+        "directory": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_workspace/banks/isvd/k8_strict/matched_q185_bf16",
+        "isvd_bank_sha256": "307dcfb4ac3d1508919fd835c025a82982c2ae20110f01456475e4d13cec112d",
+        "isvd_config_sha256": "29dacc70b885c03a3006ce24d1812b13fa1dd96c4f8f0248ff36bdd5e1c1cc58",
+        "budget": {
+          "allocation_rule": "global greedy by singular_value_squared_per_parameter_cost; no quality feedback",
+          "budget_parameters": 523564800,
+          "used_parameters": 523559424,
+          "budget_gap_parameters": 5376,
+          "budget_gap_fraction_of_budget": 1.0268069969562507e-05,
+          "source_full_parameters": 1758986240,
+          "rank_entries": 1792,
+          "zero_rank_entries": 154,
+          "mean_retained_energy": 0.7589861307722744,
+          "min_retained_energy": 0.0
+        }
+      }
+    }
+  },
+  "experts": {
+    "zh": {
+      "name": "zh",
+      "path": "/root/autodl-tmp/coreflow_m0/official_assets/LoRAs/zh_lora",
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "46b992598135f1f1351613d4fa50e6aad5650f24eb0ef7a80d233aceba1b83fb",
+      "checkpoint_bytes": 319971402,
+      "rank": 64,
+      "lora_alpha": 16,
+      "lora_dropout": 0.1,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "/home/wanghanqing/projects/models/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "ru": {
+      "name": "ru",
+      "path": "/root/autodl-tmp/coreflow_m0/official_assets/LoRAs/ru_lora",
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "b2e6becfbe82a70690d3632ff2028ba9c22a005658ffc04cb09e2202e1ce41c2",
+      "checkpoint_bytes": 319971402,
+      "rank": 64,
+      "lora_alpha": 16,
+      "lora_dropout": 0.1,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "/home/wanghanqing/projects/models/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "es": {
+      "name": "es",
+      "path": "/root/autodl-tmp/coreflow_m0/official_assets/LoRAs/es_lora",
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "00826c33ff5b61307cfcaa88ec424d263b52eb3bfb2df041698566090beae9da",
+      "checkpoint_bytes": 319971402,
+      "rank": 64,
+      "lora_alpha": 16,
+      "lora_dropout": 0.1,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "/home/wanghanqing/projects/models/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "math": {
+      "name": "math",
+      "path": "/root/autodl-tmp/coreflow_m0/official_assets/LoRAs/math_lora",
+      "adapter_config_sha256": "17ac7497ab83eb03ce751f7937dbf9fcb1637c1de3f24d26336693778b97cb50",
+      "checkpoint_sha256": "8b938cfe4941860068aebbfa0e11816c0733b3a40ff5862246f6c9440fb66e61",
+      "checkpoint_bytes": 319971402,
+      "rank": 64,
+      "lora_alpha": 16,
+      "lora_dropout": 0.1,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "/home/wanghanqing/projects/models/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "code": {
+      "name": "code",
+      "path": "/root/autodl-tmp/coreflow_m0/official_assets/LoRAs/code_lora",
+      "adapter_config_sha256": "9d0dce1fd43678f5e9d2ba776d0f5d97e004b934f83d6d479821fb01a5861520",
+      "checkpoint_sha256": "929e484e57b64bb6676ac22850ad05a1f585b9952bb45f52c0463aa281c2b0c4",
+      "checkpoint_bytes": 1279419146,
+      "rank": 256,
+      "lora_alpha": 16,
+      "lora_dropout": 0.1,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "/home/wanghanqing/projects/models/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "magicoder": {
+      "name": "magicoder",
+      "path": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_upload/lora_assets/m3_k8_strict/magicoder",
+      "adapter_config_sha256": "4f1de4ef1bbd542cf550055ea9b1e5e6ab5993c70311518027487196224d9bec",
+      "checkpoint_sha256": "8ab878472fc46681f383b85909441e51464b13064663bc4410ea175a602f449a",
+      "checkpoint_bytes": 319876480,
+      "rank": 64,
+      "lora_alpha": 128,
+      "lora_dropout": 0.05,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "meta-llama/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "openwebmath": {
+      "name": "openwebmath",
+      "path": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_upload/lora_assets/m3_k8_strict/openwebmath",
+      "adapter_config_sha256": "f8426788bd63f44edcd7ef4c5365d1c9913cf487060e3382b158e0bbf655f72d",
+      "checkpoint_sha256": "330beab8c8d6f9df1e099b1de9573eb8b22f3cd50a37907ba4f30cee3ee011f0",
+      "checkpoint_bytes": 319876480,
+      "rank": 64,
+      "lora_alpha": 128,
+      "lora_dropout": 0.05,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "meta-llama/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    },
+    "gsm8k_loftq": {
+      "name": "gsm8k_loftq",
+      "path": "/root/autodl-tmp/coreflow_m3_k_scaling_mini_upload/lora_assets/m3_k8_strict/gsm8k_loftq",
+      "adapter_config_sha256": "7d95398607a8f3de18bf2ee44722f798de65236416feb5ae9d46072c1ecf5f02",
+      "checkpoint_sha256": "1069e36d62262fd107a54c87a547c5ba39bb2fa29506483cc9b7bfc07602567c",
+      "checkpoint_bytes": 319876480,
+      "rank": 64,
+      "lora_alpha": 16,
+      "lora_dropout": 0.1,
+      "peft_type": "LORA",
+      "task_type": "CAUSAL_LM",
+      "base_model_name_or_path": "meta-llama/Llama-2-7b-hf",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "modules_to_save": null,
+      "module_count": 224
+    }
+  }
+}

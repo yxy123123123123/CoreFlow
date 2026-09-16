@@ -1,0 +1,11 @@
+{
+  "boundary_oom": [],
+  "configs": [
+    "b1_l512_o128",
+    "b1_l1024_o128",
+    "b4_l512_o128"
+  ],
+  "execution": "single_gpu_exclusive_serial",
+  "runs": 72,
+  "status": "PASS"
+}

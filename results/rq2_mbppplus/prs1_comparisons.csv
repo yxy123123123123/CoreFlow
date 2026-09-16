@@ -1,0 +1,16 @@
+scope,analysis,comparison,estimate_pp,ci_lower_pp,ci_upper_pp,bootstrap_samples,bootstrap_seed,unit_count
+seed41,paired_problem_bootstrap,core_vs_full,0.4,-3.2,4.0,20000,20260730,250
+seed41,paired_problem_bootstrap,core_vs_isvd,0.8,-2.8000000000000003,4.3999999999999995,20000,20260731,250
+seed41,paired_problem_bootstrap,isvd_vs_full,-0.4,-4.0,3.2,20000,20260732,250
+seed42,paired_problem_bootstrap,core_vs_full,0.4,-3.2,4.0,20000,20260740,250
+seed42,paired_problem_bootstrap,core_vs_isvd,-1.2,-4.8,2.4,20000,20260741,250
+seed42,paired_problem_bootstrap,isvd_vs_full,1.6,-0.4,4.0,20000,20260742,250
+seed43,paired_problem_bootstrap,core_vs_full,-1.2,-5.2,2.8000000000000003,20000,20260750,250
+seed43,paired_problem_bootstrap,core_vs_isvd,0.0,-3.5999999999999996,3.5999999999999996,20000,20260751,250
+seed43,paired_problem_bootstrap,isvd_vs_full,-1.2,-4.3999999999999995,2.0,20000,20260752,250
+pooled_750_method_seed_rows,legacy_independent_row_bootstrap_audit_only,core_vs_full,-0.13333333333333333,-2.4,2.1333333333333333,20000,20260830,750
+pooled_250_problem_clusters_retaining_3seeds,primary_problem_cluster_bootstrap,core_vs_full,-0.13333333333333333,-2.4,2.1333333333333333,20000,20260930,250
+pooled_750_method_seed_rows,legacy_independent_row_bootstrap_audit_only,core_vs_isvd,-0.13333333333333333,-2.2666666666666666,2.0,20000,20260831,750
+pooled_250_problem_clusters_retaining_3seeds,primary_problem_cluster_bootstrap,core_vs_isvd,-0.13333333333333333,-2.533333333333333,2.2666666666666666,20000,20260931,250
+pooled_750_method_seed_rows,legacy_independent_row_bootstrap_audit_only,isvd_vs_full,0.0,-1.7333333333333332,1.7333333333333332,20000,20260832,750
+pooled_250_problem_clusters_retaining_3seeds,primary_problem_cluster_bootstrap,isvd_vs_full,0.0,-2.0,1.8666666666666665,20000,20260932,250
