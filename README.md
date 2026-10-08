@@ -35,11 +35,13 @@ coreflow/decompose.py::build_module_bases
 | RQ1 | 完整子空间代数正确性、编译与直接加载 | `experiments/rq1_compilation_correctness/`、`experiments/rq1_direct_load/` | `results/rq1_correctness/` |
 | RQ2 | MBPP+ 主质量实验 | `experiments/rq2_mbppplus_quality/` | `results/rq2_mbppplus/` |
 | RQ2 | ClassEval 独立确认 | `experiments/rq2_classeval_confirmation/` | `results/rq2_classeval/` |
+| RQ2/RQ5 | q224 正式敏感性与隐藏状态漂移诊断 | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/` |
 | RQ3 | LoRA-Flow、CoreFlow、Per-Expert SVD 的吞吐、显存和 profiler 对比 | `experiments/rq3_system_efficiency/` | `results/rq3_system/` |
 | RQ4 | W0--W6 工作负载与 K=3/5/8 adapter-runtime 扩展 | `experiments/rq4_workload_k_scaling/` | `results/rq4_scaling/` |
+| RQ4 | Qwen3-8B 上的 Independent-Full、CoreFlow 与 CoMoL 路线对照，以及 RTX 4080 SUPER 描述性测量 | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/derived_statistics.json` |
 | RQ5 | q-grid、A0--A6、真实 gate 和路由干预 | `experiments/rq5_ablation_gate/` | `results/rq5_ablation_gate/` |
 
-更详细的逐脚本说明见 `docs/EXPERIMENT_MAP.md`；整理前后的原始包来源见 `docs/SOURCE_PROVENANCE.md`。
+更详细的逐脚本说明见 `docs/EXPERIMENT_MAP.md`；整理前后的原始包来源见 `docs/SOURCE_PROVENANCE.md`；数据选择、哈希和再分发边界见 `docs/DATA_PROVENANCE.md`。
 
 早期探索、被取代实现和失败实验的采用状态见 `docs/HISTORICAL_EXPERIMENTS.md`。其中 PRS-4 的代码与失败摘要保存在 `experiments/archive/` 和 `results/archive/`，不会与论文主实验混用。
 
@@ -96,6 +98,8 @@ export FORMAL_V2_WORK_ROOT=/path/to/formal_v2_workspace
 export CUDA_DEVICE=0
 ```
 
+Qwen/CoMoL 路线对照还需要设置 `QWEN_MODEL_PATH`、`COMOL_PACKAGE_ROOT`、`QWEN_MATCH_WORK_ROOT` 和相应 Python 环境；详见 `experiments/reviewer_required_v2/README_AUTODL.md`。模型、训练权重和第三方数据不在本仓库中分发。
+
 随后进入相应实验目录，按其冻结 README/脚本运行。原始脚本保留了实验时的 `/root/autodl-tmp/...` 默认值；推荐用环境变量覆盖，而不是直接修改冻结协议。
 
 ## 5. 复现层级
@@ -110,7 +114,9 @@ export CUDA_DEVICE=0
 
 ## 6. 发布范围
 
-本仓库按“核心算法代码与主要实验入口”发布，不承诺同时公开所有 GPU 原始日志和大体积中间产物。当前在 `E:\Mate` 中没有定位到与论文 RQ1 中五次编译时间及三方法 direct-load 生命周期数值一一对应的原始 PRS-2 返回包；这一点作为实验档案范围说明保留，但不阻止核心代码包发布。
+本仓库按“核心算法代码、主要实验入口、协议和轻量聚合结果”发布，不包含全部 GPU 原始日志或大体积中间产物。当前发布包没有纳入与论文 RQ1 五次编译时间及三方法 direct-load 生命周期汇总逐条对应的完整原始返回包；相关结果应按论文中的描述性证据边界解释。
+
+APPS-derived 257 题开发集仅公开任务 ID、源索引和逐题哈希，不重新分发第三方题目与测试。Qwen3-8B 的固定 revision、配置哈希及 tokenizer 哈希见 `docs/manifests/QWEN3_ASSET_MANIFEST.json`；APPS-derived 清单见 `docs/manifests/APPS_DERIVED_257_MANIFEST.json`；完整的数据来源说明见 `docs/DATA_PROVENANCE.md`。
 
 本仓库当前不授予开源许可证。使用任何材料前请阅读 `LICENSE_NOTICE.md` 和 `THIRD_PARTY_NOTICES.md`。
 

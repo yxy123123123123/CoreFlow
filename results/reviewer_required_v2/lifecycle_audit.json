@@ -1,0 +1,48 @@
+{
+  "status": "ANALYZED",
+  "protocol_id": "coreflow-reviewer-required-v2",
+  "lifecycle_units": {
+    "independent_lora_training": "includes all eight independent runs",
+    "comol_training": "joint MoE-LoRA training",
+    "coreflow_compile": "offline bank construction; report separately",
+    "inference": "excluded from lifecycle training cost"
+  },
+  "existing_group1": [
+    {
+      "stage": "independent_lora_group1",
+      "elapsed_seconds": 13106.423941612244,
+      "training": {
+        "rank": 16,
+        "alpha": 16,
+        "dropout": 0.1,
+        "target_modules": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "o_proj",
+          "down_proj"
+        ],
+        "max_length": 300,
+        "batch_size": 4,
+        "gradient_accumulation_steps": 4,
+        "epochs": 1,
+        "learning_rate": 0.0001,
+        "scheduler": "constant_with_warmup",
+        "warmup_steps": 200,
+        "weight_decay": 0.0
+      },
+      "source": "manifest"
+    },
+    {
+      "stage": "comol_group1",
+      "manifest": {
+        "status": "PASS",
+        "group": "1",
+        "seed": 101,
+        "path": "/root/autodl-tmp/coreflow_joint_vs_posthoc_v1_workspace/groups/group1/comol_outputs/base-model-mocorelora-corerouter-qkvodown-rank16-exp8-seed101-math-14k/checkpoint-600",
+        "reused": true
+      }
+    }
+  ],
+  "new_group2_3": "will be recorded by stage manifests; no claim is made until both groups complete"
+}

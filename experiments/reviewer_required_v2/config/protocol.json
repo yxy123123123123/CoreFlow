@@ -1,0 +1,56 @@
+{
+  "protocol_id": "coreflow-reviewer-required-v2",
+  "status": "FROZEN_BEFORE_REQUIRED_GPU_OUTPUTS",
+  "base_models": {"llama": "Llama-2-7B", "qwen": "Qwen3-8B"},
+  "expert_groups": {
+    "1": {"independent_seeds": [101,102,103,104,105,106,107,108], "comol_seed": 101, "gate_seed": 1101, "reuse_existing": true},
+    "2": {"independent_seeds": [201,202,203,204,205,206,207,208], "comol_seed": 201, "gate_seed": 1201, "reuse_existing": false},
+    "3": {"independent_seeds": [301,302,303,304,305,306,307,308], "comol_seed": 301, "gate_seed": 1301, "reuse_existing": false}
+  },
+  "training": {
+    "rank": 16, "alpha": 16, "dropout": 0.1,
+    "target_modules": ["q_proj","k_proj","v_proj","o_proj","down_proj"],
+    "max_length": 300, "batch_size": 4, "gradient_accumulation_steps": 4,
+    "epochs": 1, "learning_rate": 0.0001,
+    "scheduler": "constant_with_warmup", "warmup_steps": 200, "weight_decay": 0.0
+  },
+  "gate_calibration": {
+    "rows": 256,
+    "label_rule": "lowest_sequence_loss_among_frozen_experts",
+    "target_rule": "softmax_negative_centered_loss_temperature_0.05",
+    "temperature": 0.05, "epochs": 80, "learning_rate": 0.01, "weight_decay": 0.0001
+  },
+  "q224": {
+    "methods": ["code_core_q224_k5_seed41","code_core_q224_k5_seed42","code_core_q224_k5_seed43"],
+    "mbpp_rows": 250, "classeval_rows": 202,
+    "interpretation": "registered sensitivity point; q185 remains primary"
+  },
+  "quality": {
+    "datasets": ["AddSub","AQuA","gsm8k","MultiArith","SingleEq","SVAMP"],
+    "max_new_tokens": 300, "batch_size": 1,
+    "full_six_dataset_repeat": true,
+    "methods_for_groups_2_3": ["independent_full","core_q185","comol_native"]
+  },
+  "coreflow": {"candidate_q": [185], "required_repeat_q": 185, "balanced_trace_normalization": true},
+  "service": {
+    "methods": ["independent_full","core_q16","comol_native"],
+    "hardware": ["RTX_4080_SUPER","RTX_4090"],
+    "configs": [
+      {"name":"c1_l512_o128","concurrency":1,"input_tokens":512,"output_tokens":128},
+      {"name":"c4_l512_o128","concurrency":4,"input_tokens":512,"output_tokens":128},
+      {"name":"c1_l1024_o128","concurrency":1,"input_tokens":1024,"output_tokens":128}
+    ],
+    "warmup_requests": 5, "measured_requests": 50,
+    "scope": "single-worker queued-load; not continuous batching"
+  },
+  "efficiency": {"input_tokens": 512,"output_tokens": 128,"warmup_requests": 5,"measured_requests": 50,"serial_single_gpu": true},
+  "statistics": {"bootstrap_confidence": 0.95,"bootstrap_seed": 20260928,"holm": true,"unit": "paired task within seed/gate block"},
+  "required": ["compile_interface_rejection","storage_audit","lifecycle_audit","theory_error_analysis","multiple_comparison_statistics","llama_q224_formal","comol_group2_full_six_dataset","comol_group3_full_six_dataset"],
+  "strongly_recommended": ["cross_hardware_service","p95_p99_energy","llama_hidden_drift32","heterogeneous_rank_contract","partial_module_contract","k8_pareto_unification"],
+  "claims": {
+    "q224": "quality-priority sensitivity point, not a replacement for q185",
+    "comol": "matched repeatability and lifecycle comparison; no-training-at-all claim is prohibited",
+    "service": "Qwen3 matched group1 uses the existing CoreFlow q16 bank; same-method single-worker queued-load; continuous batching is not claimed",
+    "group2_3": "full six-dataset quality repetitions; no q-grid or repeated system runs required"
+  }
+}

@@ -71,3 +71,16 @@
 | 路由干预与残差 | `experiments/rq5_ablation_gate/m3r_routing_diagnostics/scripts/m3r_gate_diagnostics.py` |
 
 对应结果在 `results/rq5_ablation_gate/`。
+
+## Reviewer-required v2：跨路线、跨模型与补充敏感性
+
+| 内容 | 入口 | 轻量结果 |
+|---|---|---|
+| q224 在 MBPP+ 和 ClassEval 上的正式敏感性 | `experiments/reviewer_required_v2/scripts/run_q224.py` | `results/reviewer_required_v2/q224_complete.json`、`derived_statistics.json` |
+| Qwen3-8B Independent-Full 与 CoreFlow | `.../scripts/quality_core_worker.py`、`system_core_worker.py` | `derived_statistics.json` |
+| Qwen3-8B CoMoL 联合训练路线 | `.../scripts/train_comol.py`、`run_comol_groups.py`、`quality_comol.py`、`system_comol_worker.py` | `derived_statistics.json` |
+| RTX 4080 SUPER 描述性 service 测量 | `.../scripts/run_service.py` | `derived_statistics.json` |
+| 隐藏状态漂移诊断 | `.../scripts/run_drift.py` | `drift_diagnostics.json`、`derived_statistics.json` |
+| 编译接口、存储和生命周期审计 | `.../scripts/compile_interface_tests.py`、`storage_audit.py`、`lifecycle_audit.py` | 同名 JSON 审计文件 |
+
+该目录保留冻结协议和执行脚本，但不重新分发 Qwen、LoRA、gate、CoMoL 权重、APPS 题目、原始生成记录或编译 bank。资产与数据身份分别见 `docs/manifests/QWEN3_ASSET_MANIFEST.json` 和 `docs/DATA_PROVENANCE.md`。

@@ -1,0 +1,1829 @@
+{
+  "manifest_version": "2026-10-08",
+  "purpose": "Provenance and disjointness audit for the APPS-derived 257-task development set used to select the resource-oriented shared dimension.",
+  "source": {
+    "dataset": "codeparrot/apps",
+    "split": "test",
+    "observed_revision": "21e74ddf8de1a21436da12e3e653065c5213e9d1",
+    "difficulty": "introductory",
+    "selection": "First 257 source-order tasks without fn_name and with at least five unique short string-I/O tests; converted to solve(input_str)->str with two visible and up to twenty hidden tests.",
+    "source_file_sha256": "5b003a65ac40feb47dd5eaec267a767a6fc435bdcfa68ff715fe869f948e760c",
+    "converted_source_sha256": "60da4062af19241ec9d8fe2b32243dcdd1ec025c22476a6ac17e3f0f7586ad90",
+    "frozen_jsonl_sha256": "0f1bb2decc94a9f19c947d7b1ebf458380648ea183dbcdc2e72c6303a49fd163",
+    "expected_frozen_jsonl_sha256": "0f1bb2decc94a9f19c947d7b1ebf458380648ea183dbcdc2e72c6303a49fd163",
+    "frozen_order_sha256": "098772db5a8cd0b864d45f2af588658bb26a22d71ec696d4aa1b344873c77933",
+    "prompt_collection_sha256": "920af4f90052c4b8fffe362b7f6d5e6684a54efee6a4b87bafdb400028a92a49",
+    "collection_fingerprint": "95790f1fb0b6c98cf3cf2049a5b85c2f6ab9ead190243cd81b5ad1472f9edca5"
+  },
+  "audit": {
+    "apps_task_count": 257,
+    "mbppplus_formal_task_count": 250,
+    "classeval_formal_method_count": 202,
+    "exact_normalized_prompt_overlap_with_mbppplus": 0,
+    "exact_normalized_prompt_overlap_with_classeval": 0,
+    "audit_definition": "Unicode NFKC normalization, lowercase conversion, and whitespace collapse followed by SHA-256. This is an exact normalized-text audit, not a semantic near-duplicate detector.",
+    "mbppplus_jsonl_sha256": "049c4fd2aab859f87806d127794e80cc22cab9eb45f71ba6b654efc1a4d7d594",
+    "classeval_jsonl_sha256": "03c8e7dc1170ed3c35cbeed5c68b585bc098e6ad63f0882664688f54712cdf57"
+  },
+  "tasks": [
+    {
+      "task_id": "apps_intro_test_04107",
+      "source_index": 106,
+      "order_key": "0001842d60ceabdbb0bb9635778b90dd9083b12ec472c931144e80be48de6e05",
+      "source_normalized_text_sha256": "425b8a69751008a7ffb0670ad1b309a09ece907f501d3193ef7e926a9c28bc7c",
+      "common_normalized_prompt_sha256": "78f9612c598c7762721ea887ca54a35a6fa9c96956352f1b21ba81bae2381dba"
+    },
+    {
+      "task_id": "apps_intro_test_04126",
+      "source_index": 125,
+      "order_key": "00916936d095b5507e08ef89208b53a35559fec8d85ab42264fb095b0cff45c2",
+      "source_normalized_text_sha256": "7752b923185e572de1064989f0fdee6e38ab7178b23956cd3e07123451cb8ad9",
+      "common_normalized_prompt_sha256": "f415b764e7a4f6a15d5777df8a1b1cdddbf39860ada6e6fb89637a3de23012b9"
+    },
+    {
+      "task_id": "apps_intro_test_04198",
+      "source_index": 192,
+      "order_key": "0138e4b7160eebd3e1b387c416fc35e2199a6e5ed5351d9a3ea1173b17a55d42",
+      "source_normalized_text_sha256": "be07dcd65288ea25fd714e19854d56cfd2a2ff5f7e89d068fccf8c6cb968ea13",
+      "common_normalized_prompt_sha256": "d8e780b42e392d2d5a3cf0827cc42fdb2adcdf86843a66cc5937a28493bc4eb8"
+    },
+    {
+      "task_id": "apps_intro_test_04216",
+      "source_index": 210,
+      "order_key": "0145b05d69b74bf17e9850e4342bdd80694ffdd1b5e859b1aa0f1eeb5509ab0e",
+      "source_normalized_text_sha256": "637821fb8e0e932e262056d9929cb71526e392d4268c44b376e812d6058f65b7",
+      "common_normalized_prompt_sha256": "a845e3108484f6714f9ccafc5f4c2bc722b47b9b8ded758b91bce8d58e84e0e3"
+    },
+    {
+      "task_id": "apps_intro_test_04212",
+      "source_index": 206,
+      "order_key": "01cc5b1a455025428d238ab10d44cb45530067a05fb7236fd0c1751163df4d55",
+      "source_normalized_text_sha256": "fe607d5572696ffaaf794c0496d788802d33b3adbbf97f3ccb33872a087f7124",
+      "common_normalized_prompt_sha256": "6ab99f484146da5b5e9a00465030df148b63e00183a99055c092c67f84c7a399"
+    },
+    {
+      "task_id": "apps_intro_test_04195",
+      "source_index": 189,
+      "order_key": "01d1b68bf20d0b141275402b19054f60d3990b39647299b239e36de296f7e997",
+      "source_normalized_text_sha256": "338b4ed7d21e3054fee7717ff78fe1b20f0bb56e5b2f4f75f8c9635f4b267c1c",
+      "common_normalized_prompt_sha256": "b3d7c881dd628e65312a28a961ce18b3bde58a1cf7dc5e3c3c098ae9169b2d22"
+    },
+    {
+      "task_id": "apps_intro_test_04132",
+      "source_index": 131,
+      "order_key": "035442c1d1ad6eceeb1a34d33262f1c68edd7a959437253732b09469fdabc4d7",
+      "source_normalized_text_sha256": "ecc1053fd2ce4aa243a1372772ed4ee2d4a6964a0caaf4dea6fd49647e71fe18",
+      "common_normalized_prompt_sha256": "e68ed2633b58025274b9e190e6ccb635e6ae664054455ca9a927794604fe6597"
+    },
+    {
+      "task_id": "apps_intro_test_04251",
+      "source_index": 243,
+      "order_key": "03ec2a2f596f0b42f1d5c0378348b9153e5f03dec70f347f639bd1b34b50fa2b",
+      "source_normalized_text_sha256": "00756223dc2a1785ccec99a531cb647a6d40caf8939ec4152c4fba48d3ba3111",
+      "common_normalized_prompt_sha256": "80274d34d96d697e7453c7a4b4bdecc596f6a9977180398a24026111006d47c0"
+    },
+    {
+      "task_id": "apps_intro_test_04051",
+      "source_index": 51,
+      "order_key": "0550a7c228b1c7ccd1d966445f2ae96079aa107372692739a932785870be6aea",
+      "source_normalized_text_sha256": "db3872017133cef0ee0a9f430f4552ed20c29ecd8292b70c07fc9b4675000aba",
+      "common_normalized_prompt_sha256": "dff6540d12d47e35b8d60d05d1aa7e8bed9d804ca2f8ac2e4cff7e610ccc89ef"
+    },
+    {
+      "task_id": "apps_intro_test_04083",
+      "source_index": 83,
+      "order_key": "07ec940ffab9072489d494ce2385c305426556a4ac588e92c3a5295a011a5c92",
+      "source_normalized_text_sha256": "63ee1834d514e8e6bd1b044922ae24859af62c4925cb3fc3cbe924cf3e62d672",
+      "common_normalized_prompt_sha256": "b260d26e252bf8960f8f45530aaa54f3f3575f1bd4863dfedba93689f2131fd2"
+    },
+    {
+      "task_id": "apps_intro_test_04128",
+      "source_index": 127,
+      "order_key": "080813e8410a1b646541471a5faae358135278232aab1c40c76d2c1656bceba7",
+      "source_normalized_text_sha256": "e504d90bea80375f3840ccb9db8f5eaba654ae40e30a9d50341579731b25b022",
+      "common_normalized_prompt_sha256": "0fd07312530c7e6fa52e5a0275d504d827bd96f2caf2afc9358770f117a23a22"
+    },
+    {
+      "task_id": "apps_intro_test_04065",
+      "source_index": 65,
+      "order_key": "0824dad0af3d122033e636c0b78f2f7df9263ff18f27e6a3ab3595641dacd81a",
+      "source_normalized_text_sha256": "4079a58c40dce07b3f83f54a82f8517d118ae380d3806c2df0a168db6b8b1b0a",
+      "common_normalized_prompt_sha256": "eac1fa74405dd79431a837f7b5fbdc1dbce315e685bca0916e26830e332973c6"
+    },
+    {
+      "task_id": "apps_intro_test_04142",
+      "source_index": 140,
+      "order_key": "082d834e2a8082da0832cee95b50c6f4ab56a791131a62671f7cd4eeee005ae8",
+      "source_normalized_text_sha256": "6911d8e27ce1c92e07c090b5bfd61680416ada6c3024ef92dea69d0efc15048a",
+      "common_normalized_prompt_sha256": "f7a799a1958ae7a17313f017e52e0a08fd436b2af53c91b3e16a0e864f6ae66e"
+    },
+    {
+      "task_id": "apps_intro_test_04001",
+      "source_index": 1,
+      "order_key": "08b512660a0397f801ef3340855418079d10d29878834e03e68aaa17f633b551",
+      "source_normalized_text_sha256": "83c165a9d3c516fa4d4bfd98f1d7b82ddffc2ef9c81a21f0e9d45a1bd52959f4",
+      "common_normalized_prompt_sha256": "95563accf08723e2b728e4ed4fc22d4ae6b11bdc04c5404c86601dc552fd46aa"
+    },
+    {
+      "task_id": "apps_intro_test_04119",
+      "source_index": 118,
+      "order_key": "09fa558f72db20ab325c22e3c32e7289382643ebdd8874d3b92577a566d32da7",
+      "source_normalized_text_sha256": "7fa70957767cfe989b4ec66b1ba62dbfda4ee2ce10541ec240bb57b640b78a97",
+      "common_normalized_prompt_sha256": "fa847614d20016db782a3422dbbd346f840de54b37573a712df7f669ad2fafc3"
+    },
+    {
+      "task_id": "apps_intro_test_04196",
+      "source_index": 190,
+      "order_key": "0a370d01434fbbca7983806696a8d5d30d22360c3e7ac2e79d4c2d8594a6d186",
+      "source_normalized_text_sha256": "41ebb9918782bac69b7aca3136e115665e05112505e86cb5416ea0d552d87ed5",
+      "common_normalized_prompt_sha256": "48d5f845d1083215e00e2348e6b7f7fb9d8b58e00631edd0296d924f2d0e8120"
+    },
+    {
+      "task_id": "apps_intro_test_04241",
+      "source_index": 233,
+      "order_key": "0cab3b55ef6177609a0a989be1055d7706ef06a1ebce381cc3f40e0ef7b8a344",
+      "source_normalized_text_sha256": "346fb382db1d91fae899fcd086566c13ef7861ea6d8b26b41d0afc3311b6a637",
+      "common_normalized_prompt_sha256": "1e41599183ecd7184c0462082c71a22c51ba0360b2254d23389a8884bf6e6e7e"
+    },
+    {
+      "task_id": "apps_intro_test_04210",
+      "source_index": 204,
+      "order_key": "0dbb3bfa0d433c00bf8189492e4893a7cad12cf7d6edb451f066cd61a2172c23",
+      "source_normalized_text_sha256": "54755d4f66d3adb79e646bc45df41dae700d48a6066f22c4cd47d05b189cb815",
+      "common_normalized_prompt_sha256": "34f8df60a1255a63b4967d7a6e96fd6281d07174d76b377d3f163aae7091b258"
+    },
+    {
+      "task_id": "apps_intro_test_04032",
+      "source_index": 32,
+      "order_key": "0ded43769295dd7d87516270d2951fc252b458a773e1a2713dfcec4cb816c210",
+      "source_normalized_text_sha256": "57c75146d12cbbc613e1a49e785fcf754cbf33059aa11b3e33210e6bd5d9aa2b",
+      "common_normalized_prompt_sha256": "76dc5e940b7d1c681915f01399c2cd8273be9019f75a44974c93a9bade40a4c1"
+    },
+    {
+      "task_id": "apps_intro_test_04228",
+      "source_index": 220,
+      "order_key": "0ee663bd3e337f499d123a89a45795a1e727255d9fc5ee27248a227e95f7b167",
+      "source_normalized_text_sha256": "faa9a2570addea64ae476f3144819f6ab9a989e05a0f21aa5e3cf07ec7486d23",
+      "common_normalized_prompt_sha256": "c847a43b691d5d6b038544c0bc4ef30cf83cb02dd5cf7447ee793edc1975fbb5"
+    },
+    {
+      "task_id": "apps_intro_test_04144",
+      "source_index": 142,
+      "order_key": "0f20d1554d64ee1d94266646aadbc1ffc43011d67ee26734cccb066111d95daf",
+      "source_normalized_text_sha256": "d3ae2bbdf465bd248231e8cffbfc4d0be98f51b97ced5e6ad19583b6f1f01c8f",
+      "common_normalized_prompt_sha256": "731e2ddba8597913947fde2a942d82c19833566293c8e577ff80a4d950512b58"
+    },
+    {
+      "task_id": "apps_intro_test_04233",
+      "source_index": 225,
+      "order_key": "119d55c4951e228f564266ce0a112353e244d9ba460385986e9e016599e6c75e",
+      "source_normalized_text_sha256": "09a928c7dc2c0f425c5d53e2e4c2d6adb249ec49bc606083751604e4ef747903",
+      "common_normalized_prompt_sha256": "d811c08380c2b11fef28bab49953920f343efa6e57a550ca43724e7677140b99"
+    },
+    {
+      "task_id": "apps_intro_test_04199",
+      "source_index": 193,
+      "order_key": "150d0aa50c00d96ad255442c49f32628db5ac2692149f1e6e77a8032668e81e9",
+      "source_normalized_text_sha256": "ccb323cd01fd1d83e32daa87bbb2e825bbd843124a09cdff73a74853c50c4c87",
+      "common_normalized_prompt_sha256": "678d69fd0702bfe4927c7670c8f276a3e466a694fb186468c55d6784e518f326"
+    },
+    {
+      "task_id": "apps_intro_test_04028",
+      "source_index": 28,
+      "order_key": "16714b0fc716467a320f271f920813fe636e8d4aaa940c7d6f04408d7bdd2573",
+      "source_normalized_text_sha256": "abc5a490b25ef91567b9a94b8bd97727b3643ce7ab53c9333cac11aa6e49fda5",
+      "common_normalized_prompt_sha256": "c2bfaaf1a478dd5f0e1a0bf7dd0a84b52ac36c2ec60b917b25c728058a17c753"
+    },
+    {
+      "task_id": "apps_intro_test_04005",
+      "source_index": 5,
+      "order_key": "167a4cefac4e34f0f5641413542490f231c239cc6ce2887ed518aa3538ee1221",
+      "source_normalized_text_sha256": "0a99a4aa1bac9dcd502b77490c4ac5970a84cb2aa550f80babf886aa10800dab",
+      "common_normalized_prompt_sha256": "d37c2601377b6fa92798373b55f475dede5a24998ce77d45c7c2ec9c091be5a5"
+    },
+    {
+      "task_id": "apps_intro_test_04122",
+      "source_index": 121,
+      "order_key": "182314c7de79c87e710d2da50b08f52fcd808c8eefd6b37f1388df605762285f",
+      "source_normalized_text_sha256": "9cae05652c95b28d9332a82b96cee1d974d4f3e3a714a1615ae4c0ed0275afc3",
+      "common_normalized_prompt_sha256": "0a79e91067c803ada357ae7ce0860a665c924c42a738bc284930e98d72a7f856"
+    },
+    {
+      "task_id": "apps_intro_test_04103",
+      "source_index": 102,
+      "order_key": "1998a6622cf7ee95254213da7ff8e5aa027540f038dbf3789ced60d88b5e6671",
+      "source_normalized_text_sha256": "796f7e62c0e1f923bb7e6e684cac8de4137e3f0fe76583c290c1bdd28857ece8",
+      "common_normalized_prompt_sha256": "947c6e4167be57416dd38554857c0218c0e640ccad266f9f19f17854e5611c04"
+    },
+    {
+      "task_id": "apps_intro_test_04092",
+      "source_index": 92,
+      "order_key": "1c130fc1f934366d520bed2e2b9f5f8d5cb2a793d9232ede1b32892c8e278448",
+      "source_normalized_text_sha256": "e47291893b599440760996bac4bc974daf8eff7fee37e712244ee8d1379544e7",
+      "common_normalized_prompt_sha256": "05cb11b3c239c4dbc5561638c87d96c5fff36d95c9659b752a00f9a9a16b99af"
+    },
+    {
+      "task_id": "apps_intro_test_04076",
+      "source_index": 76,
+      "order_key": "1db05ee5e55ce274a1e686a420b684783db523558113c18b0c984c677d601357",
+      "source_normalized_text_sha256": "5640b00c871dc7a3e1505829ab215b0a4b57b2ccfef916b537d5c06e63942560",
+      "common_normalized_prompt_sha256": "4b1746a1e7dcb88dba0128314edf6c84e8c21821b87fdaa37ab770efadadaeb4"
+    },
+    {
+      "task_id": "apps_intro_test_04165",
+      "source_index": 162,
+      "order_key": "1e19cd1a2f729e60be578c0c6f2e4e90fb1bceff0c353fdf8cb7f90e73a4cb9c",
+      "source_normalized_text_sha256": "4d45e31c74419bcce0b12efad0fcfcc2b045cfcd395cf194f0c85f82c12755e8",
+      "common_normalized_prompt_sha256": "bfb442261c23a8487f6aa3e46686cd7a0ffb084def292666b50c32e055d8d9d0"
+    },
+    {
+      "task_id": "apps_intro_test_04139",
+      "source_index": 138,
+      "order_key": "1e4318ff4ed2de9a8244873e413bcbf12b7018978d7b01b0fc0d0d39b83da5b0",
+      "source_normalized_text_sha256": "b3290fcd745f93e242fd3dae3a8e901b5f4d3c9480abe4c7573389225b57d8c3",
+      "common_normalized_prompt_sha256": "6c4fe8de9c896307207e362f66cdc3a5e45505cb55905f847214ea91fb82ba11"
+    },
+    {
+      "task_id": "apps_intro_test_04120",
+      "source_index": 119,
+      "order_key": "208bb5a7f9f7bbc30d4c6039f205306eacf1768ab7f7123e87affecd59674a54",
+      "source_normalized_text_sha256": "4e34ecd76f8c9dc7ab58bb5dc1527d6f6e1f9af4b6dd0ca212d7c63bbf98fe23",
+      "common_normalized_prompt_sha256": "f7b36452873e517aac39577552c7ad198ce17c68869c80c33b2035d8694003ce"
+    },
+    {
+      "task_id": "apps_intro_test_04073",
+      "source_index": 73,
+      "order_key": "22b23d9e054e6a6fe5f59c736ab40f4ee61e8d41634864de6d895c90be71fb1e",
+      "source_normalized_text_sha256": "4b5860a3c03a366524ef7a3578d49eee376c20f13e5f2395c45ebb0bfe38dc12",
+      "common_normalized_prompt_sha256": "c62fd891fe524fa218ca5d337544cb6b2f667c07a6a3f880a1eb91697726c654"
+    },
+    {
+      "task_id": "apps_intro_test_04063",
+      "source_index": 63,
+      "order_key": "23bdbd7d74579b029d33ea8bef82caff7348c71af206620d75fac5d6bbcc40c1",
+      "source_normalized_text_sha256": "ccde63de06122fffa8206a6f5133a95661a498a352526db869b83b4861c0d2d7",
+      "common_normalized_prompt_sha256": "1c224624f4772b47e26ffef113bb64802197db2475b61a7fee16f7495aa81ce6"
+    },
+    {
+      "task_id": "apps_intro_test_04117",
+      "source_index": 116,
+      "order_key": "255fab7a1f186e17a9799412d0e63e7a2d3690e8ea8f9e956bd8c7042ab26015",
+      "source_normalized_text_sha256": "1bdb802c5bdf831e201f076917ca0d314a576dfafe9df682ba279d166649a9d3",
+      "common_normalized_prompt_sha256": "5bca524fbd0243627041bd96d22b5d0e24ad67bfd26e5341686b9b2053a41a28"
+    },
+    {
+      "task_id": "apps_intro_test_04203",
+      "source_index": 197,
+      "order_key": "25f63071916553408b8698dfa565af07245aea7317a492ff10c6d16494e8ee0f",
+      "source_normalized_text_sha256": "a5490817814e2f6bfaf1360fa85a7cefd937d80ec802a6951ea62e23aa8d999d",
+      "common_normalized_prompt_sha256": "e1cfa99da3d509a2886943f4f20d8b1d9aee12087269ffebe1e03c67f5c84038"
+    },
+    {
+      "task_id": "apps_intro_test_04137",
+      "source_index": 136,
+      "order_key": "28c4070e3cd910f5accc9a9d8912a5bf2335a8865e012a185e929a08353c7995",
+      "source_normalized_text_sha256": "15b24bd0dcc55ad6513cc19ffe84e5ab9c8532780dd92c126d6bab803fb02497",
+      "common_normalized_prompt_sha256": "f128235ccc362d0d4562e9b8fcf6ebb79355fe97e443c51a87d2b58d6ca86364"
+    },
+    {
+      "task_id": "apps_intro_test_04178",
+      "source_index": 173,
+      "order_key": "293f702372bf0121721f0d1de34099a0de31f4144689162ff1ade7cb1fd813b1",
+      "source_normalized_text_sha256": "c6dabbb67c1877e4c02dce5a58e6876623a671d9eb0147409533fda50a8d4e36",
+      "common_normalized_prompt_sha256": "4a8fb6c0a94eb97b54b7b41ded3cf78da0ecf80f2fea153f77bd07ad5ee3f4ff"
+    },
+    {
+      "task_id": "apps_intro_test_04154",
+      "source_index": 151,
+      "order_key": "296c8eaa8ef6db21989bef2a32b2db036c7a50429f4b27b542b3155ba2905c99",
+      "source_normalized_text_sha256": "7854377e5ff5255c515da73e2e7e8ffb365f49f040cdfb1128300b04ade395cd",
+      "common_normalized_prompt_sha256": "fe2c2fca320ac113c8d8c23e8024fd8bff9b4c33a9ae707101a148333ce421d2"
+    },
+    {
+      "task_id": "apps_intro_test_04089",
+      "source_index": 89,
+      "order_key": "2ba4e242722ad8e4b6e2b5de436a0890716a3b41e39f70aa7491c13bd52d8b9a",
+      "source_normalized_text_sha256": "e223391cb5051a2117af6a22cfe0dc572ced5bf43d1a01893668388283a8ea1b",
+      "common_normalized_prompt_sha256": "5fb9e949dcfac14651cb932d3a6c7fd8779207eb743b585d53d309a8b0413474"
+    },
+    {
+      "task_id": "apps_intro_test_04136",
+      "source_index": 135,
+      "order_key": "2bb13203375c0e4ac996ecdc3df227ed3eb907c60a3a70f18d76299e1665ad4c",
+      "source_normalized_text_sha256": "678b1030c16168bf10888a23615dd658ef891af71a7fef43574b6b70b5fe6038",
+      "common_normalized_prompt_sha256": "7109c0e02daf22f680e1f3e236a881c807305f57d442472cf3f2b0ea95e6b953"
+    },
+    {
+      "task_id": "apps_intro_test_04049",
+      "source_index": 49,
+      "order_key": "2bd5fc66569479137a17dd7ab0f88264ced227041f8f99b511b3789872f79e12",
+      "source_normalized_text_sha256": "96939ccfdb5db7f9d5dd7a5c5047a2bf872a36a68f588013cdf969837678f4f7",
+      "common_normalized_prompt_sha256": "5ac117ca189ea66a84e205db7be622472b88c82513c8a4a95c690e5f2a2fd9e7"
+    },
+    {
+      "task_id": "apps_intro_test_04202",
+      "source_index": 196,
+      "order_key": "2d383da6520f1bdd7593ba2047c4c5bea78eaa9f7dd74579fb76cfdc84e885f8",
+      "source_normalized_text_sha256": "66b8374bbd9825715b4cf06afc486b2b982e7d9ffe733efd63b2d13b3132187c",
+      "common_normalized_prompt_sha256": "bd5f222b941b2ba8f62dbbe0712c4ca91bf6c43ae1a31d5ee9e9ff329be05fc6"
+    },
+    {
+      "task_id": "apps_intro_test_04094",
+      "source_index": 94,
+      "order_key": "2d70b4219769673bc92810fde3468003e508ec431d0d4b6751909af596b6650e",
+      "source_normalized_text_sha256": "38f5a04d5db1d831d73eceefc776967896ebfc2b913e8a797240df0092f93de1",
+      "common_normalized_prompt_sha256": "e58a4233df3415bf6578ace0d41ef25dec9ee09b6182702b22b93bc679497311"
+    },
+    {
+      "task_id": "apps_intro_test_04081",
+      "source_index": 81,
+      "order_key": "2d9e403f5b64d8e85567557bbc5b579b7baf92110157e29b537bb540e4fa8d69",
+      "source_normalized_text_sha256": "1f34d48c91e6fe9e841fbc313081b506c3634962c60f87d47ad8f8332aae8435",
+      "common_normalized_prompt_sha256": "fb18ea56af1226d2b9e26964af61c32ff3cbafeb37a6d9ef912dc396ba490485"
+    },
+    {
+      "task_id": "apps_intro_test_04242",
+      "source_index": 234,
+      "order_key": "2dddda41bad3140c98ac24764a7079dcc4843fa776c08d42c87c8d9b0b09b0ea",
+      "source_normalized_text_sha256": "c696829ac2aa8962746af4df7108b5d896de68b72fb4422f350090a3957e1bd0",
+      "common_normalized_prompt_sha256": "7cce6f0743a275fba8708ae713935d67fb91583d892cbf0360d36022e28a8ac9"
+    },
+    {
+      "task_id": "apps_intro_test_04043",
+      "source_index": 43,
+      "order_key": "2dfa403dbac69a4ccd3e5a605e64755ff9048e9a488ddbce83f8e79e6593952b",
+      "source_normalized_text_sha256": "78ee2e65bc4dee81a0cbf71461a4e6b8499b2c47f058b75360b821883d0c83a8",
+      "common_normalized_prompt_sha256": "c4e60aed7b3b38be3e83f5a8d8e494b9cdb24637a5f6572c592b77161e1e9e97"
+    },
+    {
+      "task_id": "apps_intro_test_04084",
+      "source_index": 84,
+      "order_key": "2f038bb5c39be6ceb6f4267c45bcdc0e7b23756d6305600477ee047217010e4e",
+      "source_normalized_text_sha256": "55105e43721d68bd1aec8b71c03114184a714c0d7af5db2b2b46ae22f42dd396",
+      "common_normalized_prompt_sha256": "29728f87bb3b7667a656fd957801a35828c8b8edd75277c94efb61d3ecb0f94c"
+    },
+    {
+      "task_id": "apps_intro_test_04222",
+      "source_index": 216,
+      "order_key": "2fabb3b83d29d6771c9c8ea6cf1c6a0d9a04b9ad66d1556dbcd45cff53186fc6",
+      "source_normalized_text_sha256": "6fcef4ef04ff730682b0e4ede2b8193a02ee790295c29344e4ce262349513ee3",
+      "common_normalized_prompt_sha256": "d62c8aa940b65dac540978794e10d8ebbcfd944f4e5af9b38f975e87fcead82d"
+    },
+    {
+      "task_id": "apps_intro_test_04027",
+      "source_index": 27,
+      "order_key": "302b67d2fd85f72f4809682c2f313f4660ce5e5488b36ae239a79cf12abf1e6e",
+      "source_normalized_text_sha256": "e68f86cbcbf3cb1f6ca8ee402f02b74c63b86f64e50faa7516870342dc0ca94b",
+      "common_normalized_prompt_sha256": "9b3f3def45f6903b3fb6f78e1800a4309ae9b8d53862cc9514d39743f8ec1ea8"
+    },
+    {
+      "task_id": "apps_intro_test_04022",
+      "source_index": 22,
+      "order_key": "30cf1de8b6d4147895efefed6c9ac3b475e34490d21b9554782bb880abeba26e",
+      "source_normalized_text_sha256": "2d0a9f69bbde24787e8e9a827ae7820ae8191ad23b513e64b63ce83b856efc17",
+      "common_normalized_prompt_sha256": "2a67d2b8f3ce45a040b29332a2bf55837b2a3e6f8a5950eacefc7e4788315120"
+    },
+    {
+      "task_id": "apps_intro_test_04244",
+      "source_index": 236,
+      "order_key": "316f432304c415e63727bffb418aadbbbaf76bd9ac48e5511706bc9ac943f3b3",
+      "source_normalized_text_sha256": "e42ae2c503caeb06e5553ddd8051bba01c9979895615618dbcc8140181f8acd7",
+      "common_normalized_prompt_sha256": "9e1c530a26d6e756cc6afbbf3b5ef5e7c32d5c6aa53b441cba92b9b6fe6e4966"
+    },
+    {
+      "task_id": "apps_intro_test_04101",
+      "source_index": 100,
+      "order_key": "31b85c7a6afb2a6545f7545ffe7b7469fa318a12e611d979299eabea4f37d8f2",
+      "source_normalized_text_sha256": "40c26709044bd6520fe8652ce018619515bc06a8934449366b069b444eabaeb2",
+      "common_normalized_prompt_sha256": "310b66e231778cef9fa52815bd4fde89ccaf6c99e6637834dfda8172f20b82ae"
+    },
+    {
+      "task_id": "apps_intro_test_04173",
+      "source_index": 168,
+      "order_key": "3369b5e398374960729861bbdbd3195669452bd978f0dca39a62413325cdf79e",
+      "source_normalized_text_sha256": "bfe65334fddd0c1fda1b7f131c8e14a44844719e5a98e0c4bb8eb869e7284196",
+      "common_normalized_prompt_sha256": "875ff12a85044d017db1e734b4aa04e1a0f85862af16799d7c0638dfbb1fbfdb"
+    },
+    {
+      "task_id": "apps_intro_test_04138",
+      "source_index": 137,
+      "order_key": "33bba60250ba2ef28f34650e21286f7bf0c8dd5187b9ffd2d280c427c8676d17",
+      "source_normalized_text_sha256": "1d490c0973bbeed2fc87a148866888803bba1ce7fc055d24d212edb448c6137d",
+      "common_normalized_prompt_sha256": "f7c7e5f639f1d06f60c39835f4c026d37de1101af2cba0022f52f18aeb146cf7"
+    },
+    {
+      "task_id": "apps_intro_test_04257",
+      "source_index": 249,
+      "order_key": "355728d7984f0b2ecfd4d76c272224ef37065e1c0dfc11c76d48dd00a0d5616f",
+      "source_normalized_text_sha256": "44555d143d6edd024aae4e94b49f22d3b505ad27a63089b29bd5c59121c10095",
+      "common_normalized_prompt_sha256": "efe3771c4138339aaeb5be46c3b2dc94492751d4de1612e10e8d2de5f3640a2c"
+    },
+    {
+      "task_id": "apps_intro_test_04064",
+      "source_index": 64,
+      "order_key": "362e13b6068cbcdfda6d13790287a55c2ff8691fa81f6778c762c14e09bddcc0",
+      "source_normalized_text_sha256": "58a6145aa3a4d0deba3dd931c3f3bd1f32898c373b00fbdee7eb7ad86a887b36",
+      "common_normalized_prompt_sha256": "111ed304e5acd0dcf58983152e49b1777cf281a7193c048869421021517bcaff"
+    },
+    {
+      "task_id": "apps_intro_test_04035",
+      "source_index": 35,
+      "order_key": "368ce7b7d9ee92c190a6a7734c083e4e4648cecd3fd6059c8d368a99b8403ce4",
+      "source_normalized_text_sha256": "22759b397238c22d410a7b228aff8e8642b844ec6ae8fff6200ccdc766d7e82a",
+      "common_normalized_prompt_sha256": "2f072db163f4ca0fd77b861d4520f9a65ab9755a12a4e95af5a51435e7e583a6"
+    },
+    {
+      "task_id": "apps_intro_test_04066",
+      "source_index": 66,
+      "order_key": "36949daad3f23ec9f4590dbf311cf40536f5dc38a185edf9bb161343f2bf72c1",
+      "source_normalized_text_sha256": "5bcf0a8386a7e714e476e242329e9cee729da6566226fec959f2a9d0dd3777cc",
+      "common_normalized_prompt_sha256": "b1961679c9ea9d2af37d524ad03fd8b076808b752bf86afdda0604180c2c9431"
+    },
+    {
+      "task_id": "apps_intro_test_04230",
+      "source_index": 222,
+      "order_key": "36c7d1b06c4b4578b372935906957b5148f26d4ab30878f894542fe095125e24",
+      "source_normalized_text_sha256": "1717b302c4419c29f87c4a3c46770d9f313bec029a1e38588683def255556d62",
+      "common_normalized_prompt_sha256": "a41a9f3a05022fd6628f71a1a7036fb8f5d1cc96ce3aa0c05192a8fc4473f8eb"
+    },
+    {
+      "task_id": "apps_intro_test_04190",
+      "source_index": 184,
+      "order_key": "374daa2883609d2f5806252c6256781b27277fcdcbdc0aacbadd457d92186a21",
+      "source_normalized_text_sha256": "79c6abbdf2639637b5a7f593ea41184c390581184e4b8ed560e84214f869e395",
+      "common_normalized_prompt_sha256": "1c994444cf808f9b5f5a69e17acb14fe1282a86a3007c5706b5ceb2b01233899"
+    },
+    {
+      "task_id": "apps_intro_test_04211",
+      "source_index": 205,
+      "order_key": "37b0a2a284b12c10eeeedb7bcebc0611bece6196e789dd4f33b686c6ccf4bf73",
+      "source_normalized_text_sha256": "c0861dd6d225cbb0f5cfd9281d636004f4f56a40688f618bb1aab9abb0362a28",
+      "common_normalized_prompt_sha256": "aa3619f3c927a7002a8d53fea2e1ac9988362bdeac78abf9f9fdfc6ca7a3ca9b"
+    },
+    {
+      "task_id": "apps_intro_test_04059",
+      "source_index": 59,
+      "order_key": "37d4307c1d29b0c2975f2dafb887cc8a41577fb5a260821c7a75e2768c1aaea0",
+      "source_normalized_text_sha256": "43c14977567f3a9d1e1172376a2589477e55b8970be8608990c8f3ea33656c03",
+      "common_normalized_prompt_sha256": "afb8eb16f19a28117f1861fc0ffcd34522d036e86d45666fa5ecb5349cd141c2"
+    },
+    {
+      "task_id": "apps_intro_test_04012",
+      "source_index": 12,
+      "order_key": "3846e75a6eccd43eff9672bf0756ca6dce3cf0480119320add36cb542606dc2b",
+      "source_normalized_text_sha256": "eeb92691bded1b74b75517ef1121e48c7f50527d0991e7188ac66c3cd3d6aecf",
+      "common_normalized_prompt_sha256": "4716f2d6b700462424d6cf2ac794dc3a6a8e4c78f31386c7ccff66d3c69f7d2e"
+    },
+    {
+      "task_id": "apps_intro_test_04246",
+      "source_index": 238,
+      "order_key": "38a41ec3ccf4545ff32a4cd8bcbacd20543abb293d974b2f16f0c56ce9ed6124",
+      "source_normalized_text_sha256": "59d67a18b62396b5e1354ca5499274f8a4b332ae985e25c2c075dfa832c44aae",
+      "common_normalized_prompt_sha256": "b5cd899413d80033b79986bfae9c15221545e969f2359a12e77db851d25a8fa3"
+    },
+    {
+      "task_id": "apps_intro_test_04044",
+      "source_index": 44,
+      "order_key": "38b387f97652ebe8fb3c3c9b77f769bc9dfc3582676f3be0f6deb18984cdb41f",
+      "source_normalized_text_sha256": "4254a00c5c136206fd23e177b06329dc192f8ddb1ffa4767e7066e48dc321508",
+      "common_normalized_prompt_sha256": "6a39a85b10dc40d81dc23c5bd90789fd40f1849b6737faed86979ecdb81d5488"
+    },
+    {
+      "task_id": "apps_intro_test_04150",
+      "source_index": 147,
+      "order_key": "3a1572ffa917af1054c61ce1d87e47f1db2b165a384347cedf532326f9bf3b84",
+      "source_normalized_text_sha256": "a69a3a3cb3ec1cce7bf597d3318ac3dee0717ce7d55a13b6b42a1569d0a2ece6",
+      "common_normalized_prompt_sha256": "92652b94580bc328f1ba5d67f0f2f9f93c8f066b669f2e2f9cede63e9a77cd17"
+    },
+    {
+      "task_id": "apps_intro_test_04099",
+      "source_index": 99,
+      "order_key": "3bc5545df599ae3274667aeb7494592dd11697ff42d408897996034609cc55a1",
+      "source_normalized_text_sha256": "d18aba6d829044de45299ad2d8131df50a522ae8cabcc728a8f439fe3faf8eed",
+      "common_normalized_prompt_sha256": "1ae7f97ae253ae958d9e01abdfa28dbef6a00d73c19bc4dad3f43c98207ba68b"
+    },
+    {
+      "task_id": "apps_intro_test_04262",
+      "source_index": 254,
+      "order_key": "3bf9bb14fc731fa3bce5d5ca889cd559193552f41816c2de6b2bb1cbd0c00830",
+      "source_normalized_text_sha256": "fc9dd24b8a320d7b4e998d3d0d6774b11e6f2de2dedba8fa55b25959c937902b",
+      "common_normalized_prompt_sha256": "0e8bde7ca52cda9b86cd61f236d73dcab90f2d0e5c1d325464baa44b8e908969"
+    },
+    {
+      "task_id": "apps_intro_test_04058",
+      "source_index": 58,
+      "order_key": "3c8663e36d3aede0a3540c93d17823475e7e21ac85231481cb49838e9f11c799",
+      "source_normalized_text_sha256": "36b71845616460a9677cbf1a8a458e19273115b24dd11db18aaa1c5b0f5bb9f1",
+      "common_normalized_prompt_sha256": "489b04723a1189f7944f8a2d528b9eeed898c89ffde0f57dd5e5f6bde67add0d"
+    },
+    {
+      "task_id": "apps_intro_test_04160",
+      "source_index": 157,
+      "order_key": "3e6a3d4692b82bdef6b4a2b15bb2ea9154ce21eb663ba1eeb3ba95c389b34b26",
+      "source_normalized_text_sha256": "b1931e2fd970e649f99a26210a45ed26a19783b99dbe61ea97b6a08066977fb3",
+      "common_normalized_prompt_sha256": "a57a6c595d1ae0b73f276b7d114d5e6c19f97254fc2063e41e9dde15f4ee5b66"
+    },
+    {
+      "task_id": "apps_intro_test_04006",
+      "source_index": 6,
+      "order_key": "3e9b5d6feece896f70833808e4205e7e61eeb42d917151031acce05a4ecdb402",
+      "source_normalized_text_sha256": "267644bf50f4113cc7e756154b2454b047e68de782328c7e70802d3e56746c19",
+      "common_normalized_prompt_sha256": "bb9acdf669ba30cd47b07a9f9b9a8ecc50cf4a67b68bd7c0cec8d85279d065ce"
+    },
+    {
+      "task_id": "apps_intro_test_04109",
+      "source_index": 108,
+      "order_key": "3fbe703b0fe1f724662cd35fb0c7ec543f6faae1a6bab2882763ad6cae9f199a",
+      "source_normalized_text_sha256": "7d6b0f9dedcc757305740503f576dc5c3156d95386e90d29928fbee1a24bbbe6",
+      "common_normalized_prompt_sha256": "9b92fa184851d2e8a9f07c1495b7b000e513d4caa828f2187b306044eac9efbf"
+    },
+    {
+      "task_id": "apps_intro_test_04033",
+      "source_index": 33,
+      "order_key": "407d483b67ba117946470e2a02759e3e793709b69abbdb8709cf7e2d8bd22b76",
+      "source_normalized_text_sha256": "f8b6b4c089a02b0fa69f990a58e6508da82975b827f50177a497a6985ca1f1bc",
+      "common_normalized_prompt_sha256": "7100711c349b86dd4f423afe94bf11d705a332036686ccb425beda16f3bd5671"
+    },
+    {
+      "task_id": "apps_intro_test_04072",
+      "source_index": 72,
+      "order_key": "4216650f12f4562c6153b526d43aab3a24cf84deb19e0fa800ee63146721754e",
+      "source_normalized_text_sha256": "b53392effced3fc393aa90892286b990a8046b02362bba3196f61841b8d43158",
+      "common_normalized_prompt_sha256": "69313ebd0766232d1bf64081b6072b48a6b9d0a668379fcfc9bce2117bbfd6d6"
+    },
+    {
+      "task_id": "apps_intro_test_04175",
+      "source_index": 170,
+      "order_key": "423044a4424c30999a2f35d6e9f531a38c67c4fa9359acf6db0f0b820e2b2543",
+      "source_normalized_text_sha256": "ae88ac64ffbdad1e586952ac090768dda6bfe40dd42f30a6755a727a4c89b40f",
+      "common_normalized_prompt_sha256": "6c8cd9a8e555b2d9bbc5d0d366487f755c59da16d626409fe348bc3b06b83c4b"
+    },
+    {
+      "task_id": "apps_intro_test_04151",
+      "source_index": 148,
+      "order_key": "425f9bb5a907bdb03ffc49f399b2c4c9d6e7bb80dcc3ca86b9bfbfe0eb1e243e",
+      "source_normalized_text_sha256": "6eae6613217a8e2cb94d5cbe302d8204ff075e6734d5c85b09e07f6effb7502a",
+      "common_normalized_prompt_sha256": "a312fdd9cc19914a372166285f58bf916bcf24bd139f70b08a362728add9b8dc"
+    },
+    {
+      "task_id": "apps_intro_test_04191",
+      "source_index": 185,
+      "order_key": "435b3ec43f038f0ff6029e2d6edc8830782741944d2c0f96b1e4d80c5c20fe0c",
+      "source_normalized_text_sha256": "e633bcd81c81ca022fb13e09a9af6d995c028673ad78c8e86ae2dbcfbcc7e1ab",
+      "common_normalized_prompt_sha256": "3c8bceea9a566948ba396a1992dec4e42de3584bc06afb13065344136f8b031e"
+    },
+    {
+      "task_id": "apps_intro_test_04193",
+      "source_index": 187,
+      "order_key": "44da59a15477eaad4b3aaea2fb573e888bd0b169bb6f740432ccc61b078fb81d",
+      "source_normalized_text_sha256": "e5380cdd557f99f5ce0968320c3b73fac53c0370bf28b2166d0451cef801a8a6",
+      "common_normalized_prompt_sha256": "feb1f336e90d4a34c6597da575b4191826abd0a56bcd97ced87ed7f562bb3deb"
+    },
+    {
+      "task_id": "apps_intro_test_04182",
+      "source_index": 176,
+      "order_key": "45fc13f5f3ab87f4868628bdc8a296e08091bff6630697f1f3a89ad010034847",
+      "source_normalized_text_sha256": "03c4c2fd78aa00e5664b0c4afddc175e333351eb858c6ce0899c6dbc008f5be3",
+      "common_normalized_prompt_sha256": "cc58b23c09e0e8b2faf92bbb5873c36dea0ab0c6caffcbb18643921d5494e146"
+    },
+    {
+      "task_id": "apps_intro_test_04057",
+      "source_index": 57,
+      "order_key": "47f23c44f6ddc64bd9473cec34c58d859ab8519c5be3828e129fa11f37cd2699",
+      "source_normalized_text_sha256": "4da3e8bf6b1ddc9485a8f7ce655a8ec470e212b34357f57c4606486784f69ffb",
+      "common_normalized_prompt_sha256": "310b60a979d26fe2fd5d46ef13ceb7c31fb66898f7c3d4b015faa06636bfbf2f"
+    },
+    {
+      "task_id": "apps_intro_test_04013",
+      "source_index": 13,
+      "order_key": "4bc27bc48b8942756411693ef7293ad6934836e747597cc125f74200e8279ee9",
+      "source_normalized_text_sha256": "824aa8da5ef3f62c27ac564f89a2066c921caf5e16a443a999e92e2731dfdcc4",
+      "common_normalized_prompt_sha256": "ed2322706222d9e9fee7b20a8c510b024db4c9f3eea4d5f5ab76e990ec5facaf"
+    },
+    {
+      "task_id": "apps_intro_test_04214",
+      "source_index": 208,
+      "order_key": "4bd8f7a442a86b5444ff1c9de6c9a400f2b8d64b61b6ca6b09effac136e1b559",
+      "source_normalized_text_sha256": "3532da09684a17cfe91231f7af7f8f2406237d771862b5f4db8ef8d0cac059c9",
+      "common_normalized_prompt_sha256": "d2f650ecee8886f576e031cba3cb975f94bc9979ca92358e23bd968c34748a87"
+    },
+    {
+      "task_id": "apps_intro_test_04152",
+      "source_index": 149,
+      "order_key": "4dd6803febf30c4281562153f58a1862dbcd1bc31104356db841273ef32837eb",
+      "source_normalized_text_sha256": "e31723e81a8287e25071601c7f0b162f12bcb8d591906e5b52e23ccfbd0b3106",
+      "common_normalized_prompt_sha256": "f7d98d27d75175ffba24caaac79dd21894a5839ef0ddb1c46bfe8ca7446a2d4e"
+    },
+    {
+      "task_id": "apps_intro_test_04149",
+      "source_index": 146,
+      "order_key": "4e2194e1fc7396e12a9665ade3bd1bddcedc0d0a6ee99b583b7e014dc0207194",
+      "source_normalized_text_sha256": "3397333acd5fbeb77f7904684bb57979dc0578c4eb54499c0843d5300886a061",
+      "common_normalized_prompt_sha256": "5c9f1d18a262c39976b2d52138b7003cc24ab29c7e35b9dd0cc76c719989cce4"
+    },
+    {
+      "task_id": "apps_intro_test_04037",
+      "source_index": 37,
+      "order_key": "4f61d363dfba0e7a0cbcea6f19d89e334fbe8e3050ccc4db7f65a3e91c8af510",
+      "source_normalized_text_sha256": "62d19cca4162c50c6d533386177724d2cec7f764cfaecdbfeae2dfc079947cc1",
+      "common_normalized_prompt_sha256": "4950043fbcd0735a3ab2f0d2fdc06a69b061bd6912d0eff1c1e65f0e8418c4d2"
+    },
+    {
+      "task_id": "apps_intro_test_04030",
+      "source_index": 30,
+      "order_key": "4fb5cb12657ddfd8f330e95c04537a3bc46344a4ab2be1b5a16a15eac4a7c3af",
+      "source_normalized_text_sha256": "b941db4db2c61f5b830f55415b3a1f532089c0f21e264a3ad2199d37008f2e46",
+      "common_normalized_prompt_sha256": "9b2c056ecb4d65745a91595fba5a5ebc8ff34ace86d416f8eaa911767281331f"
+    },
+    {
+      "task_id": "apps_intro_test_04090",
+      "source_index": 90,
+      "order_key": "4ff0f23ad4a6fc6c0ec7fc32143523abe4598561c4f9e867e6423dcf3b0502e0",
+      "source_normalized_text_sha256": "be5559774f12781440f7b06cf18aaf98e1a48d9378f0bb61302ceaa1bfdbc1a8",
+      "common_normalized_prompt_sha256": "1ca82f175acea4200119548dac83746b6ebb17bf95ab54513e4346ee0ddd8719"
+    },
+    {
+      "task_id": "apps_intro_test_04200",
+      "source_index": 194,
+      "order_key": "53859020990fb55ce2fb1b70298116e4065c83dd9d954111ed3e34293729369b",
+      "source_normalized_text_sha256": "5f9db58a37b0d97a47f404c22499d9ebbfe1018b306a62604d1faea82194a22e",
+      "common_normalized_prompt_sha256": "c4dd2d62e886e74efc6bfb0652c66a7b74978911e72866253eff33d97c8a8e53"
+    },
+    {
+      "task_id": "apps_intro_test_04026",
+      "source_index": 26,
+      "order_key": "55699696e2d5bcfc863b4d0079cb02342b48509b376c2ab048a95f0aaef4b614",
+      "source_normalized_text_sha256": "246aa9fecee1543adc89de20d5d1f3961f30128fa3e347eb84c6dae5a909017b",
+      "common_normalized_prompt_sha256": "5b5197450621eb9059ec86bf861f3a3443ab6e496ef81fd04630145beef304af"
+    },
+    {
+      "task_id": "apps_intro_test_04187",
+      "source_index": 181,
+      "order_key": "55862bcb1c115be45b408f95d29e32fcf2bffbf5e3e618d2f5e70f2ef2be934a",
+      "source_normalized_text_sha256": "1939fd7bb9542194128a43cd916c2f2991ade4b21e840879285451a050b4ff99",
+      "common_normalized_prompt_sha256": "86426d25b231350c472fddc4018a8e785c2058eab2e2811a97225eba50fd0909"
+    },
+    {
+      "task_id": "apps_intro_test_04155",
+      "source_index": 152,
+      "order_key": "56a77d763c6d9d37793429341b73e984185e7f8930bacb8554e903002e4fa6fa",
+      "source_normalized_text_sha256": "ed1f2e4bf9251c49040baac73e5dba4e12acdfd2d1da8cf9b5005bd17f4eef5c",
+      "common_normalized_prompt_sha256": "1c5ebd89dc49f2e4733adea58661811db89f6fa4cfaeaec30b9571920de7c42e"
+    },
+    {
+      "task_id": "apps_intro_test_04021",
+      "source_index": 21,
+      "order_key": "59d20894072e03c09d1a28137857e7cabc140b295e98660a3a3570335563451e",
+      "source_normalized_text_sha256": "4bf48757e7e57d0c2ff5a0a60050435d73899dcdd9277489b4dd0eb0157ba879",
+      "common_normalized_prompt_sha256": "faa0d27147a0ceafa7f7cbaec06bae74de6712aa60bb11bbbbc4cb61ac8da051"
+    },
+    {
+      "task_id": "apps_intro_test_04143",
+      "source_index": 141,
+      "order_key": "5ab03edc11ab14a6dcbc98945a5f2e7030803c0806514650dcbd70d111c2b5f0",
+      "source_normalized_text_sha256": "e4adb37e777b8a1e6e96a32fd6c0d16b9b20c41d0cb8df74cf62d24cf4036300",
+      "common_normalized_prompt_sha256": "194e9d45a9f69ef9d88a8980c6ed78711f785088cc0b35a1f013c8daaeb97d32"
+    },
+    {
+      "task_id": "apps_intro_test_04091",
+      "source_index": 91,
+      "order_key": "5f57ea2dafe3dcaa692383ca114eee9aaf6376f3eaa4326642020ea8023897e7",
+      "source_normalized_text_sha256": "8c4827270fc2e32d2f54bf57cbc0489643cd347367d1e3d6a068ace195e11226",
+      "common_normalized_prompt_sha256": "d72ee942edc8fdc377763eb359c478a5c608121f786e6597694bb7776173b121"
+    },
+    {
+      "task_id": "apps_intro_test_04219",
+      "source_index": 213,
+      "order_key": "5f7aebb0b68348107172f1824c493ef17d1ed1dab524b8cbd95696cb8ff0a32b",
+      "source_normalized_text_sha256": "25d5a6d0ff6404139e812a35cb160c051454bbcca88fb0d6fe8bcd05294aaea4",
+      "common_normalized_prompt_sha256": "5d5044e75658a0ecbd659a064c7911f170e0a8b99435c1150c50f2a0aaeaba8b"
+    },
+    {
+      "task_id": "apps_intro_test_04240",
+      "source_index": 232,
+      "order_key": "6028eccd6e2914df56723757e14c035e303edc24a49ee2f539496a51e0c5df44",
+      "source_normalized_text_sha256": "b5231078cc4a380933b70c7e6a80695a1270f5545058d9d413a05ea1b4acef30",
+      "common_normalized_prompt_sha256": "6666132b5ec2e58d2e869d142d2d922e957656654502503f96a33bb3dd325f23"
+    },
+    {
+      "task_id": "apps_intro_test_04010",
+      "source_index": 10,
+      "order_key": "604f6ba3b67e487aed5573081c51fa19c43a02b8f4698da882c494cb2f6a4856",
+      "source_normalized_text_sha256": "5ff30f6b28671c5e8be0cb9b539ccc0b2ba0e435248997f543c5dbc22cf07c7d",
+      "common_normalized_prompt_sha256": "af71cc0f7af550afa41d0397667ee136b63c1455b4eb940dc5f91e59b109c873"
+    },
+    {
+      "task_id": "apps_intro_test_04118",
+      "source_index": 117,
+      "order_key": "60c4a3a7fd2db6e5d7a42fc8c839c1346c38d4f3e1f48ff0673cc5438e396559",
+      "source_normalized_text_sha256": "374667044cb96f814976b0a1b0ad711ef98bf225c96ab99337d8f9a8f9ea17cf",
+      "common_normalized_prompt_sha256": "e4d968865e67c088095ffe5eb6bba9267eb86eb1ed54a8b41a65a551c6540d3f"
+    },
+    {
+      "task_id": "apps_intro_test_04116",
+      "source_index": 115,
+      "order_key": "61a4b28733d6230d9c397916ab6477d2469a8e597f02ee7b06e8f7fda920eb31",
+      "source_normalized_text_sha256": "39b4f9bc09fe65cb4303809cd01136e92b5ab4cd11a6b4403b34de51035461c2",
+      "common_normalized_prompt_sha256": "07edb70b8a90e36ec57546d42fb5452a2091172efca7e908cabd24fcf31c2d92"
+    },
+    {
+      "task_id": "apps_intro_test_04052",
+      "source_index": 52,
+      "order_key": "61b41db23c8a269c3c46a7bbf69fbff95651ef55969d8b1c329957a76e80da09",
+      "source_normalized_text_sha256": "7634932393ad8a5e4e6a909dfab6c6f57094d3e6b8610b771c229fc070d257fe",
+      "common_normalized_prompt_sha256": "f7130d70c5b1bda449d62f504b5e9d0d0c2184c46b69f32f2ba734e3cbcb05a1"
+    },
+    {
+      "task_id": "apps_intro_test_04068",
+      "source_index": 68,
+      "order_key": "629216c24ca9a83d29ffbddcbc2e5ae68bb10b2e86a39714330201e5984dcd79",
+      "source_normalized_text_sha256": "48438e6d2921bf6dc7745ddb37fb6d04fb16cd7d035e546ef2290a32c37f799f",
+      "common_normalized_prompt_sha256": "14b586be32543ec26c9d8f81e5fcbb3a87bcae04ff5d003be428350d99a59eb0"
+    },
+    {
+      "task_id": "apps_intro_test_04249",
+      "source_index": 241,
+      "order_key": "63826629d507c26b8deaaaf900d6ea54ea86b08ccabc9cc2b0737a082bbcbf7c",
+      "source_normalized_text_sha256": "b94cd00184b214f3ffb150cd3a9b39c9c89973d47cc1f234054d87c4e71f517a",
+      "common_normalized_prompt_sha256": "073e9e6c0b6be9ad6b3f4ad4e70293f00ba8664f5551bc804b55023f74f5d42c"
+    },
+    {
+      "task_id": "apps_intro_test_04123",
+      "source_index": 122,
+      "order_key": "65cc5af3cf8568a4099e80ca025085dcf122903eebc28ac75222ca1b5ee4324f",
+      "source_normalized_text_sha256": "0e4f037e532a0df60fe1893ce7830dac9e65a784518e6bbf67ff7a74a1720106",
+      "common_normalized_prompt_sha256": "a848116fb6dcae2cf14f0ab7899e97c63aa73d94e34c9f03904b197c15b7eab7"
+    },
+    {
+      "task_id": "apps_intro_test_04260",
+      "source_index": 252,
+      "order_key": "665562cbcbdc7db182ba8f06673e26be3fc6cec385a6475f3cb00bd7eaf5fb3a",
+      "source_normalized_text_sha256": "5c7421e4e649317c9056717d7d5393d1b221f87e5529713fd7657bf497d54e2c",
+      "common_normalized_prompt_sha256": "9f8a4b580f68974bed2f036463af3f35ca155d054daad79e84914ca6dd4b9668"
+    },
+    {
+      "task_id": "apps_intro_test_04061",
+      "source_index": 61,
+      "order_key": "6805cb54185a91515ddef05aadd01349578afa155216cd10b0e5711cc1e821ae",
+      "source_normalized_text_sha256": "573b417f577f3b451f7e9ad9a2c3837eae5d6d03efe20f86a8418f1819df90f6",
+      "common_normalized_prompt_sha256": "1b12c236aaaf0306d6df6c71ea77f4b8a7a12ea466361fae4f5ef3c4ff232061"
+    },
+    {
+      "task_id": "apps_intro_test_04070",
+      "source_index": 70,
+      "order_key": "6b46c736e103e3351bc61151af16dbbac611d3bdb3369c36a3aa96fb37f9ec5c",
+      "source_normalized_text_sha256": "ce417a76eac222cc313244eebfa978c47d489bdade264ca3b7978fb20fda56f5",
+      "common_normalized_prompt_sha256": "6cd55cff40dd81a27bf8c523aa4366602ee60baf82615ba9c143ff3457a69b4d"
+    },
+    {
+      "task_id": "apps_intro_test_04194",
+      "source_index": 188,
+      "order_key": "6c392cb9d54fe949904db53bed5f016c5d03df704682b53610afee056da32196",
+      "source_normalized_text_sha256": "1f2a242e1a241419c57eaca9cf07aaea20c510932bec2e2bb5692acc4629bbb0",
+      "common_normalized_prompt_sha256": "23826ad54112ed6de3fccacb9f8a391be2b9aed5aeebb6db8208179e323b9834"
+    },
+    {
+      "task_id": "apps_intro_test_04166",
+      "source_index": 163,
+      "order_key": "6c8a751c55866584e0583b12220d220b742517e8a68ef7891fc7fd98dfad783a",
+      "source_normalized_text_sha256": "28021b36bbdc0ee71e270b3a280eb6b7db89585a9efedd5b5d7b7bc1cf07bc32",
+      "common_normalized_prompt_sha256": "cc569b3d599ff8d382dbf3f89dbdaa5c33f913b843b98d6251260e2ea6da92d0"
+    },
+    {
+      "task_id": "apps_intro_test_04189",
+      "source_index": 183,
+      "order_key": "6fb1a3ae8efc0fe46f0333dbbe2eceba763e574509997daf5892834e7001728d",
+      "source_normalized_text_sha256": "554f4da5e038ef8d40aa4e575157e682bce0fdbf7db38f5a2d281eb6bcfe5413",
+      "common_normalized_prompt_sha256": "c0393a08909a942d8bf8c31b956d71865e51a9b57b1316efb8f543290bb57b7e"
+    },
+    {
+      "task_id": "apps_intro_test_04079",
+      "source_index": 79,
+      "order_key": "7377387f37fcb15f71a1d0e9e50246702364bc3001a409e925dfd7b7d715de3b",
+      "source_normalized_text_sha256": "265ad9a467e5bf18a9990fd1fe0258e8acc79eba493fbe533427b7d3aff5e2d1",
+      "common_normalized_prompt_sha256": "7120d645973cf223944a596f77ebc7a9da6f325be2d8fb3105cd718a1ec8dc2f"
+    },
+    {
+      "task_id": "apps_intro_test_04220",
+      "source_index": 214,
+      "order_key": "7473efd866352b170466116da88848270c78618fe2bdbac05b9d33f9b0e04a39",
+      "source_normalized_text_sha256": "1585d629e57bf9a114dbd4a2ec26ea61104f9397ebee633f0cb3cd9ac8681614",
+      "common_normalized_prompt_sha256": "dacf90c1b7e361feb4b99ab242aa362a9966db714c3a016cfa09914fca7caddf"
+    },
+    {
+      "task_id": "apps_intro_test_04153",
+      "source_index": 150,
+      "order_key": "76045af4e343b69b9a832a593d24b0e815f61f0e00f54bb8cec9faa3c1d65561",
+      "source_normalized_text_sha256": "6cc951b90a681b72ffc7f758bbbd59ad030ba70777b35e23bb43b1be5cddb7f8",
+      "common_normalized_prompt_sha256": "f5023a524d5302eeac1998cb840bd16f622a95006bc44650202e617210ab9513"
+    },
+    {
+      "task_id": "apps_intro_test_04185",
+      "source_index": 179,
+      "order_key": "770c0ed12259dd8332746e171a7cf10f2a8139e6a04a5882ae3a7fe397f587fe",
+      "source_normalized_text_sha256": "6f16b2bbdd264f7201fb1ad1823a90da6c00bc8014d70912774894ce9a2fa16e",
+      "common_normalized_prompt_sha256": "4791d6a3f9eb630178de55de336949752561f8a0a6947fa3e1942b7dcd9efc24"
+    },
+    {
+      "task_id": "apps_intro_test_04184",
+      "source_index": 178,
+      "order_key": "7750f73966094aa26ffb4084f23b8f15c3736f6336b4e786f4efe3070b3ed598",
+      "source_normalized_text_sha256": "ad1b79b4ffd4038f8df1248cb4d4ea321e36d3f7de4913712d1e765c21f2769e",
+      "common_normalized_prompt_sha256": "f523f85886c236ea89f734b4daf738d055da5af515b82018ba9efe849936ea52"
+    },
+    {
+      "task_id": "apps_intro_test_04254",
+      "source_index": 246,
+      "order_key": "7af5d6d0cb6aedf0e688ae3460e7e0a49d17a0b4fba1bef25044bcdb4f8e3011",
+      "source_normalized_text_sha256": "a4b1b0882c678f4d841f1f68380a7dce32aa9957d28d40a435677946402aa260",
+      "common_normalized_prompt_sha256": "61c4a8f1b3614f6134b7c0044497db3c7419b3557bd96db07ef9bf91ce45382f"
+    },
+    {
+      "task_id": "apps_intro_test_04171",
+      "source_index": 166,
+      "order_key": "7b50e481eac7fa30ec0810ba634f5f3df6f0029077f9a5403e61111c6b7052ea",
+      "source_normalized_text_sha256": "85314187c48c1d955b081926274381a2ded29349bb68870d752dde3d231b73df",
+      "common_normalized_prompt_sha256": "fcc767a20ed6bb326062a95c6acd6c36f45ec5249e3e43c77efe75f02ec5129f"
+    },
+    {
+      "task_id": "apps_intro_test_04095",
+      "source_index": 95,
+      "order_key": "7b6690e8e7d76e71fe597992182c0e0d1e004152beb04382713bd80e89dabae8",
+      "source_normalized_text_sha256": "677783a2b3cda944140fc29c7eb355467206efdde92c5638d18dea9c2846927f",
+      "common_normalized_prompt_sha256": "a847002b37e27319a282978fcdffcfc34afe1b42c7fa9201592bf3e91620cb21"
+    },
+    {
+      "task_id": "apps_intro_test_04111",
+      "source_index": 110,
+      "order_key": "7f06a9c3db9b241dbdc26cc06041948453c3e671c05c8e1f4b90d7581b957a0b",
+      "source_normalized_text_sha256": "0c3f4e2d69a19de8bd0a92cc091050efeeb69db0ff2660f78af460203594002f",
+      "common_normalized_prompt_sha256": "70e40f061992380fa507b6abee5625c0811d12669396abc56ff3c2166b30ef83"
+    },
+    {
+      "task_id": "apps_intro_test_04034",
+      "source_index": 34,
+      "order_key": "7f67fc1667be85b05cc714a4faee4f22a4017e1f5c415b4ff5873c2d2f67ec04",
+      "source_normalized_text_sha256": "1e7bfb19b9785270d6e5222bf4342b9550e9338eb3cfd0043aaeb08c0317aca0",
+      "common_normalized_prompt_sha256": "909506dd865ed56c469c425e3f573d12a83f3147c3da86fb263131ecb8aa9278"
+    },
+    {
+      "task_id": "apps_intro_test_04236",
+      "source_index": 228,
+      "order_key": "8089583b85b8c7a99ddd6bf71b373315e64ddead2c677b89fbf7263f2704868e",
+      "source_normalized_text_sha256": "f7dcb277e87f5d7ff52a73dcec29873c5e0f797f89e56dc8bb0f9c27d474ae8a",
+      "common_normalized_prompt_sha256": "9d46c2988256664e6889d7deb3ffc58bc7680ec32a714d75bfe0fd7b3b39a919"
+    },
+    {
+      "task_id": "apps_intro_test_04074",
+      "source_index": 74,
+      "order_key": "812ba73b5008e2ef3c99a58a6a40aae67b64855db41db4923a2d8f41ee9fc202",
+      "source_normalized_text_sha256": "98a421e735f5e60f1b0224d4e39894840667982cbf08defb7024f723466fee78",
+      "common_normalized_prompt_sha256": "29b2fe074f2ec493888370ae71e8155ee5e2c0f3fa17c9fa5540cb455de97151"
+    },
+    {
+      "task_id": "apps_intro_test_04108",
+      "source_index": 107,
+      "order_key": "81fe267ee6647d712715e8b21030449c0c403168d01b848d2194c9d64c0ea1f2",
+      "source_normalized_text_sha256": "a6de31ae230c2d37efaca3e21716c2638747a57460ffc1904cac638108cdcffe",
+      "common_normalized_prompt_sha256": "d0eb000e16f8c6e40aa97fd1a2a90cfb5dfa7f7a767d4dfebc5b4de970f0be7e"
+    },
+    {
+      "task_id": "apps_intro_test_04105",
+      "source_index": 104,
+      "order_key": "82ddb57c05a2d7873ca84f18fe7f85f3e46df38904d794ac2b7b0ab0341c53a7",
+      "source_normalized_text_sha256": "50251db117820e4971d0ee259dedd02fcae7f2d93535d3eb29fc0c352949ba56",
+      "common_normalized_prompt_sha256": "2e6c462ae16231a24e6eb281f44dfe0eaa470d7b39f335a312a21d7c9c6b21dc"
+    },
+    {
+      "task_id": "apps_intro_test_04133",
+      "source_index": 132,
+      "order_key": "831c03646c2b5946ab50df4b41c5585bd14a693b83d7bce2adae046d966af737",
+      "source_normalized_text_sha256": "7afef8e9a2de1d89f304d14ab8c6da669de284e3b565b12bc701d94b64810996",
+      "common_normalized_prompt_sha256": "2133912add8d9a51a6b6a4765c379e0690a06dc09ca925ee7286c8f6374420a6"
+    },
+    {
+      "task_id": "apps_intro_test_04046",
+      "source_index": 46,
+      "order_key": "835a45e4678bf6e8883c4f397727ae352d9fff47702c9e22c325587739622038",
+      "source_normalized_text_sha256": "af4f949129c6976e6989a91e3aa5e643046e999d1a7b124bd4e31c39de678068",
+      "common_normalized_prompt_sha256": "dd371b2581ac0282ca998687bded204f055588bd4654bfb207ead3ea878ce448"
+    },
+    {
+      "task_id": "apps_intro_test_04225",
+      "source_index": 217,
+      "order_key": "83641d6444ca2d5f0716f2724059f2918b4d3dcefb9936b744d65e0ce813701d",
+      "source_normalized_text_sha256": "9f8a482ea0d4b701298a8bce20d649486998c520ef929f3ca576e329f308ff1d",
+      "common_normalized_prompt_sha256": "e3d629c5d16fc5081446de2465e75efc64ca11176c2296196ebf462068e9d728"
+    },
+    {
+      "task_id": "apps_intro_test_04106",
+      "source_index": 105,
+      "order_key": "846c5e97f34fd34e7716e9f3dbc07cb770dad9afb5c815b6dc70a67c77c98ddd",
+      "source_normalized_text_sha256": "8468ffff401d0f6ebf8b30773d23d3df1fd2474a4022f6b61c18f9a49cd5dbdd",
+      "common_normalized_prompt_sha256": "790e1fcdcecb5a8000e0f2ba1e4dcdbc6d100bdcbdc9a4bd43de49e09901dd1b"
+    },
+    {
+      "task_id": "apps_intro_test_04041",
+      "source_index": 41,
+      "order_key": "850729d19a3ed44501659ccfa3bd81131438c9a560bc235f36b9c3f4669e4a67",
+      "source_normalized_text_sha256": "7fc17bf0d93992481eff80ef0ce442b5a3a1a62cd162200166cff08d6c7e7c8a",
+      "common_normalized_prompt_sha256": "b05a5771e7da80376ce1c7474d978bf111ced2727ce35b7ac282ce3c51b05ca8"
+    },
+    {
+      "task_id": "apps_intro_test_04208",
+      "source_index": 202,
+      "order_key": "853260b6c3cc6c89c07ad1ca707cac7bdcb30fe68c26dfa00e279a7a28d5bef3",
+      "source_normalized_text_sha256": "f814d884505372e695c1f17397ae9ba2daa58d3ebed95281e859c9b9f72b3a26",
+      "common_normalized_prompt_sha256": "58ee29aa4f983086f532ed8a19724c52c3a86c309c8bead55817b9b7313b5b41"
+    },
+    {
+      "task_id": "apps_intro_test_04131",
+      "source_index": 130,
+      "order_key": "85ff89fec935103a51a0b5380493dcbe8a31fed45e10aee07de8002705d344c6",
+      "source_normalized_text_sha256": "462fe8e3f265060e3a66a218bdf342d8aa0d1f0b5c2a59d4aecdd914a7807250",
+      "common_normalized_prompt_sha256": "5c9de944cec544e4cebe0dfec6e27b83cd20929eadf8fab3c980a3813e80ac2c"
+    },
+    {
+      "task_id": "apps_intro_test_04252",
+      "source_index": 244,
+      "order_key": "8611a504527c59edf5839564b2f45b0dcd7e3fbf05042a61230a5eb580204952",
+      "source_normalized_text_sha256": "92f0040eb82af4bb68463d6fa3e905c0d06191727a4c5e0856a5dd466726ffa9",
+      "common_normalized_prompt_sha256": "e9ea24b933c8f196d28b57ff3de2884a648a018988f9e202e1476000e0103336"
+    },
+    {
+      "task_id": "apps_intro_test_04235",
+      "source_index": 227,
+      "order_key": "889edf006ce273934e3d7544e166fbf893c33753b2cec2d3b33c0678051a69a1",
+      "source_normalized_text_sha256": "6fdfd22b121b8d6306937557ed59292817cfc4f568d80d59abe6f3de007ce67f",
+      "common_normalized_prompt_sha256": "8e7ca3269cd390988b2f8d2fa37d2b1a3c39ede9a769bd725206520527e94467"
+    },
+    {
+      "task_id": "apps_intro_test_04134",
+      "source_index": 133,
+      "order_key": "8b8b2c59d3279e4a8af233c172681efb446e77bbdaf340fc19e1aeb5abca7636",
+      "source_normalized_text_sha256": "7b88337cf77f0661bdbcc6202a8aac59f9a8dd22f419095d08e4e8146150d71b",
+      "common_normalized_prompt_sha256": "e89177eef87d7b3b5e7ac9119cb46a75272c7ca86d71df4c828f97efca3e9f87"
+    },
+    {
+      "task_id": "apps_intro_test_04056",
+      "source_index": 56,
+      "order_key": "8c24670d644502208a698803ebd01eb0239fb61c21bc63887ff77e55300e0e68",
+      "source_normalized_text_sha256": "6cc3d3c6b671edd0116ca23436b05eb2b0b4e37b0361dd3a4b11ef2593d6aaee",
+      "common_normalized_prompt_sha256": "8902d3c3416b84207dc52200dad031a19d8ef14742b7f44893321c77a2d17e79"
+    },
+    {
+      "task_id": "apps_intro_test_04075",
+      "source_index": 75,
+      "order_key": "8caa59d0dc1d9410a0de4346e6afcb3c3a7215f01d7f8cbf817bc95b3ab0bd1b",
+      "source_normalized_text_sha256": "b81a89de4fe1860494cad54c6db806657ca6d385a297533fb71198f58830dfff",
+      "common_normalized_prompt_sha256": "4671c6da0733c14275157e69ed35bbc9f0d9da634abc80a0398a20efd06f2f13"
+    },
+    {
+      "task_id": "apps_intro_test_04087",
+      "source_index": 87,
+      "order_key": "8d295bc4ccffd1980d015a63cbc8667969f605265470d7c1a235c26b65bb2342",
+      "source_normalized_text_sha256": "57bfb2f5087b87438ac5a51fc79aed1d3fb3d2d70718b311195ddb7041ec9779",
+      "common_normalized_prompt_sha256": "bcff2c8a806a48266161e321bb1d50d6a2ffce4689aa2b69d2b45cd6d9bc678c"
+    },
+    {
+      "task_id": "apps_intro_test_04019",
+      "source_index": 19,
+      "order_key": "8f8127d5833333216221deb67622708773360dc55b606e4591baadd0047cecfb",
+      "source_normalized_text_sha256": "34e9f5d621d5455a3b055b1c34dbeb3ebeaf173124101cbecc7ad1567bb2dc99",
+      "common_normalized_prompt_sha256": "e0451aff00668c677d1cdc20df10311d304fae67b23f2866bd7a4623a666dab9"
+    },
+    {
+      "task_id": "apps_intro_test_04053",
+      "source_index": 53,
+      "order_key": "8fdf7afde741472034c2e474ad0fb1bee66e9fa7797a6ac6b6b97ff4569e9f65",
+      "source_normalized_text_sha256": "c69ac0499ae1cc2a1bdfd4616e9ffd87eacdee7b9c2a8953de39092b0effc60d",
+      "common_normalized_prompt_sha256": "25646b223e271c44f706b1b450152444421ca64676400dac6c52f469cad76cd1"
+    },
+    {
+      "task_id": "apps_intro_test_04048",
+      "source_index": 48,
+      "order_key": "8ff1b8fb5f8235bb868ee1a9810475b9b5516b7f66aeaf5d9ae01479214a1bb6",
+      "source_normalized_text_sha256": "e81351489a6eee72de2f0c4924e8ad3c69c6591e112398dcf4aba7f5479e484e",
+      "common_normalized_prompt_sha256": "2341a79ea093187d01e8026e0b07a3348c577f6ea84b9b8684d3e0baad8a063d"
+    },
+    {
+      "task_id": "apps_intro_test_04002",
+      "source_index": 2,
+      "order_key": "9007617854a0e13d5e64d9f8b9c2979d6fbf460ebd1a9be12313c628da839a39",
+      "source_normalized_text_sha256": "60e53266a2c51eb3fff5ac8afb9bd802a104c0e12f3fbe9dbecfb5cd5c46e861",
+      "common_normalized_prompt_sha256": "00680ef77eb4bd5103cfc99835b96b5d3bd70e58c6d89df868e0f2c11f7c1e57"
+    },
+    {
+      "task_id": "apps_intro_test_04148",
+      "source_index": 145,
+      "order_key": "9024a4870d26502654d9125ad04e8a6d9bce7352243634e289b0584d25ea03d7",
+      "source_normalized_text_sha256": "8f3c82ae51bdfbed6dc824028397dc828fc609de6b0d8f51dbc7f9bb33450e44",
+      "common_normalized_prompt_sha256": "8b3f6ba63c2e99c1e224a5a952cba9eb8eb153dd7d4a006abfa37744cc77c8e1"
+    },
+    {
+      "task_id": "apps_intro_test_04018",
+      "source_index": 18,
+      "order_key": "909a705f1fd62fa6e94c02f9789e2706a967221e1c5f95dd83a10fcd55d1cfe3",
+      "source_normalized_text_sha256": "e07e305da97aa30af93e950a17e3148f63036ec88ccb3596561a3dd32915f339",
+      "common_normalized_prompt_sha256": "6fb592c5486ecd072e893b02f440cfb589fb8eff22e0d8551c386fd3f1b3d7f0"
+    },
+    {
+      "task_id": "apps_intro_test_04209",
+      "source_index": 203,
+      "order_key": "90fec9580a62a48d2b3a4e1536f6fd203ff7ba493cc59a34755e09347520bca7",
+      "source_normalized_text_sha256": "c7cc566d0d8657230a223e7c6244f5fd0c151e4d555f0bf56967245882041d23",
+      "common_normalized_prompt_sha256": "2d010d32ee4d21b531b764a6a13253997cdba1e321b0fcd0bf33a1d139d3ad0d"
+    },
+    {
+      "task_id": "apps_intro_test_04183",
+      "source_index": 177,
+      "order_key": "92b7c34ee9a264102c5dad8f80ff714a32c41200ed7f476282177ac02c00c755",
+      "source_normalized_text_sha256": "5d7439903b7b66e3383c51b2d273b02344888923107020b99d8cb9326c5add9d",
+      "common_normalized_prompt_sha256": "bbde8a28bfddc759829f0f5649a7bafe9cbffc10279320ee865dc8015418b4d5"
+    },
+    {
+      "task_id": "apps_intro_test_04088",
+      "source_index": 88,
+      "order_key": "92df6f9688bc1cbd4d9e6c5e8f3b069a5afc21d1f803965e302f49fc6e8aae30",
+      "source_normalized_text_sha256": "6611ebb3514893c6fdbc8dfee77105cb7199ac7eedcca4bbfb75d58937fe1b64",
+      "common_normalized_prompt_sha256": "ba5135ebd0d63de2edba7dc94c0fdfdd8f4da5a7b9ce566673424890a4ccbd33"
+    },
+    {
+      "task_id": "apps_intro_test_04060",
+      "source_index": 60,
+      "order_key": "94be6c7621c9fe0804a495fa2a4d9ebf7bf385396cf3c69a72cedf7909e1907d",
+      "source_normalized_text_sha256": "3cd51841b188a99a958dba9ab643a13d9b847cad10b9709c13ea0b2a7b34ff1d",
+      "common_normalized_prompt_sha256": "6404bfbfb8225376aab9309e821171df74415973a6220eeedfd98786529a6867"
+    },
+    {
+      "task_id": "apps_intro_test_04201",
+      "source_index": 195,
+      "order_key": "94ffefd51e3de66346241a6158fe56bdb71921bc78790ecf8c209a65b018096a",
+      "source_normalized_text_sha256": "9b21c5c83b683938fd388180e0d413faf59aac93ea14385f20429c3a87644eef",
+      "common_normalized_prompt_sha256": "de21b7587286618e9c96a12455c5a25c3ab958709537cdbf4e85e59b42962014"
+    },
+    {
+      "task_id": "apps_intro_test_04054",
+      "source_index": 54,
+      "order_key": "95e4299e7fa776054896e46567d2e26c5cd8ad09e3c92cfd828dbd1ea771d798",
+      "source_normalized_text_sha256": "08e1d8d48593b99b2c849610feca95c8a183e62914e69e3431213d156b23b2fd",
+      "common_normalized_prompt_sha256": "126c006ec63fdc8c9c19207cdc7bfa212195504769389bb5c1ffcbfd0c4f7cd0"
+    },
+    {
+      "task_id": "apps_intro_test_04024",
+      "source_index": 24,
+      "order_key": "982cfa2c7d48fa2a95e3b7f1d3f7ed4ff8be09df4c5250c55406d0c042760014",
+      "source_normalized_text_sha256": "8d47eb44cc0e8b9950b5b8e3bd9e5a3f94be12e410cfb4dd3fb2323911a568aa",
+      "common_normalized_prompt_sha256": "d2c76442b390c7295c3bce39b400d8a0452018b567c3fd91065db135a5fedc5b"
+    },
+    {
+      "task_id": "apps_intro_test_04159",
+      "source_index": 156,
+      "order_key": "99557b9ffe71b9252e2e87f3e89fd174d305b466f7ee8da8ac1d518a1c4eaf81",
+      "source_normalized_text_sha256": "ab1c22b6820c302625724bd86bcb977a35edadd8767b2808716d62d3ba2202e8",
+      "common_normalized_prompt_sha256": "5bcd730d19212c5f075d5b9c283e839dd0a44ecf19d6d0d02b61e864b82a3352"
+    },
+    {
+      "task_id": "apps_intro_test_04188",
+      "source_index": 182,
+      "order_key": "9a9e9515ee607e25bca3574ef8490ed21287c0bd7c2217c0be22056ff0fd3ce4",
+      "source_normalized_text_sha256": "8589002b654b4761b49eb559b79b32a6781a1492e956230971973d381dbc4df5",
+      "common_normalized_prompt_sha256": "818e492717905d6e3ecb6311e46a2359c7f5a64b8997f4d705a5be35bf9b0f89"
+    },
+    {
+      "task_id": "apps_intro_test_04227",
+      "source_index": 219,
+      "order_key": "9dd2c177e04e6baf4f0884b614c2bac979b9189466bc03487720334d0d107d02",
+      "source_normalized_text_sha256": "45a3fbce66989f6ef41c0813a929ee221dc2ba691ce2ab3113e8ae0ed1c5ea6d",
+      "common_normalized_prompt_sha256": "6c78c91fda9b0c5e46fe3e2f1ce4844af22a9b7677de85609a98012c053de16b"
+    },
+    {
+      "task_id": "apps_intro_test_04062",
+      "source_index": 62,
+      "order_key": "9ea661d7b473a66c2bfa964c4dd5ec9d5e78b47744991d124ea904da382f1114",
+      "source_normalized_text_sha256": "09f8be863ed5eb9b0ec78693a3db32aae41362a95f9c3b1672fdefb07b14b3cb",
+      "common_normalized_prompt_sha256": "78b15fd9dea8e649569e9d60d339c4a97e431205f69fa1fd644be001f7769a44"
+    },
+    {
+      "task_id": "apps_intro_test_04129",
+      "source_index": 128,
+      "order_key": "9f57c21aa7768da11d84ef536dea6fefc44f1b203476a80ef0e7747eb8ed6e62",
+      "source_normalized_text_sha256": "3b7bebe83203320045d53ecd2559852defdc76635792fff70267773c61d20733",
+      "common_normalized_prompt_sha256": "933fce2fbe1b5febbe95b361af44172ec11edffd95118c7829bfb3225d4ec6e8"
+    },
+    {
+      "task_id": "apps_intro_test_04008",
+      "source_index": 8,
+      "order_key": "a1efe206303245303590c6ee6d6ec50e4c6ab172e63f54cd93d013c086ebcf3d",
+      "source_normalized_text_sha256": "9a5af101a1fb5d8a52a6ac1f49a0a70d1aef5fe033e80728b797b79145c82d9f",
+      "common_normalized_prompt_sha256": "bfb1fc31de1eff4daa5bd023afa6591f31526d19155928f9a4165e48a0b18710"
+    },
+    {
+      "task_id": "apps_intro_test_04179",
+      "source_index": 174,
+      "order_key": "a235b9b6b975846f1cbe35b0692c5492bbf66130835834d0b187d1aaf261f900",
+      "source_normalized_text_sha256": "0adbe9c9ee09996d0a73448874db00be970522326358de5aac1e7075d01d87f2",
+      "common_normalized_prompt_sha256": "65b9d14738c41d20788bf647109b48eb6126c2843747ecedd922e0badbce2551"
+    },
+    {
+      "task_id": "apps_intro_test_04050",
+      "source_index": 50,
+      "order_key": "a24aa033691890996d8d6250b086919ce05d55a773ba7f7a0355f9eb1dfcac25",
+      "source_normalized_text_sha256": "e1649e9fbe969cd0b8d97826813e7f5e75c3f406f0888329b2fa0d01f1c17bc7",
+      "common_normalized_prompt_sha256": "72cb1c31e2d0041efb828e7b75e5d8125643d18d1ccb6056a462b5238c76bde8"
+    },
+    {
+      "task_id": "apps_intro_test_04256",
+      "source_index": 248,
+      "order_key": "a540c796a0a7c926a39935fa99c7d40dd5166371f07c3f0a45e9eea584cb4266",
+      "source_normalized_text_sha256": "6883e3a58b458cbe1e37d8e22d7cfd7f2cc2c5dfe2e7b8166640d34298a380d0",
+      "common_normalized_prompt_sha256": "dd5d74d4caebdfbf66866a093781661a6c2cfe0298d147035c456439278bc2a1"
+    },
+    {
+      "task_id": "apps_intro_test_04207",
+      "source_index": 201,
+      "order_key": "a613db5ae9e74b0d9ea7f4232e97a1e2341ed8cc9de7b35a800bea7cd94a47c2",
+      "source_normalized_text_sha256": "6f1371c06eab316332911815407f54e111dbdd61d538855486f7e205fb99d2af",
+      "common_normalized_prompt_sha256": "7ff892491d0421f7e9cbff8f3595bcc48d67344d1859e4664c058fca73a86029"
+    },
+    {
+      "task_id": "apps_intro_test_04231",
+      "source_index": 223,
+      "order_key": "a8171defe57f477c48e31d949d083555413e8b15e4c7fb3f75a27f328016c4e1",
+      "source_normalized_text_sha256": "7a3361f466cde3b6952000ae367cebc75eaa650f49d1efc9526a60520ebb8956",
+      "common_normalized_prompt_sha256": "f41e77956e5eec20c28d8b5242ac7333019a16ec1dd41a85d1a25629d99e8b7f"
+    },
+    {
+      "task_id": "apps_intro_test_04164",
+      "source_index": 161,
+      "order_key": "a8bd44ade1250248eb660412a55b779f27bcf3f81befc7fc3eea7f8cf27d5714",
+      "source_normalized_text_sha256": "6fe8f8810774274404e3c37ab834918adb7b04e5c9492528eb519e17f10790b3",
+      "common_normalized_prompt_sha256": "6102303b6b30fd79372916bd21cf593ff4f4c91c542f84e210a8e6694261b2da"
+    },
+    {
+      "task_id": "apps_intro_test_04112",
+      "source_index": 111,
+      "order_key": "a8f4792768ef240f2fca67a6e3d51ca707ce102be4e0037b4fa9f865f3006948",
+      "source_normalized_text_sha256": "43c87adfb2ec19ec146e646ea79e066589c920425065cf8cf2f66e8063186706",
+      "common_normalized_prompt_sha256": "6a2cad5dd4bb75f227bde082cb3b623601a6d16f5c3b3694e440fb7d24cb7f1d"
+    },
+    {
+      "task_id": "apps_intro_test_04077",
+      "source_index": 77,
+      "order_key": "a970c92519f8157a9878fb4289d61a43665edeb59f3466fdc9cf08b7990d3399",
+      "source_normalized_text_sha256": "ec957bb4b1299eb11646299eabfbb6005032017ae86567bb8a27e159b24317be",
+      "common_normalized_prompt_sha256": "74e061f097a86859d006ff32ee12ab547e08889e017f449cff46b9705d5c5025"
+    },
+    {
+      "task_id": "apps_intro_test_04029",
+      "source_index": 29,
+      "order_key": "a9a73ffd50d8397c070a783d522ad4496b143ec45aff77c92db7cf01e0e65536",
+      "source_normalized_text_sha256": "2a8a2758f66d700219a9e0af4813cf3d55f00533c9da33f136e353689676d6df",
+      "common_normalized_prompt_sha256": "93eb1110339bf6f74cf4410fa1997e2dc89def27f0497a83ce5a26b787313803"
+    },
+    {
+      "task_id": "apps_intro_test_04011",
+      "source_index": 11,
+      "order_key": "abd1d2962ef82fe126925067df4daf8bcf8bab50ce44f5034e7ecd074f1e25d9",
+      "source_normalized_text_sha256": "be4892f40830c41644be5468f04e43b01acfcaa3318a764ea39a5ee6586ca0b2",
+      "common_normalized_prompt_sha256": "0468330fef87cd91132725a304a4c720136f59230950d089df27b798b5438a01"
+    },
+    {
+      "task_id": "apps_intro_test_04078",
+      "source_index": 78,
+      "order_key": "ac5f4baa59670054252a60c4fbbff862c91ddc5076a7a018d95803d559d13806",
+      "source_normalized_text_sha256": "115979672867ad405f98434b156613d4c5f2765e2cb5437397fcb339c6834853",
+      "common_normalized_prompt_sha256": "2558cc610e86c03caaa67905c91c5a811fb42136d7f26702ced72b0e71f8fbbd"
+    },
+    {
+      "task_id": "apps_intro_test_04015",
+      "source_index": 15,
+      "order_key": "ac84efe7aa5895586e00b0eaa5ac6c29ff8a75c2d786fd88dadb5a2ed52414ae",
+      "source_normalized_text_sha256": "b8759b0071150ca91d97464ba5b73ccfc1b5e88e7f03d2bdf86b1d9e298c1ec7",
+      "common_normalized_prompt_sha256": "00bf1ed8b4618efa523f0364ab39d15763526d4bad447352fec66e78150051fd"
+    },
+    {
+      "task_id": "apps_intro_test_04102",
+      "source_index": 101,
+      "order_key": "ad4ee62ff62f9d6ac6c42d75d65dc088eb61415ae17abd1383d04e457f04ab5e",
+      "source_normalized_text_sha256": "07b6bc79521092d1a320dd3ed2f84ecec67cdeeaad180f2ea3f5c5e57a0946b5",
+      "common_normalized_prompt_sha256": "401874570129c51578b26282f7a0d931b331a7db5e0242fc3bd835e7ec42627a"
+    },
+    {
+      "task_id": "apps_intro_test_04036",
+      "source_index": 36,
+      "order_key": "aeb3b66dd63ad4dbbba252e658b28668a7b243a3e1b9d8b29a612469aa45906a",
+      "source_normalized_text_sha256": "60bc78b67a28743bc1057d49f5c67a70cb7c8bf7c09f52cdb3f20f09a8e414f2",
+      "common_normalized_prompt_sha256": "a1f5a055427f8c2740848ad3657f5939d80c0c657e404aca6dd5870fcd711392"
+    },
+    {
+      "task_id": "apps_intro_test_04238",
+      "source_index": 230,
+      "order_key": "af1d82c32323e4a79cffc2b826db98f0e8d55367e1c4d1ecc38643ba21b6a424",
+      "source_normalized_text_sha256": "d9cde6cf95432429205717d29f7c9034bd695e9faeb41ea7ffa755d0c82b3298",
+      "common_normalized_prompt_sha256": "5f9a6412cabbf1db321925a54b6b79c1f0ffc464dd7738797ad6a9112127834d"
+    },
+    {
+      "task_id": "apps_intro_test_04263",
+      "source_index": 255,
+      "order_key": "b168883f46f3bf3f4617bd52f91aa03e8c553daaf451cfa630d6ee58d792bf50",
+      "source_normalized_text_sha256": "e255e4df01d0d8a1e4553e1605260c55ea4a398dc3ce1dc093e0f9ada4b9e1d1",
+      "common_normalized_prompt_sha256": "ffffb6d82a26f007862d310ce56af35cf2b9dfa9bc4ee0ede18d4f601a86a1d5"
+    },
+    {
+      "task_id": "apps_intro_test_04250",
+      "source_index": 242,
+      "order_key": "b334bed94f352390bb0be4b503e5ec03d35e739ec7637cfb1f7deab5f49baf31",
+      "source_normalized_text_sha256": "946c4b3cb7555d039a404c00cdbc9d6d18dcbb9d65f691b0efaaec2c31a40b2a",
+      "common_normalized_prompt_sha256": "bce9c48cf971e5cbcfde28467263b4cfba402e9d7fa1f8ac5f64ec9926193239"
+    },
+    {
+      "task_id": "apps_intro_test_04192",
+      "source_index": 186,
+      "order_key": "b351bd86f53a7eab63a24e9de2d5500c68b07faee2a0131db2728ba43351e6fc",
+      "source_normalized_text_sha256": "cebf71f53a01b2d97cad4f3973b1e3cbb468c47b3357d103f33bfc2caef3cca7",
+      "common_normalized_prompt_sha256": "f296e88c6c4753b70f149e6d7912a10068c6bb8d276f8ba18e3e54dd47bb964a"
+    },
+    {
+      "task_id": "apps_intro_test_04237",
+      "source_index": 229,
+      "order_key": "b4a9305c44a3a607f73669deb9a908139f6cbf0cbdea84e823af917d098bdfdf",
+      "source_normalized_text_sha256": "bceec1172f211fa116f9c6fb549efbc1d89eb341254021443cf43d23e4052ce1",
+      "common_normalized_prompt_sha256": "768922464f126aeed41abfb92baada3a58abc575663ea197ae3490a3c87a3320"
+    },
+    {
+      "task_id": "apps_intro_test_04226",
+      "source_index": 218,
+      "order_key": "b4bc026142515a3d01216e68380c97fa48e1e6b6346518e1a4105bc0c2ce5d2f",
+      "source_normalized_text_sha256": "57e7f82fdc31e29887ae959e629f4c7ad7b51ecbcc8658d80c582c848fe232ab",
+      "common_normalized_prompt_sha256": "4c2681e153dd1630b06be75dc4549d7c4717f039eda36ee2fc4a12c69d9ea00e"
+    },
+    {
+      "task_id": "apps_intro_test_04096",
+      "source_index": 96,
+      "order_key": "b4f6f20d63a81e8bad1998e02a1ae2a0a7acb7d7820e117efb1996058220a12f",
+      "source_normalized_text_sha256": "653529a0c6da9c03bc4a133de0d12c6f40da5e6fc6058a5982831c9a38fa30c0",
+      "common_normalized_prompt_sha256": "f1697968d5e2e8c22f7ac30512f8bc1fb3a38814fc4a0a4d7365105e7a689617"
+    },
+    {
+      "task_id": "apps_intro_test_04206",
+      "source_index": 200,
+      "order_key": "b6cb592a5ca49c4459d794972c1bebdef5605ba0bc929c8cf3d6c6ca41757c09",
+      "source_normalized_text_sha256": "c4f9d8810d44afd977e0f86df2ff700023f3d49f3cbfb353ab5710dd3b397c5f",
+      "common_normalized_prompt_sha256": "762979704a6aa59fddb5c462a396d8c3fb34a8df39a3166a74d8e017f4d60791"
+    },
+    {
+      "task_id": "apps_intro_test_04259",
+      "source_index": 251,
+      "order_key": "b771a39ebf66801f8e2004e99729fcf07de8e8a9d7ef540634dc2267fdea08d5",
+      "source_normalized_text_sha256": "e498538c81bafc2f1c62331f23966d369245137a395f7f778ff0da3308127ae3",
+      "common_normalized_prompt_sha256": "fdd7ffb277e77d30470c6c63e85b16fd0a1e84af7f4f481a178bc0d481ea16c4"
+    },
+    {
+      "task_id": "apps_intro_test_04127",
+      "source_index": 126,
+      "order_key": "b7a4ca43f9ad38acb43fc905696183bcd7431322e4d5a72566baa2a9b531ee64",
+      "source_normalized_text_sha256": "3f6e9170c32cb5ff7f85b0f63bcff755e25dc4b06a16e411ba69c8a7c83157c1",
+      "common_normalized_prompt_sha256": "bef5a7d8534ebd6db5d6d45099cab76dd3b354e06047f3de29496db35b8579c5"
+    },
+    {
+      "task_id": "apps_intro_test_04007",
+      "source_index": 7,
+      "order_key": "b7e42344b2742b8a05bce694daff9e08bca5df8bcaca627f790118120c38f71d",
+      "source_normalized_text_sha256": "308c428aefec6649d2869cbb1b865da5de64ad9689eb2c750d4cb86d9eeb84bc",
+      "common_normalized_prompt_sha256": "f1432f7b3854d4a45bd2f1708457bbf820d7ef5a60749c5fbfe8b63dd995da56"
+    },
+    {
+      "task_id": "apps_intro_test_04145",
+      "source_index": 143,
+      "order_key": "b8a5b4818ec772501edd3a104899e7d956231b942a07c5bcb33798b0d41ddc77",
+      "source_normalized_text_sha256": "344bdaf7ee76c77fb714bc323a64faed3b3e9f5252b1886a017bb43592daffb3",
+      "common_normalized_prompt_sha256": "25c7fc68a2424ee2f46f674564f301779462c52f66bdb37f9d994981f7e448f9"
+    },
+    {
+      "task_id": "apps_intro_test_04163",
+      "source_index": 160,
+      "order_key": "bbad5c4656ac9b421c3cc9b5ae12565f9208e763576370c3569ad4aff20c527c",
+      "source_normalized_text_sha256": "63a72f2ad95ba6f9eb2310f592eaf976e08349cdc32f4722c36d962ecb21bff6",
+      "common_normalized_prompt_sha256": "b43356802059a7320b7fbeffd04fffdb98f16af74e383f6a4ec48e52c5b386c4"
+    },
+    {
+      "task_id": "apps_intro_test_04014",
+      "source_index": 14,
+      "order_key": "bd40e41302e6d04a11c8ea7662449d247c08c947a5bbf8fdd2bb46551e22367c",
+      "source_normalized_text_sha256": "9d8aad6dec144d342ec82b18699e1ca2142e7ea5df3a221eb05690947855faf7",
+      "common_normalized_prompt_sha256": "9f60471630a75b2e96239ac31bf9b20551c02040d6915003a55540ea01c95807"
+    },
+    {
+      "task_id": "apps_intro_test_04232",
+      "source_index": 224,
+      "order_key": "bd5fd1ed15f9dc2880dbaf583bcc0ef8f4d78c6070774f83bd9e22ea36f92553",
+      "source_normalized_text_sha256": "dea7c42eed26c62944089089a6c2159c5125efbfc28ffe723ab3c491ed5a200c",
+      "common_normalized_prompt_sha256": "4c7311474cca391dfcdd2ec57d19721deb302bf82515211f81ee8e7b0423197a"
+    },
+    {
+      "task_id": "apps_intro_test_04156",
+      "source_index": 153,
+      "order_key": "bd924a488b88f198fc96dfc909e9f28659430e38afb9341ba4c0b0d9507eede3",
+      "source_normalized_text_sha256": "a03c2465c5ef87c66db13294ab4a5b18deefdde192aa95740021e1dbe2428e51",
+      "common_normalized_prompt_sha256": "95cec6e9e54aa5b19b6041017b9747572c710ff397ffd667d2111342d401ea3f"
+    },
+    {
+      "task_id": "apps_intro_test_04085",
+      "source_index": 85,
+      "order_key": "bfbd1ec5777f30e6eed98db0d5b238f45c739fae98033eed7cd4d277d3462224",
+      "source_normalized_text_sha256": "9c493adccee9a4a77a3d4f643f9f31ecc9e92b6a2530650f53348b860fdc1fab",
+      "common_normalized_prompt_sha256": "e8bd5a8702b6dc0de724c58d769f20ea771290e0812cec144a0698494ac0a6ad"
+    },
+    {
+      "task_id": "apps_intro_test_04245",
+      "source_index": 237,
+      "order_key": "c0de46f8ce3992289fc730ce7c9c3115dc2279a10a8d2e239b97185b84f72600",
+      "source_normalized_text_sha256": "b98beb2a254fadb54d1ba1d65042d701b4f8e0bbea8dd5e8f85b74ed39be28ba",
+      "common_normalized_prompt_sha256": "f2c3e986ef56d05e5da9ccf39d74450c3ceac8d05db965507f4b36a07d63e023"
+    },
+    {
+      "task_id": "apps_intro_test_04147",
+      "source_index": 144,
+      "order_key": "c211837fc29275f6012e1ccc984dab12f4daa84c012c4bf423307d59883f06b7",
+      "source_normalized_text_sha256": "7c1139c124c137047aa97495e4fe5bb5ee8477a7cb9e0bb824abb0c6b115b24f",
+      "common_normalized_prompt_sha256": "1577234a8af5b9b864b19f2bd29fac9e78e96d1e58c922124fe952fdd9f76aa4"
+    },
+    {
+      "task_id": "apps_intro_test_04215",
+      "source_index": 209,
+      "order_key": "c4dbfd4960243c4e9eeafdfd3468e0ed48147e58e4d5bb2fc930d3fdf8c7303d",
+      "source_normalized_text_sha256": "cc59f64482b026cec15f6fd2e43a132a3d3372ed2cd389a37d55af72985c327d",
+      "common_normalized_prompt_sha256": "296dca3eb2874ab0061c3b452cbae1fbbd7cf133f36fcfd67b3c3bd6f333830b"
+    },
+    {
+      "task_id": "apps_intro_test_04020",
+      "source_index": 20,
+      "order_key": "c60b4c2e71aa90d215d164a231c83e2dfe7cbfc949194f4ec7a68be7984704c5",
+      "source_normalized_text_sha256": "efdd9f4db3a591e0790bf1b7814cff28dcf5ad692430ea77ce1deec68bdbf41f",
+      "common_normalized_prompt_sha256": "2fe47cd687b4f95188d760e3e89faa60b396d418d13c42dc6bc844bb9b621bd9"
+    },
+    {
+      "task_id": "apps_intro_test_04086",
+      "source_index": 86,
+      "order_key": "c649b45b07c07669d9bde2ed3238941bfb9851df759dcb952541acc21c7949f0",
+      "source_normalized_text_sha256": "8e2676ecb73cc229cb9ccd2504cb67aff0dea8651fb2bafc5669136ea8f8dc53",
+      "common_normalized_prompt_sha256": "3933046ff50c0c3307a90c0d0645f3ed1d242e13883c9702bbfeb6a2a8e98285"
+    },
+    {
+      "task_id": "apps_intro_test_04114",
+      "source_index": 113,
+      "order_key": "c8020a69fbcca189462d4e91ed47e1566ff634348a7c58467cb2cf6665f5ea7e",
+      "source_normalized_text_sha256": "4e6884e35b79b5c6944c8d87e2dad71f543cfe1fe456d85c10937b5c97744d61",
+      "common_normalized_prompt_sha256": "86a944e75e631181181c2ecd310e29e3caf9f8d90521ecd6da5ef7ac095d5a67"
+    },
+    {
+      "task_id": "apps_intro_test_04213",
+      "source_index": 207,
+      "order_key": "c895d58a6caa3c2ec220c4ed78eee4072478a6ea9eadd6b19d6266bc0ff3b4b6",
+      "source_normalized_text_sha256": "4a5fc5ffe13194e04cbba1aae93239d650c4cc312ef3a67fb5c75a140b24269a",
+      "common_normalized_prompt_sha256": "4fd8647c9dbb3acd5d26ec066d04cac9ffa5b257b2d022a51d92ccafa05f332f"
+    },
+    {
+      "task_id": "apps_intro_test_04141",
+      "source_index": 139,
+      "order_key": "c8b9d86f81aaeffdb0cd596add49fb1e17304b9b0044f8f5f7df720a5cdde629",
+      "source_normalized_text_sha256": "b554a91a814c5abe90d1819dce69a1dd2d216bf2ad7b0338603e9b6fc5418979",
+      "common_normalized_prompt_sha256": "8a810dbc2e438ce5d7de11205c5498c82cc2eeeeae140ee30f4b0f71e107d1f8"
+    },
+    {
+      "task_id": "apps_intro_test_04130",
+      "source_index": 129,
+      "order_key": "c8fcea2511efccd733d94485e824823eb82294ee1f6780dc0f4e5b39a585e598",
+      "source_normalized_text_sha256": "42d9f692cbd6062252d71caffb73f18c3d2a763d9098c5e636f2fc53f096bfba",
+      "common_normalized_prompt_sha256": "f3ee127e3da0b266e2d04476611843d576fe323b3b00b1da7db90e2981210220"
+    },
+    {
+      "task_id": "apps_intro_test_04003",
+      "source_index": 3,
+      "order_key": "c9c10c25f3323b5bd26d8fad91e7f7cafb53aab8dfff8b57997572ee01e7cffc",
+      "source_normalized_text_sha256": "ad892c9ae1accda50e105a8b523614021072b6e74da481f40778e7bceb34a563",
+      "common_normalized_prompt_sha256": "a9659d519b29bd527d083d75aa300279ed945aa2f13473dd676d757b1681f8b0"
+    },
+    {
+      "task_id": "apps_intro_test_04248",
+      "source_index": 240,
+      "order_key": "c9e0260212c45b9d2579eca3ce9fa092663645d4b37afe1e9f138d126a8c216f",
+      "source_normalized_text_sha256": "ac7478d0eef1471db89c2f774d006e1e7d2b706d5547b2ea04fb554861ca7338",
+      "common_normalized_prompt_sha256": "1fd80d89033e4be1a1f0177b062bffcfa0137d8b823c22431ba3d7cf3061482f"
+    },
+    {
+      "task_id": "apps_intro_test_04172",
+      "source_index": 167,
+      "order_key": "ca00a19f3753689887001b2d0370038c41f1858f95868e1bc9bb14e0f4c62599",
+      "source_normalized_text_sha256": "35f96ff2a7d55c7548ec4ca742737f48c90cfe34cfa88abf89a1892f52285713",
+      "common_normalized_prompt_sha256": "648b789fdcbc94c7ac5a51b65806991865b097a60965c078691b29f508e2b80b"
+    },
+    {
+      "task_id": "apps_intro_test_04016",
+      "source_index": 16,
+      "order_key": "ca147281f5b9796e9b9ee852f30c2282e692bd4d95172e06536402123f97ade7",
+      "source_normalized_text_sha256": "2549cdd59c9f8e044443f99b48baf412d94c7ae73df8a234ce8e5f4cbbf8cf1e",
+      "common_normalized_prompt_sha256": "4b6e514403d18027cdd1623fd301b7c0aec0da5df230ceacb1ac1b8d3e61d711"
+    },
+    {
+      "task_id": "apps_intro_test_04234",
+      "source_index": 226,
+      "order_key": "ca59ed67429ee33985b9867211c8da076fc51269e19263251e2ab51211243a18",
+      "source_normalized_text_sha256": "3015196dcec83d278f097f7269861a6d0e8d373b36dcbb55a4a4bf961528af0f",
+      "common_normalized_prompt_sha256": "34b1c707a4cb2197736a4c32e18e4ea7e1d8b163b07a177f3dd34e0463dfe8fc"
+    },
+    {
+      "task_id": "apps_intro_test_04174",
+      "source_index": 169,
+      "order_key": "cb89b3a8dcb113609419aaef8e8656fdd0700ef711a4d5e102e6f5791669fe89",
+      "source_normalized_text_sha256": "296ea1b9614294611aaf9d0616f69656eb8d33e6afb54ecee9d3c869490a3d5c",
+      "common_normalized_prompt_sha256": "09ae85f89ff77af17dd297cd51fbbfe9ff6d53542326a023127049998a704d49"
+    },
+    {
+      "task_id": "apps_intro_test_04104",
+      "source_index": 103,
+      "order_key": "cc2b6d074a189401439c41e095472d956aa59dd133aaa8127b82f2dce6cc86bf",
+      "source_normalized_text_sha256": "316815ee4449cf008f69afafeb7d8ba59dd1ad0fc2e9020122c60e057bf109cc",
+      "common_normalized_prompt_sha256": "6e8511b5cdc7c52e44842a9506269a8750e705937bbaeeb7663c23bbf888c46d"
+    },
+    {
+      "task_id": "apps_intro_test_04158",
+      "source_index": 155,
+      "order_key": "cce047a3857664c61cbcd139e5c610b1e9507d8b2e948d8a45079a112dafb56f",
+      "source_normalized_text_sha256": "13f54e1b12bde3d046c3e308b6adc48f99bf2cfdb4c71bfcd89275a06e025f6d",
+      "common_normalized_prompt_sha256": "ee9ca9f230315856016483890f62afdae20ce5a5878b3f65e000ca4ae05c7b30"
+    },
+    {
+      "task_id": "apps_intro_test_04023",
+      "source_index": 23,
+      "order_key": "cd7a6bb70e21ba06627d6a30913d39b088e4854594f6590f2ba04e49b17a5f83",
+      "source_normalized_text_sha256": "09f8396493ce4c729679ac207388b353ee45d307234cc1189efdaa0ce7bdab2d",
+      "common_normalized_prompt_sha256": "75931cb44562c35ba0a4a8c939f5c790f3be2db6d644273e30cbf3b27dd7e3eb"
+    },
+    {
+      "task_id": "apps_intro_test_04042",
+      "source_index": 42,
+      "order_key": "cdd22772f32730b1cd38568195320c3d7a05bb237d5ae98b6f314e9b5b1cab5a",
+      "source_normalized_text_sha256": "34852b00037040ea0c57fa048e0c73e46772c5fa361d0140a12272d300458245",
+      "common_normalized_prompt_sha256": "187aff3320149c25f1a94b1e2c78a61e85c463a42e7d5db0e6c7528bbca91f89"
+    },
+    {
+      "task_id": "apps_intro_test_04229",
+      "source_index": 221,
+      "order_key": "d0f5559888df90f2f3409d26bca21c6fb42d170a8d6214fc359ab03d2fb2ed85",
+      "source_normalized_text_sha256": "98515c8649ead2635662d0cb8de50aee727e76f1cb328e61790d6bbc8af5b782",
+      "common_normalized_prompt_sha256": "a1fdd611e1cda5b2c4884f5b022e92c74058c471b784ef0a424cbb7aec7ae9df"
+    },
+    {
+      "task_id": "apps_intro_test_04197",
+      "source_index": 191,
+      "order_key": "d10efe818ab7de4fd7dc4683b29aafa0545cbf5937741e2fed678fdbdf8c8009",
+      "source_normalized_text_sha256": "043c51eae32f1317a11daba54eccd0d1d30eaa44d32e060aa5d4160adcf00a91",
+      "common_normalized_prompt_sha256": "3d764678becd1160d82fe7bb5cea034b98ea86a4f0f7aaeb3e456712c10cf5ce"
+    },
+    {
+      "task_id": "apps_intro_test_04039",
+      "source_index": 39,
+      "order_key": "d2171e7104fe03ea5995f88faef0653632b22716f9817ded0a493eaaaef6cd5c",
+      "source_normalized_text_sha256": "c7edab7b3de43b20c4cc6c5e51c2d4cb3ada6aa7bb4ab4d7e924d5031757db7d",
+      "common_normalized_prompt_sha256": "473b9859b79fd954329ff828ac82fa38d01d7170b293cbebef70aa797b25ca84"
+    },
+    {
+      "task_id": "apps_intro_test_04204",
+      "source_index": 198,
+      "order_key": "d28f829310d72e0244b8b4436f8630fa5450803fa62407319dd1cdc518eecd48",
+      "source_normalized_text_sha256": "b83de2b1a63484a31c19f65cac16f011c19fab86101fe794ceef05d362a55420",
+      "common_normalized_prompt_sha256": "5bc492112bfd1853e6e4a5c8f1eaac76695a6d310414a67fe1703087b916ec5d"
+    },
+    {
+      "task_id": "apps_intro_test_04177",
+      "source_index": 172,
+      "order_key": "d29f2378b01ecbc268b7f7935597148b35b87a10d91af269950082bd31ffc56b",
+      "source_normalized_text_sha256": "b69b7fac10d28d1d5243a14a26a237e0d2c35b1d8e0b0a717c56337ec49b673e",
+      "common_normalized_prompt_sha256": "a63868334b94e84a98a77035dcdcedb238ec5c6b482d75b0d2129115ca2093d4"
+    },
+    {
+      "task_id": "apps_intro_test_04115",
+      "source_index": 114,
+      "order_key": "d2e5eb88c3df5f0d1cc6c01b16ae110e3c19f5567d6bba839f9c0a03b6e950db",
+      "source_normalized_text_sha256": "c9b47b6f9c53153316d48a37e1bd7692f4c09eaa5344a1f386c6c7c68d24769f",
+      "common_normalized_prompt_sha256": "49509fbb97c1bfea2b37b71660c0dd6e14b67c1a7c115ea120550db0fdafe0e5"
+    },
+    {
+      "task_id": "apps_intro_test_04025",
+      "source_index": 25,
+      "order_key": "d5872461c2155aa741e62a1f9517c81e9fc6a11df8bd173572e4b3dba33c0ee4",
+      "source_normalized_text_sha256": "7fdba365ef05d576bdedfa17e14b69b86d803f941ad654ef9a15a9c851710b04",
+      "common_normalized_prompt_sha256": "78bb21dca1d390ab6e5f2dbfbd1cda5f3e60f7625079ca4d3c880b20d5b688e7"
+    },
+    {
+      "task_id": "apps_intro_test_04258",
+      "source_index": 250,
+      "order_key": "d5acd62f1b17b548f0cbc59221e9fdfd13481658c3225c01762e1c4c0365e942",
+      "source_normalized_text_sha256": "1a2915772db29f05ab5374e35e78d8b1989470b7532a079c6eef91d4ded17a3b",
+      "common_normalized_prompt_sha256": "79bfb698a9a0b085d6dfb392f3589d896481195f44feb5cf043287ae3963c808"
+    },
+    {
+      "task_id": "apps_intro_test_04180",
+      "source_index": 175,
+      "order_key": "d5ddf1d5e1398ae39e7b64b5bedc380ccfe64ae89759c93fb887eeac6f3bc4d2",
+      "source_normalized_text_sha256": "40bc7f40ea27c9b70186854e9e52978c4ecddaa989a72f5ae523ba67a3b260cc",
+      "common_normalized_prompt_sha256": "cb52b6b9eb57ecd99b85f7348f5c2ad49e64d40b885fa16e9f91869e009cf112"
+    },
+    {
+      "task_id": "apps_intro_test_04009",
+      "source_index": 9,
+      "order_key": "d65a10d1b0b51d3aa74073b58642818794a43fe636cff55bae838eba71ac46b6",
+      "source_normalized_text_sha256": "b9ae39a7b957b658e75cb3b7c04196c1bcf14523cbf1ead7b5c576b44c2b838b",
+      "common_normalized_prompt_sha256": "15dd81c24547373da5d55ca7241af1f310d44941bd5302ae52573467392b9635"
+    },
+    {
+      "task_id": "apps_intro_test_04000",
+      "source_index": 0,
+      "order_key": "d69f02282dc64d9eb0a3c49888f9403f8b80a30ca634976cf7d27a1b1264e9fc",
+      "source_normalized_text_sha256": "45d43085a8c3b2da4359db8cc8d5202d7dd4179c8ea5c83f0f1e85663caf4871",
+      "common_normalized_prompt_sha256": "7c3270346e21dd46b09f3f6d2e4cb4b59ec51cd83a8528943bb1ac2c61bebd92"
+    },
+    {
+      "task_id": "apps_intro_test_04167",
+      "source_index": 164,
+      "order_key": "d7174c5ef6e25f6e4ecdc8d8c6e5b3f589231199b115a8a7f07436bef7465ba0",
+      "source_normalized_text_sha256": "4047e99be3f66b2621e89d2a67b57bf7133a117a3023881d7cfceeaa5bb34a3f",
+      "common_normalized_prompt_sha256": "a0bbe45aa2d0c3411593a435482b0b392ae72effedc83b138defffa294e625fe"
+    },
+    {
+      "task_id": "apps_intro_test_04239",
+      "source_index": 231,
+      "order_key": "d8ee2bb549d4cbddf2b73010e0be9c80ff213fabd0190a1e7fa9a1b18861fea9",
+      "source_normalized_text_sha256": "c122ba4bdb5eb9b64b3988ce03bcb43d1256eca2e116c537aa8eca81d2e2da3e",
+      "common_normalized_prompt_sha256": "dbca6fa0ba489a8925516cc1318045b33a1ebe141f6d693ec4254a9c2aa31300"
+    },
+    {
+      "task_id": "apps_intro_test_04121",
+      "source_index": 120,
+      "order_key": "da85726d54c78be44908c9571d29e8b76c9395a1a133f7da501a0fdaab9ae523",
+      "source_normalized_text_sha256": "993f0937375ded7b5ce95d2ba80518575e0d137415ac2bf6b73275f91d19fe45",
+      "common_normalized_prompt_sha256": "3e971bc1726b8b7e86ae815fcf48639f44d8fc86564fbdb6906867c6f64c692e"
+    },
+    {
+      "task_id": "apps_intro_test_04113",
+      "source_index": 112,
+      "order_key": "dabeed5af065d6e23b1bd68a3daf0fb032b8fad0832c8f4e5dfc348905062ff5",
+      "source_normalized_text_sha256": "bace443063f94aed7cf7d3adf953833fca30699699ec5c863fb52e93dee98170",
+      "common_normalized_prompt_sha256": "ada44ea75d3be0d7f1755f5336822ce0c851b5bf7443f4dea2d2e062b4f6316f"
+    },
+    {
+      "task_id": "apps_intro_test_04186",
+      "source_index": 180,
+      "order_key": "db315a14c3d8526816c8d005b9a0efaa0d674627272c1725d9116c3ea4237555",
+      "source_normalized_text_sha256": "03174a0e2eb9a8ed96b548a35a99e9ccbfba65b3e02554d3d353e6ea8b22c2ac",
+      "common_normalized_prompt_sha256": "f18592ea39897ed0df13bb1d16d02cac0cbdea853eb7e66682f8efe87cbe75ba"
+    },
+    {
+      "task_id": "apps_intro_test_04243",
+      "source_index": 235,
+      "order_key": "dc8a511e99649231200cb8924d71976717f0a403fcf197b13b55efeeeef19d6c",
+      "source_normalized_text_sha256": "480e1c16e7e6012f17f7fdfb7c24ce819a2045fbde00c1dcaf190b84b69731a4",
+      "common_normalized_prompt_sha256": "fb975d3f7a7518ba21f3724144db3dbe4c9683740589dde55600a6d77790c519"
+    },
+    {
+      "task_id": "apps_intro_test_04162",
+      "source_index": 159,
+      "order_key": "dcd53aead19287be0a7c09e7551c755fb38b73f5fea67746a43b8c84e0d35548",
+      "source_normalized_text_sha256": "3d657a6d3803f67421e126c335be2d6e175a1dacea53dd18e51f5bc79d364919",
+      "common_normalized_prompt_sha256": "e03fb5f1eb08927aea86fc4e6d682511ba1f443f7e7ce456e33feab3c91a7d12"
+    },
+    {
+      "task_id": "apps_intro_test_04069",
+      "source_index": 69,
+      "order_key": "deadd2961b994b478fffba90fa2f197429dfcdea3a3921422bb4f61acceeebb5",
+      "source_normalized_text_sha256": "3a48c23ed4ceff9f491e3bcfc049b6417df57df25316b730d6d02fdb405ab2be",
+      "common_normalized_prompt_sha256": "176b7fc5551dc9cbf022cb5f7f13c8ad2d2aeb4a9f153b70cd7b3ada55be421d"
+    },
+    {
+      "task_id": "apps_intro_test_04125",
+      "source_index": 124,
+      "order_key": "e346319f12564bbf4e1f42eace8dad34497954fa774948fa2d5aa75c9f01e7a8",
+      "source_normalized_text_sha256": "7d6c404e9e705db0bfeb0110aa482493f26d769f54fc7afabf805d4df719f777",
+      "common_normalized_prompt_sha256": "e813a2142ad38e960f918b14b7f80cdf7b8440903652e9cf08341372ed917b4b"
+    },
+    {
+      "task_id": "apps_intro_test_04017",
+      "source_index": 17,
+      "order_key": "e4a37ff6fe09ccf14416673efc3daadf455516ae2f48e7305cda4c315b387940",
+      "source_normalized_text_sha256": "7a1553cd6d16be164fba4638bf986cdd59d8f2b3fc25db0a3812512acd04dd9a",
+      "common_normalized_prompt_sha256": "b7128ab1e1357a6e95e62b7365bc15e37c385a758cc91c6a65e66a561338be28"
+    },
+    {
+      "task_id": "apps_intro_test_04055",
+      "source_index": 55,
+      "order_key": "e52102ce53b23c268bb5161ac3ac354bd2f2e48dad1b6dee6d2cefc2021656cd",
+      "source_normalized_text_sha256": "864a3a9468c42e7c668483d9be34e253c9fb88ad3ce418be85f79cca82aefb76",
+      "common_normalized_prompt_sha256": "acade294e1f4aeec35e238cd702319645158da74f33fb214cb26e292d33335aa"
+    },
+    {
+      "task_id": "apps_intro_test_04135",
+      "source_index": 134,
+      "order_key": "e6f4a54d8d8e5c00b69b4b948ba8961ce05278856744796ef488ba8a3b0ab5df",
+      "source_normalized_text_sha256": "f103d8d33c9aa5cf96305930a32cf3440717a71f0f58e57d970fa0e61c7996f1",
+      "common_normalized_prompt_sha256": "352a0a621426a66947d592e1c5e9a9cb7f362033f96d0fe49f0c7e2f54301766"
+    },
+    {
+      "task_id": "apps_intro_test_04161",
+      "source_index": 158,
+      "order_key": "e7d81ae37a70a0e59b4a948e078e705cf96de7e656183f341771f04758f2b482",
+      "source_normalized_text_sha256": "76ca4db5f1d29ace9c578897b3780226081405ff0643b0272452efaa6ae6402b",
+      "common_normalized_prompt_sha256": "c972f317edc40ba33df35cbabc165eaf9da45d638751cbe39710c3923e88da6f"
+    },
+    {
+      "task_id": "apps_intro_test_04093",
+      "source_index": 93,
+      "order_key": "e84fdedb3262c02d695b689aab4504ea3f94abcd521426e82c67a11a09c3c3fd",
+      "source_normalized_text_sha256": "5d7738485da7183e2a0d553db4abf1f10eb94cc35024c6ed0abc31421c8f89fd",
+      "common_normalized_prompt_sha256": "ab1ed419248d9c3e714515c6c52e5393cd15c8fcc087be4b4113842a06d7a088"
+    },
+    {
+      "task_id": "apps_intro_test_04253",
+      "source_index": 245,
+      "order_key": "e8b89afa860db0baa50c5caa30ffc91af9b7a1853cf3e05637026cdcaab9ae69",
+      "source_normalized_text_sha256": "af2cfaf64ba57b7cf9e2c8b9c5b325023a2786cc1d1aef9b5de81e82aa6ac287",
+      "common_normalized_prompt_sha256": "be795cfe0a9beb70efd2c8f5374eddd3756c08af9ba9aa39c9a6554f96e6a64b"
+    },
+    {
+      "task_id": "apps_intro_test_04247",
+      "source_index": 239,
+      "order_key": "ea513d29684207bedbf5f98aab9e4f782575faf42fb77ff47f11937404b8ab9b",
+      "source_normalized_text_sha256": "2ed2833a527c248d2a72fa48f4002cccafb9dc0f3733109f890e4cfb2810f300",
+      "common_normalized_prompt_sha256": "09244b655385e8c8cd4837b29bd4da315f7f3a7166ce61f46eded183efe65a7b"
+    },
+    {
+      "task_id": "apps_intro_test_04205",
+      "source_index": 199,
+      "order_key": "ebd3fc3ba1e8c62c3de3a1550ab13539dace2d3d0909c1558ea4f29e2eeae40d",
+      "source_normalized_text_sha256": "65edf5191af8b796b8f6bbb05624ba5bfd38431166c9ca00615436289deae292",
+      "common_normalized_prompt_sha256": "c55cb5d122dd930dc184f1e9674f9c40f0178259b69d04f7d54da3fda054c991"
+    },
+    {
+      "task_id": "apps_intro_test_04045",
+      "source_index": 45,
+      "order_key": "ec9d8f71f0004fab364bea351d1396ec7e73114e1780d8ce4cbd6247ffd2976b",
+      "source_normalized_text_sha256": "ee1c10ff8268a8e1fcb732410c7a0f0a84e601dc8eee5edc7173bb3a6d474415",
+      "common_normalized_prompt_sha256": "e30c495548944aefdac5ecff886a04f798e0f3cd42e100225f8df423eda5506c"
+    },
+    {
+      "task_id": "apps_intro_test_04038",
+      "source_index": 38,
+      "order_key": "ed4a33db9207f4540579c849f41829eb112bf38a4c665de38f1206fef8688817",
+      "source_normalized_text_sha256": "fa303a248a3248d784c4a008b3b59d60788e0a5f13702daf6ca71b602dca36ce",
+      "common_normalized_prompt_sha256": "741f2cb2f7fbeffe3f3cce28fc00c3862883c9ea89d29a0da67b699136f26dc1"
+    },
+    {
+      "task_id": "apps_intro_test_04031",
+      "source_index": 31,
+      "order_key": "ee520aa79bac64cd36f4479eb2261be499a3f1f51b54c0574c03a7ac54be4bde",
+      "source_normalized_text_sha256": "dd6f1a9fd40bf82cf1d98cabff7084d9cf280c6d4ce4c79b842dab7086980e40",
+      "common_normalized_prompt_sha256": "88e7984c6b332c0cb31f3d61f692ebff95f218688293ce4896347aeff9078967"
+    },
+    {
+      "task_id": "apps_intro_test_04097",
+      "source_index": 97,
+      "order_key": "ef654dbc53e12a16f2d29ddb42ea68d0226873ba921a941c528907a3cb8e3f1d",
+      "source_normalized_text_sha256": "0735441abccfcf23f984cbffb027a69cecabe9b6b72a5b9ea85ee5e41d8d6b9c",
+      "common_normalized_prompt_sha256": "6b9db9475a6802cb00f25e6343157947f18bdc7bb967d83c3f0099f51a0ba337"
+    },
+    {
+      "task_id": "apps_intro_test_04040",
+      "source_index": 40,
+      "order_key": "f1377ac14eb8a4dd415712104352e636d1847d9de405a7588dbe039f20f9b8b9",
+      "source_normalized_text_sha256": "9d8c9281e698f94b0145eee8c0a6e36a67d25012843c0b26c1820a8e25846734",
+      "common_normalized_prompt_sha256": "d88fef2b8a5e756dbd90949fd5063311f477cd62bae9613b49f5292b19b6dabf"
+    },
+    {
+      "task_id": "apps_intro_test_04261",
+      "source_index": 253,
+      "order_key": "f2542528e937a0e9324c8662dd8f89ae65f2301c49add9922d5ccf5ecb2918ac",
+      "source_normalized_text_sha256": "e2d143e3363afff29d1f9ce2e91b146f89547171f921c56790602d2fb09138d5",
+      "common_normalized_prompt_sha256": "0a2cc62a17d84d055a9efb5e7b837ec286b93b2879f95c0579b0b82221a3bba0"
+    },
+    {
+      "task_id": "apps_intro_test_04217",
+      "source_index": 211,
+      "order_key": "f2b18a22884f49e15fed2918a57760ec3021d6dcf8c938fe9add49a7a8fa9458",
+      "source_normalized_text_sha256": "dbbac6080fb6b561b4d3b8aff05babd34068378bccddbf4b328cb2631ea8a51c",
+      "common_normalized_prompt_sha256": "ec441d0cde2cc733dc7581c6cb1865451b2b1b702c4a14b3501854ced4c5d5c1"
+    },
+    {
+      "task_id": "apps_intro_test_04255",
+      "source_index": 247,
+      "order_key": "f3fef08fe0d7b2feaae891293e3c98d4e03de84dd9a03ac3a2d23e0e0137c5ff",
+      "source_normalized_text_sha256": "a380facd2081a4a191dacc96366f07d1a0a5151eace13b95ad4158fe29212698",
+      "common_normalized_prompt_sha256": "07b781166652639fce1038af104e6270ecb58aa9cd7774e7d0b9f87fcf24ff6e"
+    },
+    {
+      "task_id": "apps_intro_test_04176",
+      "source_index": 171,
+      "order_key": "f421eef192080da92d4d9ac50e8e49ff71c216a441ed9db7459fc60f9ba5bf1c",
+      "source_normalized_text_sha256": "954fa9741b18d4877ad02fa5c3911458c00086fc30d261ce5e408faa87d13df4",
+      "common_normalized_prompt_sha256": "107033007fedc88384bba8e2fd257ed8f2f3df83d81c5bc5ca0b8d203fed7ee4"
+    },
+    {
+      "task_id": "apps_intro_test_04080",
+      "source_index": 80,
+      "order_key": "f5a2a5bbd5b5a64d3d7110c0d22772280dcc29d033df0917d02a463a295be783",
+      "source_normalized_text_sha256": "54b13f079121bf82cdfa7d9cc73490e5a526d150f1b8d76f57cd4a15a269a9d2",
+      "common_normalized_prompt_sha256": "8bc20f2565a52627c0a9652f800225c331947d1b32ae73080061f9c4f2676efa"
+    },
+    {
+      "task_id": "apps_intro_test_04168",
+      "source_index": 165,
+      "order_key": "f5df5960f1b5e07ebbf6adbf783a01655d75d64307d5b3c3e490a666837464bb",
+      "source_normalized_text_sha256": "b5026397a1a8c52f79fd421b08e9fb0edf1eea18476c37accb5a4fcb7b30de9f",
+      "common_normalized_prompt_sha256": "3e3f32b6e06806497545a45394f40b3e40d0eabdecdc82a736de0f344f560968"
+    },
+    {
+      "task_id": "apps_intro_test_04124",
+      "source_index": 123,
+      "order_key": "f74b7ea9119a4afb2f69fb7dd1c36d075f20456533ef7f2d227c1486667d3d9f",
+      "source_normalized_text_sha256": "12b0df768845dd55afc17d334af7212edea5fd7cdac1cf2592aef6166f151127",
+      "common_normalized_prompt_sha256": "3abebfb178c9191a239beee5653b25bd3a52c2a5d11b590764d4eb62ebcc9023"
+    },
+    {
+      "task_id": "apps_intro_test_04157",
+      "source_index": 154,
+      "order_key": "f7a1f0b6b3489b30500f4ba11ac5cac84792da5319eeefe8374e48dfb94da87a",
+      "source_normalized_text_sha256": "c048c64b6e627209c35194e8ef4216c84b97585c4d363c324f2d159e13169d5f",
+      "common_normalized_prompt_sha256": "8a5f90409e5b2680dc345e2211ea9e596bc3596fdca5d921567fcdec99500623"
+    },
+    {
+      "task_id": "apps_intro_test_04067",
+      "source_index": 67,
+      "order_key": "f7b60f8be3ad7ef7b98f11c2a39fc0c57be2731a9ec22a5a50872a6f43204d9f",
+      "source_normalized_text_sha256": "1c64fee6116f4c7ccf3b645f8c121a8d1ea07d8ddab82d8877d54bb06c5e0a14",
+      "common_normalized_prompt_sha256": "048cd069008c3061197338400cb119fa6924209724451584e5177d42de607c31"
+    },
+    {
+      "task_id": "apps_intro_test_04221",
+      "source_index": 215,
+      "order_key": "f82b8e20d3f6f2172e47db50dbb6b5cf2f3feeed9b9c39acdaf9c7239f1ff2a1",
+      "source_normalized_text_sha256": "df17bee3418d362a5efcd33c6221fe263c7b5c1f6eee9e18b4d50341df220154",
+      "common_normalized_prompt_sha256": "b672b8b965094272f94f0de5c8be96f687d4d3fca8c7ff3ba4bdb6b0b3558f52"
+    },
+    {
+      "task_id": "apps_intro_test_04071",
+      "source_index": 71,
+      "order_key": "f9e21c85a18ee1cfcf26e500c48c1433014975300b79998bb12fd6f3aca4d946",
+      "source_normalized_text_sha256": "45fda4e6c8608399ff1017604830e0c88b3255f3a1aa15d153910debd60275ea",
+      "common_normalized_prompt_sha256": "a4dfb559d2ef4843e3339212cc5d1df88c470bf35c875db19202d8a762a3278e"
+    },
+    {
+      "task_id": "apps_intro_test_04082",
+      "source_index": 82,
+      "order_key": "f9fadf4f18a468ef50ac952d802c1fdc4e4ee26d49975475219896e6af529ccb",
+      "source_normalized_text_sha256": "3b5e0289d7977735134afc2a7dd81429f451bf343b07223f46e546a0584c7a6e",
+      "common_normalized_prompt_sha256": "d5d5294dcd73084e5c6f180ff549b4a7f40368abd86251961e924ce9595a955b"
+    },
+    {
+      "task_id": "apps_intro_test_04110",
+      "source_index": 109,
+      "order_key": "fb8e7895866dc3ee288b150c71a5765f62c683893b57805552b64aa150d64c68",
+      "source_normalized_text_sha256": "f7a63d82de9d1cb59cbbd9b9a8e2ec6c25cf32ba7c24d5b95a078f57fea0daea",
+      "common_normalized_prompt_sha256": "3858c19267ba3189dbab05743196597fe6d1680e7752a8d6b705019d56eb94b3"
+    },
+    {
+      "task_id": "apps_intro_test_04047",
+      "source_index": 47,
+      "order_key": "fbb7b8e1aa7bc34e155ca8480ec69e9d1716a9e5aceb2f01cf66914f51f68000",
+      "source_normalized_text_sha256": "2a95b1c0ce16174ed7f7efd6a3ab89a95009d3d2952eec77f6f8348c195f36ae",
+      "common_normalized_prompt_sha256": "7e561876c6a00d8184f6aa22c41e3cc070f8829e56d3fd49093246442226f351"
+    },
+    {
+      "task_id": "apps_intro_test_04218",
+      "source_index": 212,
+      "order_key": "fcd54ed7d22f27f81a9a2a75b0fe82566e8eff5c2ecda5db92d84813d3adbf8b",
+      "source_normalized_text_sha256": "39772da9e2c54aa6061da043590efa33f04259e092badd6da246df0cbbfaf3e8",
+      "common_normalized_prompt_sha256": "2be75220950853c4b0e71c838b1eab06548233a36378f0e733a34c21e48b2ccf"
+    },
+    {
+      "task_id": "apps_intro_test_04098",
+      "source_index": 98,
+      "order_key": "fd768820ca143c54d21eb3526254dfcdd2b61de95be4dbcc9eac038e79ba0f7a",
+      "source_normalized_text_sha256": "432ec82c0093e82ae1bc923b85a4ade58df704501635abee82bd9bbe45915203",
+      "common_normalized_prompt_sha256": "ee59d577e11c6d08e9a084aa306d50d3b0972c3ae6f1e12c0bb31b3b383f89f9"
+    },
+    {
+      "task_id": "apps_intro_test_04004",
+      "source_index": 4,
+      "order_key": "fe53635202550562c11d45809ba13448c7bf4d97960df78f103d3083faa49eeb",
+      "source_normalized_text_sha256": "e4a725938df65504ab1897dae253bcafb7a9ac3e43222e07ce8a73ef7e749938",
+      "common_normalized_prompt_sha256": "c210ca8d64add3629b1a5ce3f6b617055a147010d71a1722c49c453f7e5c5982"
+    },
+    {
+      "task_id": "apps_intro_test_04264",
+      "source_index": 256,
+      "order_key": "fef2826edecaf0d8f2e9efbb7113a6fa38ff874ab7dd19ce4356bf1f450633db",
+      "source_normalized_text_sha256": "b5c4dcbd1a59aaa216809ac61460fde6a4f5e9e6a28c0fe64d35545417acc4f0",
+      "common_normalized_prompt_sha256": "064464a22eceb5bde0ff63a8860c8e61ddd98dcdaedff51c858e5109d42383d0"
+    }
+  ]
+}

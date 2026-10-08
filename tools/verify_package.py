@@ -19,7 +19,7 @@ SECRET_PATTERNS = {
 
 def main() -> int:
     failures: list[str] = []
-    files = [path for path in ROOT.rglob("*") if path.is_file()]
+    files = [path for path in ROOT.rglob("*") if path.is_file() and ".git" not in path.parts]
     for path in files:
         relative = path.relative_to(ROOT)
         if "__pycache__" in path.parts or path.suffix == ".pyc":
@@ -58,4 +58,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

@@ -1,6 +1,6 @@
 # 第三方资产准备与哈希
 
-本仓库不分发 Llama-2-7B、LoRA、gate checkpoint、CoreFlow/ISVD bank 或基准数据。完整实验使用下列 K=5 专家顺序：
+本仓库不分发 Llama-2-7B、Qwen3-8B、LoRA、gate/CoMoL checkpoint、CoreFlow/ISVD bank 或基准数据。Llama 主实验使用下列 K=5 专家顺序：
 
 ```text
 zh, ru, es, math, code
@@ -26,11 +26,15 @@ zh, ru, es, math, code
 
 更完整的锁文件保存在各实验目录的 `provenance/` 或 `evidence/` 中。
 
+Qwen3-8B 路线对照使用固定 revision `b968826d9c46dd6066d109eabc6255188de91218`。其配置和 tokenizer 哈希见 `docs/manifests/QWEN3_ASSET_MANIFEST.json`；训练后的 Independent-Full、CoreFlow 和 CoMoL 权重不在本仓库分发。
+
 ## 数据
 
 - MBPP+：使用 EvalPlus 官方 test split，经固定 SHA-256 顺序确定 dev128/formal250。
 - ClassEval：使用官方 method-level 数据，经客观排除规则形成 qualification98/formal202/reserve39。
+- APPS-derived：从固定 `codeparrot/apps` revision 的 test split 按公开规则确定 257 题开发集，仅发布任务 ID、源索引和哈希。
 - 数据文件不随仓库发布；拆分 manifest、prompt 和协议保留在对应实验目录。
 
-请在生成任何输出前先验证来源许可证、任务 ID、文件哈希和拆分 manifest。
+具体来源、选择规则、哈希和 exact-overlap 审计定义见 `docs/DATA_PROVENANCE.md`。
 
+请在生成任何输出前先验证来源许可证、任务 ID、文件哈希和拆分 manifest。

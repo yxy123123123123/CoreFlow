@@ -2,7 +2,7 @@
   "status": "PASS",
   "protocol_id": "coreflow-indep-confirm-classeval-v1",
   "generated_at_utc": "2026-08-07T13:19:37.445331+00:00",
-  "source_file": "E:\\Mate\\coreflow_indep_confirm_v1_upload\\raw_sources\\ClassEval_data.json",
+  "source_file": "external/ClassEval_data.json",
   "source_sha256": "50a1ac0e4d0c238573c10c0ab11feae00b14a80ae9e4c9cc28148707ecf0b6a2",
   "split_rule": "sha256(\"coreflow-indep-confirm-classeval-v1|class|{class_task_id}\") sorted after excluding 17 non-reproducible classes; qual until >= 96 methods; formal until >= 200; remainder reserve",
   "runnable_subset_note": "Excluded classes whose official canonical tests require niche third-party packages, depend on current time or machine identity, or contain official dataset defects.",
@@ -139,7 +139,7 @@
     "ClassEval_77"
   ],
   "tokenizer_note": {
-    "tokenizer_json": "E:\\Mate\\lora_mrpc\\train_mrpc\\tokenizer.json",
+    "tokenizer_json": "external/loraflow_gate_tokenizer.json",
     "prompt_template_sha256": "e436746fcfca2936e667927d69dd0c71291195d0fe342126403854168364a49b",
     "max_prompt_tokens": 942,
     "min_prompt_tokens": 196,

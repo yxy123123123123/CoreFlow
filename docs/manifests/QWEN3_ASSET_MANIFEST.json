@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "asset_type": "third_party_base_model",
+  "model_id": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "dtype": "bfloat16",
+  "config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "redistribution": {
+    "base_model_included": false,
+    "lora_weights_included": false,
+    "gate_checkpoints_included": false,
+    "comol_weights_included": false
+  },
+  "notes": [
+    "The revision and hashes identify the frozen external base-model asset used by the Qwen3-8B route-comparison experiments.",
+    "Users must obtain the model and all trained weights from their respective rights holders and verify them locally.",
+    "This manifest does not grant rights to any third-party asset."
+  ]
+}

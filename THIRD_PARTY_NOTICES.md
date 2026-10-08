@@ -14,10 +14,15 @@ available at <https://www.apache.org/licenses/LICENSE-2.0>.
 
 ## External software and research assets
 
-The project depends on or interoperates with external projects including
-PyTorch, Transformers 4.36.2, the PEFT fork distributed with LoRA-Flow
-(reported as 0.7.2.dev0 in the frozen runtime), Safetensors, NumPy, Flask,
-EvalPlus/MBPP+, and ClassEval. Except for the source snapshot identified
-above, these projects and datasets are not incorporated into this repository.
+The project depends on or interoperates with external projects and research
+assets including PyTorch, Transformers, PEFT, Safetensors, NumPy, Flask,
+LoRA-Flow, CoMoL, Llama-2-7B, Qwen3-8B, EvalPlus/MBPP+, ClassEval, and APPS.
+The PEFT fork used by the frozen LoRA-Flow runtime reported version
+`0.7.2.dev0`; the original Llama experiments used Transformers 4.36.2.
+
+Except for the source snapshot identified above, these projects, models,
+trained weights, and datasets are not incorporated into this repository.
 Their names are provided for attribution and reproducibility and do not imply
-endorsement. Each remains governed by its own upstream license and terms.
+endorsement. Each remains governed by its own upstream license, access rules,
+and terms. Model and dataset fingerprints in `docs/` identify the authors'
+frozen experimental inputs but do not grant redistribution or usage rights.

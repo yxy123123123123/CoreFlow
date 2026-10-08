@@ -35,11 +35,13 @@ coreflow/decompose.py::build_module_bases
 | RQ1 | Full-subspace algebraic correctness, compilation, and direct loading | `experiments/rq1_compilation_correctness/`, `experiments/rq1_direct_load/` | `results/rq1_correctness/` |
 | RQ2 | Primary MBPP+ quality evaluation | `experiments/rq2_mbppplus_quality/` | `results/rq2_mbppplus/` |
 | RQ2 | Independent ClassEval confirmation | `experiments/rq2_classeval_confirmation/` | `results/rq2_classeval/` |
+| RQ2/RQ5 | Formal q224 sensitivity and hidden-state drift diagnostics | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/` |
 | RQ3 | Throughput, memory, and profiler comparison of LoRA-Flow, CoreFlow, and Per-Expert SVD | `experiments/rq3_system_efficiency/` | `results/rq3_system/` |
 | RQ4 | W0--W6 workloads and K=3/5/8 adapter-runtime scaling | `experiments/rq4_workload_k_scaling/` | `results/rq4_scaling/` |
+| RQ4 | Qwen3-8B route comparison among Independent-Full, CoreFlow, and CoMoL, plus descriptive RTX 4080 SUPER measurements | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/derived_statistics.json` |
 | RQ5 | q-grid, A0--A6 ablations, real gates, and controlled routing interventions | `experiments/rq5_ablation_gate/` | `results/rq5_ablation_gate/` |
 
-See `docs/EXPERIMENT_MAP.md` for the script-level mapping and `docs/SOURCE_PROVENANCE.md` for the correspondence between the original experiment packages and this release layout.
+See `docs/EXPERIMENT_MAP.md` for the script-level mapping, `docs/SOURCE_PROVENANCE.md` for the correspondence between the original experiment packages and this release layout, and `docs/DATA_PROVENANCE.md` for dataset selection, fingerprints, and redistribution boundaries.
 
 The status of early exploratory studies, superseded implementations, and unsuccessful experiments is recorded in `docs/HISTORICAL_EXPERIMENTS.md`. In particular, the PRS-4 code and failure summary are retained under `experiments/archive/` and `results/archive/` and are not mixed with the paper's primary evidence.
 
@@ -96,6 +98,8 @@ export FORMAL_V2_WORK_ROOT=/path/to/formal_v2_workspace
 export CUDA_DEVICE=0
 ```
 
+The Qwen/CoMoL route comparison additionally requires `QWEN_MODEL_PATH`, `COMOL_PACKAGE_ROOT`, `QWEN_MATCH_WORK_ROOT`, and the corresponding Python environments. See `experiments/reviewer_required_v2/README_AUTODL.md`. Models, trained weights, and third-party datasets are not redistributed here.
+
 Then enter the corresponding experiment directory and follow its frozen README or driver script. The original scripts retain their historical `/root/autodl-tmp/...` defaults. Prefer overriding those defaults with environment variables instead of silently editing a frozen protocol.
 
 ## 5. Levels of Reproduction
@@ -110,7 +114,9 @@ The `results/` directory contains audit and summary files rather than large raw 
 
 ## 6. Release Scope
 
-This repository releases the core algorithms and the principal experiment entry points. It does not claim to include every raw GPU log or large intermediate artifact. The archived material currently available under `E:\Mate` does not contain a raw PRS-2 return package that maps one-to-one to the five compilation-time measurements and the three-method direct-load lifecycle summary reported in RQ1. This is retained as an experiment-archive scope note and does not block publication of the core code package.
+This repository releases the core algorithms, principal experiment entry points, protocols, and lightweight aggregate results. It does not include every raw GPU log or large intermediate artifact. The release does not contain the complete raw return packages mapping one-to-one to the five compilation-time measurements and the three-method direct-load lifecycle summary reported in RQ1; those results should be interpreted within the descriptive evidence boundary stated in the paper.
+
+For the APPS-derived 257-task development set, only task identifiers, source indices, and per-task hashes are released; third-party prompts and tests are not redistributed. The fixed Qwen3-8B revision and configuration/tokenizer hashes are recorded in `docs/manifests/QWEN3_ASSET_MANIFEST.json`, the APPS-derived manifest is in `docs/manifests/APPS_DERIVED_257_MANIFEST.json`, and the full provenance note is in `docs/DATA_PROVENANCE.md`.
 
 The repository is published without an open-source license. See `LICENSE_NOTICE.md` and `THIRD_PARTY_NOTICES.md` before using any material.
 

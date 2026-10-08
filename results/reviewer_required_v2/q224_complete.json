@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "datasets": [
+    "both"
+  ],
+  "prepare_sha256": {
+    "mbpp": {
+      "path": "/root/autodl-tmp/coreflow_reviewer_required_v2_workspace/data/llama_mbppplus_formal_q224.jsonl",
+      "rows": 250,
+      "sha256": "049c4fd2aab859f87806d127794e80cc22cab9eb45f71ba6b654efc1a4d7d594"
+    },
+    "classeval": {
+      "path": "/root/autodl-tmp/coreflow_reviewer_required_v2_workspace/data/llama_classeval_formal_q224.jsonl",
+      "rows": 202,
+      "sha256": "03c8e7dc1170ed3c35cbeed5c68b585bc098e6ad63f0882664688f54712cdf57"
+    }
+  }
+}

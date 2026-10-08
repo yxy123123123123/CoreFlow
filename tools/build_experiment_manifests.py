@@ -20,6 +20,7 @@ PACKAGES = {
     "rq5_ablation_gate/prs5_weight_audit": "PACKAGE_MANIFEST.sha256",
     "rq5_ablation_gate/m3g_real_gate": "PACKAGE_MANIFEST.sha256",
     "rq5_ablation_gate/m3r_routing_diagnostics": "PACKAGE_MANIFEST.sha256",
+    "reviewer_required_v2": "PACKAGE_MANIFEST.sha256",
     "archive/prs4_reference_method_failed": "PACKAGE_MANIFEST.sha256",
 }
 

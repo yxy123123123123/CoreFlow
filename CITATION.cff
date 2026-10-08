@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or its experimental artifacts, please cite the associated CoreFlow paper."
+title: "CoreFlow: Retraining-Free Shared-Core Compilation for Memory-Efficient Dynamic Multi-LoRA Deployment"
+type: software
+authors:
+  - family-names: Yin
+    given-names: Yixun
+    orcid: "https://orcid.org/0009-0006-6673-6776"
+    email: comdonehh@gmail.com
+    affiliation: North Automatic Control Technology Institute
+  - family-names: Wang
+    given-names: Xuewen
+    email: wangxuewen913@sina.com
+    affiliation: North Automatic Control Technology Institute
+  - family-names: Yue
+    given-names: Zhongqi
+    email: han_hh04@sina.com
+    affiliation: North Automatic Control Technology Institute
+  - family-names: Yang
+    given-names: Yifan
+    orcid: "https://orcid.org/0000-0002-8176-3792"
+    email: yangyifan_by@sina.com
+    affiliation: North Automatic Control Technology Institute
+  - family-names: Zhao
+    given-names: Yujia
+    email: m18335191015@163.com
+    affiliation: North Automatic Control Technology Institute
+repository-code: "https://github.com/yxy123123123123/CoreFlow"
+url: "https://github.com/yxy123123123123/CoreFlow"
+version: "0.2.0"
+date-released: "2026-10-08"

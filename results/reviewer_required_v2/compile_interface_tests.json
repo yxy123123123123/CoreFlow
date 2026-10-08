@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "protocol_id": "coreflow-reviewer-required-v2",
+  "cases": [
+    {
+      "case": "missing_expert_order",
+      "expected": "reject",
+      "observed": "missing_expert_order",
+      "pass": true
+    },
+    {
+      "case": "duplicate_expert_name",
+      "expected": "reject",
+      "observed": "duplicate_expert_name",
+      "pass": true
+    },
+    {
+      "case": "invalid_rank",
+      "expected": "reject",
+      "observed": "invalid_rank",
+      "pass": true
+    },
+    {
+      "case": "invalid_dtype",
+      "expected": "reject",
+      "observed": "invalid_dtype",
+      "pass": true
+    },
+    {
+      "case": "partial_module_coverage",
+      "expected": "reject",
+      "observed": "partial_module_coverage_rejected",
+      "pass": true
+    },
+    {
+      "case": "valid_minimal",
+      "expected": "accept",
+      "observed": "accepted",
+      "pass": true
+    }
+  ],
+  "scope": "CPU contract tests; no model output"
+}

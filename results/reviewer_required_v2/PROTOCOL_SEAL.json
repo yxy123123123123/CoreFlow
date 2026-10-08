@@ -1,0 +1,9 @@
+{
+  "status": "SEALED_BEFORE_REQUIRED_GPU_OUTPUTS",
+  "protocol_id": "coreflow-reviewer-required-v2",
+  "config_sha256": "5004ab58870baa6a785a6dc71e946d62ae886a8be32a1c933f253efd6001c0a9",
+  "prepare_sha256": "5f728f6bd77842d0cdd08f003d52c0200df66199bcfbf505cbbfa84dce310909",
+  "sealed_at_utc": "2026-10-02T15:38:58.326050+00:00",
+  "full_six_dataset_comol_repeats": true,
+  "continuous_batching_claim": false
+}

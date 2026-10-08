@@ -22,6 +22,7 @@ def main() -> None:
         for path in ROOT.rglob("*")
         if path.is_file()
         and path != OUTPUT
+        and ".git" not in path.parts
         and "__pycache__" not in path.parts
         and path.suffix != ".pyc"
     )

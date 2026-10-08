@@ -100,13 +100,20 @@ def load_adapter(adapter_dir: str | Path) -> tuple[dict, Dict[str, AdapterModule
         state = _load_torch_state(checkpoint)
 
     alpha = float(config["lora_alpha"])
-    default_rank = int(config["r"])
+    default_rank = int(config.get("r", config.get("lora_rank", 0)))
+    if default_rank <= 0:
+        raise ValueError(f"Missing positive r/lora_rank in {root / 'adapter_config.json'}")
     rank_pattern = config.get("rank_pattern") or {}
     alpha_pattern = config.get("alpha_pattern") or {}
     pairs: Dict[str, Dict[str, torch.Tensor]] = {}
     for raw_key, tensor in state.items():
         suffix = None
-        for candidate in (".lora_A.weight", ".lora_B.weight"):
+        for candidate in (
+            ".lora_A.default.weight",
+            ".lora_B.default.weight",
+            ".lora_A.weight",
+            ".lora_B.weight",
+        ):
             if raw_key.endswith(candidate):
                 suffix = candidate
                 break

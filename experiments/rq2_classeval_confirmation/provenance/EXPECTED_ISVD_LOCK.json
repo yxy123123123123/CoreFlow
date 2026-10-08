@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "protocol_id": "coreflow-formal-v2-primary-v1",
-  "source": "downloaded primary results: E:\\LoRA\\tmp\\coreflow_figure_sources_20260805\\coreflow_formal_v2_primary_results\\reports\\formal_v2_primary\\isvd_asset_lock.json",
+  "source": "frozen formal-v2 primary results: reports/formal_v2_primary/isvd_asset_lock.json",
   "banks": {
     "k5_math": {
       "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks/k5_math/matched_q185_bf16",
