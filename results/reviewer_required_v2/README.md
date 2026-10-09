@@ -13,4 +13,6 @@ These files are sufficient to audit the aggregate values used by the manuscript 
 | `statistics_required.json` | required statistical checks and derived intervals |
 | `PROTOCOL_SEAL.json` | frozen protocol identity and integrity metadata |
 
-The complete GPU return archive is intentionally not stored in Git because it includes large and/or non-redistributable artifacts. The source scripts required to regenerate it are in `experiments/reviewer_required_v2/`.
+Task-level outcomes, RTX 4080 SUPER request records, and Qwen group-2/group-3 lifecycle timings are published under `../submission_reproducibility_package/`. The complete GPU return archive is not stored in Git because it includes large and/or non-redistributable artifacts. The source scripts required to regenerate the experiment are in `experiments/reviewer_required_v2/`.
+
+`derived_statistics.json` is retained as the frozen aggregate snapshot generated with the original experiment package. For current completion and artifact-availability status, use `statistics_required.json`, `lifecycle_audit.json`, and `storage_audit.json`; these files supersede status fields embedded in the frozen snapshot without altering its reported numerical results.

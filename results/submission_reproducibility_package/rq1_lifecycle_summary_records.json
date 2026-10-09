@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "evidence_class": "archived_summary_records",
+  "limitations": "The original per-stage return packages were not retained. Values below are transcribed from the frozen experiment report and manuscript table; they are provided for auditability but are not presented as raw replayable logs.",
+  "compile_runs": [
+    {"run": 1, "total_minutes": 19.6},
+    {"run": 2, "total_minutes": 18.9},
+    {"run": 3, "total_minutes": 19.2},
+    {"run": 4, "total_minutes": 18.7},
+    {"run": 5, "total_minutes": 19.0}
+  ],
+  "compile_summary": {
+    "median_total_minutes": 19.0,
+    "median_shared_factor_construction_minutes": 6.0,
+    "median_eigendecomposition_minutes": 7.0,
+    "median_core_projection_minutes": 3.7,
+    "peak_cpu_rss_gib": 34.0,
+    "peak_gpu_allocated_gib": 10.8,
+    "peak_gpu_reserved_gib": 12.2,
+    "source_lora_bank_gib": 2.384,
+    "coreflow_bank_gib": 0.933,
+    "covered_modules": 224,
+    "non_finite_elements": 0
+  },
+  "direct_load_summary": [
+    {
+      "method": "LoRA-Flow",
+      "source_lora_reads": 5,
+      "signature_passed": 8,
+      "signature_total": 8,
+      "health_ready_seconds": 21.9,
+      "first_request_seconds": 14.2,
+      "ttft_seconds": 0.220,
+      "tpot_seconds_per_token": 0.103,
+      "decode_tokens_per_second": 9.75,
+      "cpu_rss_gib": 22.0,
+      "gpu_allocated_gib": 15.02
+    },
+    {
+      "method": "CoreFlow-q185",
+      "source_lora_reads": 0,
+      "signature_passed": 8,
+      "signature_total": 8,
+      "health_ready_seconds": 18.7,
+      "first_request_seconds": 7.7,
+      "ttft_seconds": 0.120,
+      "tpot_seconds_per_token": 0.055,
+      "decode_tokens_per_second": 18.50,
+      "cpu_rss_gib": 19.0,
+      "gpu_allocated_gib": 13.62
+    },
+    {
+      "method": "Per-Expert-SVD",
+      "source_lora_reads": 0,
+      "signature_passed": 8,
+      "signature_total": 8,
+      "health_ready_seconds": 27.1,
+      "first_request_seconds": 10.1,
+      "ttft_seconds": 0.180,
+      "tpot_seconds_per_token": 0.070,
+      "decode_tokens_per_second": 14.40,
+      "cpu_rss_gib": 27.0,
+      "gpu_allocated_gib": 16.91
+    }
+  ]
+}

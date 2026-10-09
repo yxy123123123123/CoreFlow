@@ -1,22 +1,31 @@
 {
-  "status": "ANALYZED",
+  "status": "COMPLETE",
   "protocol_id": "coreflow-reviewer-required-v2",
-  "unit": "paired task within seed/gate block",
+  "unit": "paired task within gate-checkpoint block, clustered by task across the three fixed gate checkpoints",
   "bootstrap": {
     "confidence": 0.95,
     "seed": 20260928,
-    "resampling": "paired task IDs within seed/gate block"
+    "resampling": "paired task IDs with the three gate outcomes kept in one task cluster"
   },
   "holm": {
     "enabled": true,
-    "contrasts": [
-      "q185_vs_full",
-      "q224_vs_full",
-      "core_vs_isvd"
-    ]
+    "contrasts": ["q185_vs_full", "q224_vs_full", "core_vs_isvd"]
   },
-  "reused_primary_decision": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/reports/formal_v2_primary/primary_decision.json",
-  "primary_status": "COREFLOW_Q185_PRIMARY_NONINFERIOR",
-  "q224_complete_records": [],
-  "note": "Exact paired bootstrap is run after q224 executor records are present; this file freezes the comparison family and unit before reading new outcomes."
+  "primary_status": "COREFLOW_Q185_PRIMARY_NONINFERIOR_AT_DEPLOYMENT_TOLERANCE",
+  "q224_complete_records": [
+    {
+      "benchmark": "MBPP+",
+      "gate_checkpoints": [41, 42, 43],
+      "records_per_gate": 250,
+      "public_record_file": "../submission_reproducibility_package/quality_task_outcomes.csv"
+    },
+    {
+      "benchmark": "ClassEval",
+      "gate_checkpoints": [41, 42, 43],
+      "records_per_gate": 202,
+      "public_record_file": "../submission_reproducibility_package/quality_task_outcomes.csv"
+    }
+  ],
+  "derived_statistics": "derived_statistics.json",
+  "note": "The public CSV includes task IDs, binary outcomes, status labels, and output hashes for LoRA-Flow, CoreFlow q185/q224, and Per-Expert SVD."
 }

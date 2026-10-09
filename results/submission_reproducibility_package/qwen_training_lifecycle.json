@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "group": "2",
+      "route": "comol_joint_training",
+      "status": "PASS",
+      "elapsed_seconds": 3198.7339627742767,
+      "seed": 201,
+      "expert_count": 8,
+      "rank": 16,
+      "epochs": 1
+    },
+    {
+      "group": "2",
+      "route": "independent_lora_training",
+      "status": "PASS",
+      "elapsed_seconds": 13458.889063119888,
+      "seed": null,
+      "expert_count": 8,
+      "rank": 16,
+      "epochs": 1
+    },
+    {
+      "group": "3",
+      "route": "comol_joint_training",
+      "status": "PASS",
+      "elapsed_seconds": 3549.7775390148163,
+      "seed": 301,
+      "expert_count": 8,
+      "rank": 16,
+      "epochs": 1
+    },
+    {
+      "group": "3",
+      "route": "independent_lora_training",
+      "status": "PASS",
+      "elapsed_seconds": 13431.435441732407,
+      "seed": null,
+      "expert_count": 8,
+      "rank": 16,
+      "epochs": 1
+    }
+  ]
+}

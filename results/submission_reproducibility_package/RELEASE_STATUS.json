@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "release_version": "0.3.0",
+  "release_date": "2026-10-09",
+  "status": "PUBLIC_EVIDENCE_SYNCHRONIZED",
+  "complete_public_records": {
+    "llama_task_level_outcomes": true,
+    "q224_task_level_outcomes": true,
+    "rtx4080_request_level_latency_and_throughput": true,
+    "qwen_group2_group3_training_lifecycle": true,
+    "protocol_and_aggregate_statistics": true
+  },
+  "declared_limitations": {
+    "rq1_compile_raw_return_packages": "not retained; run totals and aggregate stage/memory values are provided as archived summary records",
+    "rq1_direct_load_raw_return_packages": "not retained; three-method aggregate records are provided as archived summary records",
+    "llama_isvd_q185_artifact": "not redistributed and absent from the final audited source workspace; logical capacity and archived implementation-level measurements remain explicitly separated",
+    "third_party_assets": "models, benchmark content, LoRA weights, gate checkpoints, and CoMoL checkpoints are not redistributed"
+  },
+  "version_anchor": {
+    "citation_version": "0.3.0",
+    "git_tag": "v0.3.0-peerj-submission",
+    "package_manifest": "PACKAGE_MANIFEST.sha256"
+  }
+}

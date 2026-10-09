@@ -1,93 +1,60 @@
 {
-  "status": "ANALYZED",
+  "status": "ANALYZED_WITH_DECLARED_ISVD_ARTIFACT_GAP",
   "protocol_id": "coreflow-reviewer-required-v2",
   "definitions": {
     "logical_parameters": "mathematical parameter count",
-    "effective_payload": "non-padding tensor payload",
-    "stored_bytes": "recursive bytes on disk",
-    "runtime_memory": "allocated/reserved after loading; must be measured separately"
+    "compact_bf16_payload_bytes": "logical parameter count multiplied by two bytes",
+    "stored_bytes": "recursive bytes of the concrete artifact on disk",
+    "runtime_memory": "allocated/reserved memory after loading; measured separately"
   },
   "artifacts": [
     {
       "label": "llama_core_q185",
-      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/core_banks/k5_code/q185_bf16",
-      "exists": true,
+      "available_in_audited_source_workspace": true,
+      "redistributed": false,
       "stored_bytes": 1001337753,
-      "config_keys": [
-        "balanced_trace_normalization",
-        "beta",
-        "efficiency",
-        "expert_order",
-        "experts",
-        "format",
-        "modules",
-        "q",
-        "runtime_must_not_apply_source_scaling",
-        "scale_absorbed_exactly_once",
-        "scaling_absorbed_into_core",
-        "schema_version",
-        "source_order",
-        "storage_dtype"
-      ],
       "modules": 224,
-      "efficiency": {
-        "source_resident_adapter_parameters": 1279262720,
-        "coreflow_resident_adapter_parameters": 500565600,
-        "resident_parameter_reduction_pct": 60.870774065861944,
-        "source_adapter_macs_per_token": 1279262720,
-        "coreflow_adapter_macs_per_token": 500565600,
-        "adapter_macs_reduction_pct": 60.870774065861944
-      }
+      "logical_parameters": 500565600,
+      "compact_bf16_payload_bytes": 1001131200,
+      "source_logical_parameters": 1279262720,
+      "logical_parameter_reduction_pct": 60.870774065861944
     },
     {
       "label": "llama_core_q224",
-      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/m2_assets/core_banks/k5_code/q224_bf16",
-      "exists": true,
+      "available_in_audited_source_workspace": true,
+      "redistributed": false,
       "stored_bytes": 1231956031,
-      "config_keys": [
-        "balanced_trace_normalization",
-        "beta",
-        "efficiency",
-        "expert_order",
-        "experts",
-        "format",
-        "modules",
-        "q",
-        "runtime_must_not_apply_source_scaling",
-        "scale_absorbed_exactly_once",
-        "scaling_absorbed_into_core",
-        "schema_version",
-        "source_order",
-        "storage_dtype"
-      ],
       "modules": 224,
-      "efficiency": {
-        "source_resident_adapter_parameters": 1279262720,
-        "coreflow_resident_adapter_parameters": 615874560,
-        "resident_parameter_reduction_pct": 51.85706967213115,
-        "source_adapter_macs_per_token": 1279262720,
-        "coreflow_adapter_macs_per_token": 615874560,
-        "adapter_macs_reduction_pct": 51.85706967213115
-      }
+      "logical_parameters": 615874560,
+      "compact_bf16_payload_bytes": 1231749120,
+      "source_logical_parameters": 1279262720,
+      "logical_parameter_reduction_pct": 51.85706967213115
     },
     {
       "label": "llama_isvd_q185",
-      "path": "/root/autodl-tmp/coreflow_formal_v2_primary_workspace/isvd_banks/k5_code/matched_q185_bf16",
-      "exists": false,
-      "stored_bytes": null
+      "available_in_final_audited_source_workspace": false,
+      "redistributed": false,
+      "logical_parameters": 500560000,
+      "compact_bf16_payload_bytes": 1001120000,
+      "archived_runtime_bank_gib": 4.240,
+      "archived_runtime_bank_evidence_class": "frozen experiment summary; concrete bank absent from the final audited workspace",
+      "note": "Logical capacity, compact payload, concrete stored artifact, and loaded runtime memory are distinct quantities. The 4.240 GiB value applies only to the evaluated fixed-width runtime bank."
     },
     {
       "label": "qwen_group1_banks",
-      "path": "/root/autodl-tmp/coreflow_joint_vs_posthoc_v1_workspace/groups/group1/banks",
-      "exists": true,
+      "available_in_audited_source_workspace": true,
+      "redistributed": false,
       "stored_bytes": 231929452
     },
     {
-      "label": "qwen_group1_loras",
-      "path": "/root/autodl-tmp/coreflow_joint_vs_posthoc_v1_workspace/groups/group1/independent_loras",
-      "exists": true,
-      "stored_bytes": 2232
+      "label": "qwen_group1_lora_manifest_links",
+      "available_in_audited_source_workspace": true,
+      "redistributed": false,
+      "stored_bytes": 2232,
+      "is_weight_payload": false,
+      "note": "The byte count covers links/manifests only and must not be used as the eight-LoRA payload size."
     }
   ],
-  "padding_is_not_silently_counted_as_effective_payload": true
+  "padding_is_not_silently_counted_as_effective_payload": true,
+  "public_status": "../submission_reproducibility_package/RELEASE_STATUS.json"
 }

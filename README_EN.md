@@ -35,10 +35,10 @@ coreflow/decompose.py::build_module_bases
 | RQ1 | Full-subspace algebraic correctness, compilation, and direct loading | `experiments/rq1_compilation_correctness/`, `experiments/rq1_direct_load/` | `results/rq1_correctness/` |
 | RQ2 | Primary MBPP+ quality evaluation | `experiments/rq2_mbppplus_quality/` | `results/rq2_mbppplus/` |
 | RQ2 | Independent ClassEval confirmation | `experiments/rq2_classeval_confirmation/` | `results/rq2_classeval/` |
-| RQ2/RQ5 | Formal q224 sensitivity and hidden-state drift diagnostics | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/` |
+| RQ2/RQ5 | Formal q224 sensitivity and hidden-state drift diagnostics | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/`; task-level public records in `results/submission_reproducibility_package/` |
 | RQ3 | Throughput, memory, and profiler comparison of LoRA-Flow, CoreFlow, and Per-Expert SVD | `experiments/rq3_system_efficiency/` | `results/rq3_system/` |
 | RQ4 | W0--W6 workloads and K=3/5/8 adapter-runtime scaling | `experiments/rq4_workload_k_scaling/` | `results/rq4_scaling/` |
-| RQ4 | Qwen3-8B route comparison among Independent-Full, CoreFlow, and CoMoL, plus descriptive RTX 4080 SUPER measurements | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/derived_statistics.json` |
+| RQ4 | Qwen3-8B route comparison among Independent-Full, CoreFlow, and CoMoL, plus descriptive RTX 4080 SUPER measurements | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/derived_statistics.json`; request/lifecycle records in `results/submission_reproducibility_package/` |
 | RQ5 | q-grid, A0--A6 ablations, real gates, and controlled routing interventions | `experiments/rq5_ablation_gate/` | `results/rq5_ablation_gate/` |
 
 See `docs/EXPERIMENT_MAP.md` for the script-level mapping, `docs/SOURCE_PROVENANCE.md` for the correspondence between the original experiment packages and this release layout, and `docs/DATA_PROVENANCE.md` for dataset selection, fingerprints, and redistribution boundaries.
@@ -110,11 +110,11 @@ This repository distinguishes three levels of reproduction:
 2. **Result reanalysis:** read the decision JSON, CSV tables, and protocol seals under `results/` to verify the statistics reported in the paper.
 3. **End-to-end rerun:** obtain the third-party model, LoRAs, gates, and datasets; verify their hashes; and rerun the GPU experiments.
 
-The `results/` directory contains audit and summary files rather than large raw generations. It supports verification of the reported conclusions but cannot regenerate every token without the external assets.
+The `results/` directory contains audit files, task-level binary outcomes, request-level numerical measurements, lifecycle records, and aggregate summaries rather than model generations. It supports independent reanalysis of the reported statistics but cannot regenerate every token without the external assets.
 
 ## 6. Release Scope
 
-This repository releases the core algorithms, principal experiment entry points, protocols, and lightweight aggregate results. It does not include every raw GPU log or large intermediate artifact. The release does not contain the complete raw return packages mapping one-to-one to the five compilation-time measurements and the three-method direct-load lifecycle summary reported in RQ1; those results should be interpreted within the descriptive evidence boundary stated in the paper.
+This repository releases the core algorithms, principal experiment entry points, protocols, task-level quality outcomes, RTX 4080 SUPER request-level numerical records, Qwen lifecycle measurements, and lightweight aggregate results. The neutral evidence entry point is `results/submission_reproducibility_package/`. It does not include model generations, every raw GPU log, or large intermediate artifacts. The original raw return packages corresponding to the five RQ1 compilation runs and the three-method direct-load summary were not retained; the frozen run-level/aggregate records are published with an explicit descriptive-evidence label.
 
 For the APPS-derived 257-task development set, only task identifiers, source indices, and per-task hashes are released; third-party prompts and tests are not redistributed. The fixed Qwen3-8B revision and configuration/tokenizer hashes are recorded in `docs/manifests/QWEN3_ASSET_MANIFEST.json`, the APPS-derived manifest is in `docs/manifests/APPS_DERIVED_257_MANIFEST.json`, and the full provenance note is in `docs/DATA_PROVENANCE.md`.
 

@@ -83,4 +83,4 @@
 | 隐藏状态漂移诊断 | `.../scripts/run_drift.py` | `drift_diagnostics.json`、`derived_statistics.json` |
 | 编译接口、存储和生命周期审计 | `.../scripts/compile_interface_tests.py`、`storage_audit.py`、`lifecycle_audit.py` | 同名 JSON 审计文件 |
 
-该目录保留冻结协议和执行脚本，但不重新分发 Qwen、LoRA、gate、CoMoL 权重、APPS 题目、原始生成记录或编译 bank。资产与数据身份分别见 `docs/manifests/QWEN3_ASSET_MANIFEST.json` 和 `docs/DATA_PROVENANCE.md`。
+可公开重分析的逐题二元结果、RTX 4080 SUPER 逐请求记录及 Qwen group 2/3 生命周期计时集中在 `results/submission_reproducibility_package/`。该包不重新分发 Qwen、LoRA、gate、CoMoL 权重、基准题目、原始生成文本或编译 bank。资产与数据身份分别见 `docs/manifests/QWEN3_ASSET_MANIFEST.json` 和 `docs/DATA_PROVENANCE.md`。

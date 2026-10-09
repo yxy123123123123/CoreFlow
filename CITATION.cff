@@ -8,6 +8,9 @@ authors:
     orcid: "https://orcid.org/0009-0006-6673-6776"
     email: comdonehh@gmail.com
     affiliation: North Automatic Control Technology Institute
+  - family-names: Hong
+    given-names: Han
+    affiliation: North Automatic Control Technology Institute
   - family-names: Wang
     given-names: Xuewen
     email: wangxuewen913@sina.com
@@ -27,5 +30,5 @@ authors:
     affiliation: North Automatic Control Technology Institute
 repository-code: "https://github.com/yxy123123123123/CoreFlow"
 url: "https://github.com/yxy123123123123/CoreFlow"
-version: "0.2.0"
-date-released: "2026-10-08"
+version: "0.3.0"
+date-released: "2026-10-09"

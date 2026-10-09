@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "privacy_boundary": "No prompts, tests, generations, weights, or private source paths are exported.",
+  "quality": {
+    "output": "quality_task_outcomes.csv",
+    "record_count": 5424,
+    "sources": [
+      {
+        "benchmark": "MBPP+",
+        "method": "LoRA-Flow",
+        "gate_checkpoint": 41,
+        "source_sha256": "8a7b9cc6af3fdd3bbb6c6627860dcdc448b3bebf2ccb2f51f945f3ebcd1dae41",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "LoRA-Flow",
+        "gate_checkpoint": 42,
+        "source_sha256": "a31873eaca97a6cc96bfc50bd07ca1eac5a8f2a0d9bf6570adb7499185ffffd4",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "LoRA-Flow",
+        "gate_checkpoint": 43,
+        "source_sha256": "704071ebf1934f0a76fec72997498619c296d75223f33180d2753166150628ff",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "CoreFlow-q185",
+        "gate_checkpoint": 41,
+        "source_sha256": "ba541ef276057b04da84fdf497d5745b09e7f1bcf51521da395f828a60009793",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "CoreFlow-q185",
+        "gate_checkpoint": 42,
+        "source_sha256": "3635dc2106acdbb1a9e73dafc176620a010eb366c9757c9a4d78468a6f3f6ff2",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "CoreFlow-q185",
+        "gate_checkpoint": 43,
+        "source_sha256": "b7abe7e37674382d53eb5c6e712375081e48e3806196f22eb068b27e759ad0d5",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "Per-Expert-SVD",
+        "gate_checkpoint": 41,
+        "source_sha256": "f7f140a29d6817338bd2fbc26ef5cd1d9235fb8f792c99c5f93c162f34ce7727",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "Per-Expert-SVD",
+        "gate_checkpoint": 42,
+        "source_sha256": "025d3c0ba3c4e2550137999d1a409c2a82027372d6678e16cfb52c1d61eabbb4",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "Per-Expert-SVD",
+        "gate_checkpoint": 43,
+        "source_sha256": "01275cd6473b79b407c88f0ae9dccff080a8a8de48ba2d1504b2131fa1410004",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "CoreFlow-q224",
+        "gate_checkpoint": 41,
+        "source_sha256": "0de52e77e6f130f5a48292b755cf9474dde41fa8c0f87676832a6ea054ce82fb",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "CoreFlow-q224",
+        "gate_checkpoint": 42,
+        "source_sha256": "781257d411960426abd5272541bed4b4fcca756d9201e7a1467786867f48dd56",
+        "record_count": 250
+      },
+      {
+        "benchmark": "MBPP+",
+        "method": "CoreFlow-q224",
+        "gate_checkpoint": 43,
+        "source_sha256": "e8f05eb5efaddb7b9c99a35711662281d7fd23d254c6c3945c11a5f66dc05bc0",
+        "record_count": 250
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "LoRA-Flow",
+        "gate_checkpoint": 41,
+        "source_sha256": "36bbdb3d76c9aa450506b55f6610229cf0cfb9c330c2fe897f365a8989498ae6",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "LoRA-Flow",
+        "gate_checkpoint": 42,
+        "source_sha256": "23e50687774edd4320b3751514745cccdb6b2ffda7d229b03fdb3cc26794d883",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "LoRA-Flow",
+        "gate_checkpoint": 43,
+        "source_sha256": "8369a890284111d4f769a0401b6876924c5f0b658b4b5fb665a0ae07a077c846",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "CoreFlow-q185",
+        "gate_checkpoint": 41,
+        "source_sha256": "94e985a4ffa62c447b1ddd6f6f5f4d28cc3051590848b4260f2d781b3f29f14c",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "CoreFlow-q185",
+        "gate_checkpoint": 42,
+        "source_sha256": "1f95b779a6c03e218360b8e9a2de3fcc233e8e64ba160bb71352134a4b442b60",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "CoreFlow-q185",
+        "gate_checkpoint": 43,
+        "source_sha256": "fb438faea35bf9213b741db5752da943baa478399a5ec63b9a0be10b9bcec303",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "Per-Expert-SVD",
+        "gate_checkpoint": 41,
+        "source_sha256": "58aa7b920a0f64b744053dbe8da5cddec14f24e8269ec550d9c58d4be7a35e97",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "Per-Expert-SVD",
+        "gate_checkpoint": 42,
+        "source_sha256": "664894ac26cd6ad6e03fac36c1f1ba5bf8200de624cb1db921a8616e2dc78c2c",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "Per-Expert-SVD",
+        "gate_checkpoint": 43,
+        "source_sha256": "ad519967a5ef3c2ece5c542bfd01ce8e6c9e2faffcd8479ccdb24c09df8223d8",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "CoreFlow-q224",
+        "gate_checkpoint": 41,
+        "source_sha256": "93e019b37afe6229364fcc060dd0c14bf44bc2a84d6f9b3ddac106616a890e02",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "CoreFlow-q224",
+        "gate_checkpoint": 42,
+        "source_sha256": "19ca87be1ab13806f6e3d3b3a1b5b1e0a9383eace49b14ca6425e406c0b57e5d",
+        "record_count": 202
+      },
+      {
+        "benchmark": "ClassEval",
+        "method": "CoreFlow-q224",
+        "gate_checkpoint": 43,
+        "source_sha256": "c13d46be4a72da4b14e6e001b165552cf00cdf9d96d58f67a208f203602a630f",
+        "record_count": 202
+      }
+    ]
+  },
+  "service": {
+    "output": "rtx4080_request_records.json",
+    "configuration_count": 9,
+    "sources": [
+      {
+        "source_sha256": "114125cf9a99b9a507b401b31d3a4287424b636981f26ad39bd8f45dfa214b12",
+        "config": "c1_l512_o128",
+        "method": "independent_full"
+      },
+      {
+        "source_sha256": "34bc5b7cffebca3bf2624b6cc2c69d4cd803441d24057bf55266cbe4cb49f328",
+        "config": "c1_l512_o128",
+        "method": "core_q16"
+      },
+      {
+        "source_sha256": "7ccc5cbfa21a83428bf293cc361f7971260288e826acec2add4c321eb9bec71c",
+        "config": "c1_l512_o128",
+        "method": "comol_native"
+      },
+      {
+        "source_sha256": "931b99423bacffb015502185a2011756ead90b120cbeaff7c4ac946ba90b646e",
+        "config": "c4_l512_o128",
+        "method": "independent_full"
+      },
+      {
+        "source_sha256": "e7828d602b9ce018f6c04ce1b6eac9b6a1edb789b09b81ad49b7a4fe8effa7b9",
+        "config": "c4_l512_o128",
+        "method": "core_q16"
+      },
+      {
+        "source_sha256": "eda3e61942edd51ac660989d9db7064048a612d8faecf778c38ab26cc214f2ab",
+        "config": "c4_l512_o128",
+        "method": "comol_native"
+      },
+      {
+        "source_sha256": "a4fee9cccc7944a72298dc2e23e26dd2644159e7f7437b73f92f3aaae96836e4",
+        "config": "c1_l1024_o128",
+        "method": "independent_full"
+      },
+      {
+        "source_sha256": "a35ce94598931391c58f615fc15c28a42378ef99cc1444491d401f6cbd3839cc",
+        "config": "c1_l1024_o128",
+        "method": "core_q16"
+      },
+      {
+        "source_sha256": "583b8c618867751b073fd8531d8272630af1dd5325c3fbc38ccc4923910de80e",
+        "config": "c1_l1024_o128",
+        "method": "comol_native"
+      }
+    ]
+  },
+  "lifecycle": {
+    "output": "qwen_training_lifecycle.json",
+    "record_count": 4,
+    "sources": [
+      {
+        "group": "2",
+        "route": "independent_lora_training",
+        "source_sha256": "f2aae2dd91498d920e9a677cc3b749d9006b8fe54e6428579db3962ecdec8755"
+      },
+      {
+        "group": "2",
+        "route": "comol_joint_training",
+        "source_sha256": "d1273dabe95299a2dac69e5b2e586cef5db6815aa74a329124096f2198e75f6b"
+      },
+      {
+        "group": "3",
+        "route": "independent_lora_training",
+        "source_sha256": "9c193c202a0d861bcf903fc0aa66383cef91d05b033769c6f01354df376db5ae"
+      },
+      {
+        "group": "3",
+        "route": "comol_joint_training",
+        "source_sha256": "a15093359aa5d356ae005cae187c11eb3fd3be9dabfdd8ffa804988d4e014766"
+      }
+    ]
+  }
+}

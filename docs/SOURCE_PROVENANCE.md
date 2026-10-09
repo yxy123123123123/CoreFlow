@@ -33,6 +33,7 @@
 | `results/rq5_ablation_gate/` | Phase-2B、PRS-5、M3G 与 M3R 的汇总 JSON/CSV |
 | `results/archive/prs4_reference_method_failed/` | `_prs4a_prs4p_results_20260805/workspace/reports/prs4a_prs4p/final` |
 | `results/reviewer_required_v2/` | `coreflow-reviewer-required-v2_results_evidence.tar.gz`（SHA-256：`89c637aa72e87f6fb682f6a677a9d86b7b5e687f418f1ab724546954cb377f6e`）中的轻量汇总和审计文件 |
+| `results/submission_reproducibility_package/` | MBPP+/ClassEval 原始 executor records、ReviewerRequired v2 evidence archive 中的 RTX 4080 SUPER 请求记录和 Qwen group 2/3 manifest，经 `tools/build_minimal_public_records.py` 去除题目文本、生成文本和本机路径后生成；每个私有输入的 SHA-256 见 `source_audit.json` |
 
 ## 未合并的内容
 
@@ -42,6 +43,6 @@
 - PRS-4 的参考方法低于预设质量地板，不进入论文主证据链；其代码和轻量失败证据已单独归档。
 - 早期开发、重复上传包和已被后续冻结实验取代的脚本不重复收录。
 
-## 仍需作者补档的来源
+## 已声明但无法恢复为原始日志的来源
 
-论文 RQ1 所述五次完整编译时间和三方法 direct-load 生命周期汇总，在当前整理的实验档案中没有找到一一对应的原始返回包。本仓库当前定位为核心算法代码包，因此将其记录为实验档案范围限制，而不列为代码发布阻塞项；若以后宣称提供完整结果复现，再补入对应日志、命令、产物哈希和汇总脚本。
+论文 RQ1 所述五次完整编译时间和三方法 direct-load 生命周期汇总，在当前整理的实验档案中没有找到一一对应的原始返回包。`results/submission_reproducibility_package/rq1_lifecycle_summary_records.json` 发布了冻结报告中的五次总时间及三方法汇总值，并明确标记为 archived-summary evidence。该文件提高了数值可审计性，但不能替代原始返回包，也不支持将这些生命周期数值升级为可完整重放的证据。

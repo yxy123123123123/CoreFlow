@@ -1,48 +1,33 @@
 {
-  "status": "ANALYZED",
+  "status": "COMPLETE_FOR_REPORTED_TRAINING_LIFECYCLE",
   "protocol_id": "coreflow-reviewer-required-v2",
+  "public_evidence_entry_point": "../submission_reproducibility_package/qwen_training_lifecycle.json",
   "lifecycle_units": {
-    "independent_lora_training": "includes all eight independent runs",
-    "comol_training": "joint MoE-LoRA training",
-    "coreflow_compile": "offline bank construction; report separately",
+    "independent_lora_training": "wall-clock total over all eight independent expert runs",
+    "comol_training": "wall-clock time for one joint MoE-LoRA training run",
+    "coreflow_compile": "offline bank construction, reported separately from training",
     "inference": "excluded from lifecycle training cost"
   },
-  "existing_group1": [
+  "groups": [
     {
-      "stage": "independent_lora_group1",
-      "elapsed_seconds": 13106.423941612244,
-      "training": {
-        "rank": 16,
-        "alpha": 16,
-        "dropout": 0.1,
-        "target_modules": [
-          "q_proj",
-          "k_proj",
-          "v_proj",
-          "o_proj",
-          "down_proj"
-        ],
-        "max_length": 300,
-        "batch_size": 4,
-        "gradient_accumulation_steps": 4,
-        "epochs": 1,
-        "learning_rate": 0.0001,
-        "scheduler": "constant_with_warmup",
-        "warmup_steps": 200,
-        "weight_decay": 0.0
-      },
-      "source": "manifest"
+      "group": 1,
+      "independent_lora_training_seconds": 13106.423941612244,
+      "comol_training_seconds": null,
+      "status": "PARTIAL_PUBLIC_TIMING",
+      "note": "The archived CoMoL group-1 manifest records successful reuse but does not retain a comparable elapsed-time field."
     },
     {
-      "stage": "comol_group1",
-      "manifest": {
-        "status": "PASS",
-        "group": "1",
-        "seed": 101,
-        "path": "/root/autodl-tmp/coreflow_joint_vs_posthoc_v1_workspace/groups/group1/comol_outputs/base-model-mocorelora-corerouter-qkvodown-rank16-exp8-seed101-math-14k/checkpoint-600",
-        "reused": true
-      }
+      "group": 2,
+      "independent_lora_training_seconds": 13458.889063119888,
+      "comol_training_seconds": 3198.7339627742767,
+      "status": "PASS"
+    },
+    {
+      "group": 3,
+      "independent_lora_training_seconds": 13431.435441732407,
+      "comol_training_seconds": 3549.7775390148163,
+      "status": "PASS"
     }
   ],
-  "new_group2_3": "will be recorded by stage manifests; no claim is made until both groups complete"
+  "note": "This file supersedes the pre-completion placeholder previously stored under new_group2_3."
 }

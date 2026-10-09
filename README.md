@@ -35,10 +35,10 @@ coreflow/decompose.py::build_module_bases
 | RQ1 | 完整子空间代数正确性、编译与直接加载 | `experiments/rq1_compilation_correctness/`、`experiments/rq1_direct_load/` | `results/rq1_correctness/` |
 | RQ2 | MBPP+ 主质量实验 | `experiments/rq2_mbppplus_quality/` | `results/rq2_mbppplus/` |
 | RQ2 | ClassEval 独立确认 | `experiments/rq2_classeval_confirmation/` | `results/rq2_classeval/` |
-| RQ2/RQ5 | q224 正式敏感性与隐藏状态漂移诊断 | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/` |
+| RQ2/RQ5 | q224 正式敏感性与隐藏状态漂移诊断 | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/`；公开逐题记录见 `results/submission_reproducibility_package/` |
 | RQ3 | LoRA-Flow、CoreFlow、Per-Expert SVD 的吞吐、显存和 profiler 对比 | `experiments/rq3_system_efficiency/` | `results/rq3_system/` |
 | RQ4 | W0--W6 工作负载与 K=3/5/8 adapter-runtime 扩展 | `experiments/rq4_workload_k_scaling/` | `results/rq4_scaling/` |
-| RQ4 | Qwen3-8B 上的 Independent-Full、CoreFlow 与 CoMoL 路线对照，以及 RTX 4080 SUPER 描述性测量 | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/derived_statistics.json` |
+| RQ4 | Qwen3-8B 上的 Independent-Full、CoreFlow 与 CoMoL 路线对照，以及 RTX 4080 SUPER 描述性测量 | `experiments/reviewer_required_v2/` | `results/reviewer_required_v2/derived_statistics.json`；逐请求/生命周期记录见 `results/submission_reproducibility_package/` |
 | RQ5 | q-grid、A0--A6、真实 gate 和路由干预 | `experiments/rq5_ablation_gate/` | `results/rq5_ablation_gate/` |
 
 更详细的逐脚本说明见 `docs/EXPERIMENT_MAP.md`；整理前后的原始包来源见 `docs/SOURCE_PROVENANCE.md`；数据选择、哈希和再分发边界见 `docs/DATA_PROVENANCE.md`。
@@ -110,11 +110,11 @@ Qwen/CoMoL 路线对照还需要设置 `QWEN_MODEL_PATH`、`COMOL_PACKAGE_ROOT`�
 2. **结果重分析**：直接读取 `results/` 中的决策 JSON、CSV 和协议封印，核对论文中的统计量。
 3. **端到端重跑**：自行获取第三方模型、LoRA、gate 和数据集，并根据哈希校验后运行 GPU 实验。
 
-`results/` 只保存审计和汇总文件，不保存大体积生成文本。这样可以核对文章结论，但不能在没有第三方资产的情况下重新生成全部 token。
+`results/` 保存审计文件、逐题二元结果、逐请求数值记录、生命周期记录和汇总结果，不保存大体积生成文本。这样可以重新分析论文统计量，但不能在没有第三方资产的情况下重新生成全部 token。
 
 ## 6. 发布范围
 
-本仓库按“核心算法代码、主要实验入口、协议和轻量聚合结果”发布，不包含全部 GPU 原始日志或大体积中间产物。当前发布包没有纳入与论文 RQ1 五次编译时间及三方法 direct-load 生命周期汇总逐条对应的完整原始返回包；相关结果应按论文中的描述性证据边界解释。
+本仓库发布核心算法代码、主要实验入口、冻结协议、逐题质量结果、RTX 4080 SUPER 逐请求数值记录、Qwen 生命周期记录和轻量汇总。中性的公开证据入口为 `results/submission_reproducibility_package/`。仓库不包含模型生成文本、全部 GPU 原始日志或大体积中间产物。RQ1 五次编译与三方法 direct-load 的原始返回包未被保留，因此仅发布冻结的逐次/汇总记录，并明确标记为描述性生命周期证据。
 
 APPS-derived 257 题开发集仅公开任务 ID、源索引和逐题哈希，不重新分发第三方题目与测试。Qwen3-8B 的固定 revision、配置哈希及 tokenizer 哈希见 `docs/manifests/QWEN3_ASSET_MANIFEST.json`；APPS-derived 清单见 `docs/manifests/APPS_DERIVED_257_MANIFEST.json`；完整的数据来源说明见 `docs/DATA_PROVENANCE.md`。
 

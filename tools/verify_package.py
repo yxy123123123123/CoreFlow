@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import csv
+import json
 import re
 import sys
 from pathlib import Path
@@ -41,10 +43,46 @@ def main() -> int:
         ROOT / "docs" / "EXPERIMENT_MAP.md",
         ROOT / "results" / "rq2_mbppplus" / "primary_decision.json",
         ROOT / "results" / "rq3_system" / "original_baselines_summary.json",
+        ROOT / "results" / "submission_reproducibility_package" / "quality_task_outcomes.csv",
+        ROOT / "results" / "submission_reproducibility_package" / "rtx4080_request_records.json",
+        ROOT / "results" / "submission_reproducibility_package" / "qwen_training_lifecycle.json",
+        ROOT / "results" / "submission_reproducibility_package" / "RELEASE_STATUS.json",
+        ROOT / "CITATION.cff",
     ]
     for path in required:
         if not path.is_file():
             failures.append(f"missing required file: {path.relative_to(ROOT)}")
+
+    public_results = ROOT / "results" / "submission_reproducibility_package"
+    quality_file = public_results / "quality_task_outcomes.csv"
+    if quality_file.is_file():
+        with quality_file.open("r", encoding="utf-8", newline="") as handle:
+            quality_rows = list(csv.DictReader(handle))
+        if len(quality_rows) != 5424:
+            failures.append(f"unexpected public quality row count: {len(quality_rows)} != 5424")
+
+    service_file = public_results / "rtx4080_request_records.json"
+    if service_file.is_file():
+        service_records = json.loads(service_file.read_text(encoding="utf-8")).get("records", [])
+        if len(service_records) != 9:
+            failures.append(f"unexpected service configuration count: {len(service_records)} != 9")
+        for record in service_records:
+            if len(record.get("latencies_seconds", [])) != 50:
+                failures.append(f"service latency count is not 50: {record.get('config')} {record.get('method')}")
+            if len(record.get("decode_tokens_per_second", [])) != 50:
+                failures.append(f"service throughput count is not 50: {record.get('config')} {record.get('method')}")
+
+    lifecycle_file = public_results / "qwen_training_lifecycle.json"
+    if lifecycle_file.is_file():
+        lifecycle_records = json.loads(lifecycle_file.read_text(encoding="utf-8")).get("records", [])
+        if len(lifecycle_records) != 4 or any(record.get("status") != "PASS" for record in lifecycle_records):
+            failures.append("Qwen group-2/group-3 lifecycle records are incomplete")
+
+    citation_file = ROOT / "CITATION.cff"
+    if citation_file.is_file():
+        citation_text = citation_file.read_text(encoding="utf-8")
+        if "family-names: Hong" not in citation_text or "given-names: Han" not in citation_text:
+            failures.append("CITATION.cff does not include Han Hong")
 
     if failures:
         print("FAIL")
