@@ -1,10 +1,18 @@
-# CoreFlow 复现代码包
+# CoreFlow：动态低秩适配部署的共享核心编译
 
 [English](README_EN.md) | 中文
 
-本目录整理了 CoreFlow 论文所使用的核心算法、实验驱动脚本、冻结协议和轻量结果摘要。目录面向 GitHub 发布，不包含基础模型、LoRA 权重、gate checkpoint、编译后的大体积 bank、原始生成文本或第三方基准数据。
+## 项目说明
 
-## 1. 最重要的代码在哪里
+本仓库是 CoreFlow AI Application 论文的复现代码包。CoreFlow 在不重新训练专家或 gate 的条件下，将冻结的低秩适配（LoRA）专家池和现有逐 token gate 转换为共享核心部署产物。本仓库整理了论文所使用的核心算法、实验驱动脚本、冻结协议和轻量结果记录，不包含基础模型、LoRA 权重、gate checkpoint、编译后的大体积 bank、原始生成文本或第三方基准数据。
+
+## 数据集信息
+
+实验使用 MBPP+/EvalPlus、ClassEval、由 APPS 派生的 257 题开发集、Math14k，以及 Qwen3-8B/CoMoL 对照中的六个评测集。数据选择规则、固定版本、任务标识符、哈希、重叠审计和再分发边界见 `docs/DATA_PROVENANCE.md` 与 `docs/manifests/`。本仓库不复制第三方题目和测试；复现实验者需从原始来源获取并遵守相应许可证。`results/` 发布用于重新分析的逐题结果和数值测量，而不是受限数据内容或完整模型生成文本。
+
+## 代码信息
+
+### 核心代码位置
 
 | 文件 | 作用 | 类型 |
 |---|---|---|
@@ -28,7 +36,7 @@ coreflow/decompose.py::build_module_bases
   -> coreflow/runtime.py::install_coreflow
 ```
 
-## 2. 论文实验与代码对应关系
+### 论文实验与代码对应关系
 
 | 论文问题 | 实验内容 | 代码目录 | 轻量结果 |
 |---|---|---|---|
@@ -45,7 +53,7 @@ coreflow/decompose.py::build_module_bases
 
 早期探索、被取代实现和失败实验的采用状态见 `docs/HISTORICAL_EXPERIMENTS.md`。其中 PRS-4 的代码与失败摘要保存在 `experiments/archive/` 和 `results/archive/`，不会与论文主实验混用。
 
-## 3. 环境
+## 运行要求
 
 论文 GPU 实验的冻结环境为：
 
@@ -65,7 +73,7 @@ python -m pip install -r requirements.txt
 
 LoRA-Flow 的 Transformers/PEFT 修改不是普通 PyPI 包。完整生成实验应先按 `docs/ASSETS.md` 准备 LoRA-Flow 代码与冻结资产。
 
-## 4. 快速验证
+## 使用方法
 
 不下载模型即可进行代码包静态检查：
 
@@ -102,7 +110,7 @@ Qwen/CoMoL 路线对照还需要设置 `QWEN_MODEL_PATH`、`COMOL_PACKAGE_ROOT`�
 
 随后进入相应实验目录，按其冻结 README/脚本运行。原始脚本保留了实验时的 `/root/autodl-tmp/...` 默认值；推荐用环境变量覆盖，而不是直接修改冻结协议。
 
-## 5. 复现层级
+### 复现层级
 
 本仓库区分三种复现：
 
@@ -112,7 +120,11 @@ Qwen/CoMoL 路线对照还需要设置 `QWEN_MODEL_PATH`、`COMOL_PACKAGE_ROOT`�
 
 `results/` 保存审计文件、逐题二元结果、逐请求数值记录、生命周期记录和汇总结果，不保存大体积生成文本。这样可以重新分析论文统计量，但不能在没有第三方资产的情况下重新生成全部 token。
 
-## 6. 发布范围
+## 方法流程
+
+CoreFlow 首先校验冻结专家池的模块映射、缩放因子、专家顺序、数值精度和 gate 元数据。对于每个适配模块，编译过程构造迹归一化的输入/输出协方差矩阵，提取共享基，将每个专家更新投影为紧凑核心矩阵，并生成包含张量与模块覆盖检查的 manifest。运行时加载基础模型、原 gate 和编译产物，仅计算一次共享高维投影，再在核心空间进行逐 token 专家组合。实验驱动脚本按照冻结协议分别验证代数正确性、任务质量、独立加载、容量、显存、吞吐、生命周期成本和结构消融。公式与逐脚本流程见论文、`docs/EXPERIMENT_MAP.md` 及各实验目录中的 README。
+
+## 发布范围
 
 本仓库发布核心算法代码、主要实验入口、冻结协议、逐题质量结果、RTX 4080 SUPER 逐请求数值记录、Qwen 生命周期记录和轻量汇总。中性的公开证据入口为 `results/submission_reproducibility_package/`。仓库不包含模型生成文本、全部 GPU 原始日志或大体积中间产物。RQ1 五次编译与三方法 direct-load 的原始返回包未被保留，因此仅发布冻结的逐次/汇总记录，并明确标记为描述性生命周期证据。
 
@@ -122,7 +134,19 @@ APPS-derived 257 题开发集仅公开任务 ID、源索引和逐题哈希，不
 
 本次整理实际执行的静态检查和未执行项见 `docs/VALIDATION_REPORT.md`。
 
-## 7. 第三方内容和许可证
+## 引用方式
+
+如本代码包用于论文或派生分析，请引用相关稿件：
+
+> Yin, Y., Hong, H., Wang, X., Yue, Z., Yang, Y., and Zhao, Y. CoreFlow: retraining-free shared-core compilation for memory-efficient dynamic deployment of multiple low-rank adaptation experts. Manuscript submitted to *PeerJ Computer Science*.
+
+机器可读的引用元数据见 `CITATION.cff`。
+
+## 许可证与贡献说明
+
+CoreFlow 自有文件公开用于科研透明度和复现审查，但当前不授予开源许可证；使用、复制或修改前请阅读 `LICENSE_NOTICE.md`。第三方内容继续受其原许可证约束，详见 `THIRD_PARTY_NOTICES.md`。本归档版本暂不设通用外部贡献流程；复现问题可通过仓库 issue 报告。
+
+## 第三方内容和许可证
 
 基础模型、LoRA、gate 和基准数据不在本仓库重新分发。`vendor_canonical/modeling_llama.py` 来源于 Apache-2.0 许可的 Transformers 实现，并包含 LoRA-Flow 所需接口；详情见 `THIRD_PARTY_NOTICES.md`。
 

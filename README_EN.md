@@ -1,10 +1,18 @@
-# CoreFlow Reproducibility Package
+# CoreFlow: Shared-Core Compilation for Dynamic Low-Rank Adaptation Deployment
 
 English | [中文](README.md)
 
-This repository organizes the core algorithms, experiment drivers, frozen protocols, and lightweight result summaries used in the CoreFlow paper. It is prepared for release on GitHub and does not redistribute the base model, LoRA weights, gate checkpoints, large compiled banks, raw generations, or third-party benchmark datasets.
+## Description
 
-## 1. Where Is the Core Code?
+This repository is the reproducibility package for the CoreFlow AI application. CoreFlow transforms a frozen bank of low-rank adaptation (LoRA) experts and an existing token-wise gate into a shared-core deployment artifact without retraining either component. The repository organizes the core algorithms, experiment drivers, frozen protocols, and lightweight result records used in the manuscript. It does not redistribute the base models, LoRA weights, gate checkpoints, large compiled banks, raw generations, or third-party benchmark datasets.
+
+## Dataset Information
+
+The experiments use MBPP+/EvalPlus, ClassEval, an APPS-derived 257-task development set, Math14k, and the six evaluation datasets used in the Qwen3-8B/CoMoL comparison. Dataset selection rules, fixed revisions, identifiers, hashes, overlap audits, and redistribution boundaries are documented in `docs/DATA_PROVENANCE.md` and `docs/manifests/`. Third-party prompts and tests are not copied into this repository. Users must obtain them from their original sources and accept the corresponding licenses. The released `results/` records contain task-level outcomes and numerical measurements needed for reanalysis, rather than the restricted benchmark contents or complete model generations.
+
+## Code Information
+
+### Core implementation
 
 | File | Purpose | Category |
 |---|---|---|
@@ -28,7 +36,7 @@ coreflow/decompose.py::build_module_bases
   -> coreflow/runtime.py::install_coreflow
 ```
 
-## 2. Mapping from Paper Experiments to Code
+### Mapping from paper experiments to code
 
 | Research question | Experiment | Code | Lightweight results |
 |---|---|---|---|
@@ -45,7 +53,7 @@ See `docs/EXPERIMENT_MAP.md` for the script-level mapping, `docs/SOURCE_PROVENAN
 
 The status of early exploratory studies, superseded implementations, and unsuccessful experiments is recorded in `docs/HISTORICAL_EXPERIMENTS.md`. In particular, the PRS-4 code and failure summary are retained under `experiments/archive/` and `results/archive/` and are not mixed with the paper's primary evidence.
 
-## 3. Environment
+## Requirements
 
 The frozen environment used for the paper's GPU experiments was:
 
@@ -65,7 +73,7 @@ python -m pip install -r requirements.txt
 
 The Transformers and PEFT modifications used by LoRA-Flow are not ordinary PyPI packages. Before running the full generation experiments, prepare the LoRA-Flow source and frozen assets described in `docs/ASSETS.md`.
 
-## 4. Quick Validation
+## Usage Instructions
 
 The package can be checked without downloading a model:
 
@@ -102,7 +110,7 @@ The Qwen/CoMoL route comparison additionally requires `QWEN_MODEL_PATH`, `COMOL_
 
 Then enter the corresponding experiment directory and follow its frozen README or driver script. The original scripts retain their historical `/root/autodl-tmp/...` defaults. Prefer overriding those defaults with environment variables instead of silently editing a frozen protocol.
 
-## 5. Levels of Reproduction
+### Levels of reproduction
 
 This repository distinguishes three levels of reproduction:
 
@@ -112,7 +120,11 @@ This repository distinguishes three levels of reproduction:
 
 The `results/` directory contains audit files, task-level binary outcomes, request-level numerical measurements, lifecycle records, and aggregate summaries rather than model generations. It supports independent reanalysis of the reported statistics but cannot regenerate every token without the external assets.
 
-## 6. Release Scope
+## Methodology
+
+CoreFlow first validates the frozen expert bank, module mapping, scaling factors, expert order, precision, and gate metadata. For each adapted module, it builds trace-normalized input and output covariance matrices, extracts shared bases, projects every expert update into a compact core matrix, and writes a manifest with tensor and coverage checks. The runtime loads the foundation model, original gate, and compiled artifact; it evaluates the shared high-dimensional projections once and performs token-wise expert composition in the core space. The experiment drivers then evaluate algebraic correctness, task quality, artifact loading, capacity, memory, throughput, lifecycle cost, and structural ablations under the frozen protocols. Detailed equations and script-level procedures are provided in the manuscript, `docs/EXPERIMENT_MAP.md`, and the README files within each experiment directory.
+
+## Release Scope
 
 This repository releases the core algorithms, principal experiment entry points, protocols, task-level quality outcomes, RTX 4080 SUPER request-level numerical records, Qwen lifecycle measurements, and lightweight aggregate results. The neutral evidence entry point is `results/submission_reproducibility_package/`. It does not include model generations, every raw GPU log, or large intermediate artifacts. The original raw return packages corresponding to the five RQ1 compilation runs and the three-method direct-load summary were not retained; the frozen run-level/aggregate records are published with an explicit descriptive-evidence label.
 
@@ -122,7 +134,19 @@ The repository is published without an open-source license. See `LICENSE_NOTICE.
 
 See `docs/VALIDATION_REPORT.md` for the checks performed on this organized package and the checks that still require the frozen Linux/PyTorch environment.
 
-## 7. Third-Party Content and Licensing
+## Citations
+
+If this package contributes to a publication or derivative analysis, cite the associated manuscript:
+
+> Yin, Y., Hong, H., Wang, X., Yue, Z., Yang, Y., and Zhao, Y. CoreFlow: retraining-free shared-core compilation for memory-efficient dynamic deployment of multiple low-rank adaptation experts. Manuscript submitted to *PeerJ Computer Science*.
+
+Machine-readable citation metadata are provided in `CITATION.cff`.
+
+## License and Contribution Guidelines
+
+The CoreFlow-authored files are publicly visible for research transparency and reproducibility review, but no open-source license is granted. Read `LICENSE_NOTICE.md` before using, copying, or modifying them. Third-party components remain governed by their original licenses; see `THIRD_PARTY_NOTICES.md`. This archival release does not define a general external-contribution process. Reproduction problems may be reported through the repository issue tracker.
+
+## Third-Party Content and Licensing
 
 The base model, LoRAs, gates, and benchmark datasets are not redistributed in this repository. `vendor_canonical/modeling_llama.py` is derived from the Apache-2.0-licensed Transformers implementation and carries the interface required by LoRA-Flow. See `THIRD_PARTY_NOTICES.md` for details.
 

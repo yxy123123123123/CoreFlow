@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or its experimental artifacts, please cite the associated CoreFlow paper."
-title: "CoreFlow: Retraining-Free Shared-Core Compilation for Memory-Efficient Dynamic Multi-LoRA Deployment"
+title: "CoreFlow: retraining-free shared-core compilation for memory-efficient dynamic deployment of multiple low-rank adaptation experts"
 type: software
 authors:
   - family-names: Yin
@@ -30,5 +30,5 @@ authors:
     affiliation: North Automatic Control Technology Institute
 repository-code: "https://github.com/yxy123123123123/CoreFlow"
 url: "https://github.com/yxy123123123123/CoreFlow"
-version: "0.3.0"
-date-released: "2026-10-09"
+version: "0.3.2"
+date-released: "2026-10-16"
